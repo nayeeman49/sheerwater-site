@@ -143,6 +143,7 @@ for (const file of pageFiles) {
     title: esc(title),
     description: esc(meta.description),
     canonical,
+    ogimage: `${base}/assets/og.png`,
     nav,
     year,
     content,

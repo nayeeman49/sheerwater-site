@@ -63,3 +63,12 @@ Then upload the changed files. You can also edit the built `.html` files directl
 - [ ] Check your employment contract allows outside business activity.
 - [ ] Once the business is a limited company, add its name, number and registered office to the footer (there is a comment marking the spot in `_source/layout.html`).
 - [ ] Update the LinkedIn page overview so it matches this site.
+
+## Branding and assets
+
+The site uses the Sheerwater logo palette: navy `#001119`, cyan `#08FBFA`, green `#00BF63`, white. Colours are CSS variables at the top of `assets/style.css`.
+
+The original logo is kept in `_source/brand/logo-original.png`. To regenerate the logo files, favicon, social share image (`og.png`) and hero pattern (`maze.svg`) in `assets/`, run:
+
+    pip install Pillow
+    python3 _source/tools/make-assets.py

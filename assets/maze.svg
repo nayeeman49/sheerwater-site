@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+<path d="M1080 360 L1080 324 L1008 324 L1008 216" stroke="#08FBFA"/>
+<path d="M180 252 L144 252 L144 288 L108 288" stroke="#08FBFA"/>
+<path d="M504 36 L504 108 L540 108 L540 36 L648 36 L648 144 L540 144" stroke="#08FBFA"/>
+<path d="M684 432 L684 324 L792 324 L792 396 L720 396 L720 360" stroke="#08FBFA"/>
+<path d="M792 216 L684 216 L684 252 L792 252" stroke="#00BF63"/>
+<path d="M1116 684 L1080 684 L1080 612 L1116 612 L1116 648" stroke="#00BF63"/>
+<path d="M828 576 L936 576 L936 648 L1008 648 L1008 612" stroke="#08FBFA"/>
+<path d="M864 108 L936 108 L936 144 L864 144 L864 252" stroke="#08FBFA"/>
+<path d="M252 108 L360 108 L360 180 L432 180 L432 144" stroke="#00BF63"/>
+<path d="M900 396 L900 360 L936 360 L936 252" stroke="#08FBFA"/>
+<path d="M360 648 L360 684 L396 684 L396 612" stroke="#08FBFA"/>
+<path d="M288 216 L288 288 L252 288 L252 216" stroke="#08FBFA"/>
+<path d="M576 648 L576 540 L648 540 L648 576 L612 576" stroke="#08FBFA"/>
+<path d="M504 576 L504 468 L612 468" stroke="#08FBFA"/>
+<path d="M144 540 L144 432 L180 432 L180 504" stroke="#08FBFA"/>
+<path d="M72 144 L72 180 L180 180 L180 72 L108 72" stroke="#08FBFA"/>
+<path d="M864 648 L864 684 L792 684" stroke="#00BF63"/>
+<path d="M396 504 L288 504 L288 576 L324 576 L324 540" stroke="#08FBFA"/>
+<path d="M1080 540 L1080 504 L1044 504 L1044 432 L1116 432 L1116 540" stroke="#08FBFA"/>
+<path d="M432 324 L432 432 L324 432" stroke="#00BF63"/>
+<path d="M1080 108 L1008 108 L1008 144 L1116 144 L1116 252" stroke="#00BF63"/>
+<path d="M180 684 L180 612 L216 612 L216 648" stroke="#08FBFA"/>
+<path d="M108 648 L72 648 L72 684 L36 684" stroke="#08FBFA"/>
+<path d="M540 396 L612 396 L612 324" stroke="#00BF63"/>
+<path d="M504 288 L504 324 L540 324" stroke="#08FBFA"/>
+<path d="M864 504 L756 504 L756 612 L720 612 L720 684" stroke="#08FBFA"/>
+<path d="M756 72 L720 72 L720 36 L756 36" stroke="#00BF63"/>
+<path d="M36 360 L36 396 L72 396 L72 432" stroke="#08FBFA"/>
+<path d="M432 72 L432 36 L324 36" stroke="#00BF63"/>
+<path d="M972 432 L972 504 L936 504" stroke="#08FBFA"/>
+<path d="M576 216 L612 216 L612 252" stroke="#00BF63"/>
+<path d="M36 540 L72 540 L72 576 L36 576" stroke="#08FBFA"/>
+<path d="M360 324 L360 252 L396 252" stroke="#08FBFA"/>
+<path d="M252 396 L252 360 L180 360" stroke="#08FBFA"/>
+</svg>
