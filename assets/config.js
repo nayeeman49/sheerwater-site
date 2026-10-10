@@ -1,8 +1,9 @@
 /*
   Sheerwater Studios: settings you can edit without rebuilding anything.
 
-  email         Where enquiries and applications go. Shown in the footer and
-                used as the fallback when no form service is set up.
+  email         Where form submissions are delivered when no form service is set up.
+                Never shown on the site. Clear it once formEndpoint is working.
+  phone         Shown in the footer and on the contact page.
   github        Your GitHub profile URL (used in the footer and on the Lab page).
   formEndpoint  The URL of a free form service, so the forms send straight to
                 your inbox. Create a form with a service such as Formspree or
@@ -13,6 +14,7 @@
 */
 window.SW_CONFIG = {
   email: "nayeeman49@googlemail.com",
+  phone: "+44 7498 840388",
   github: "https://github.com/nayeeman49",
   formEndpoint: "",
   formAccessKey: ""

@@ -20,8 +20,8 @@
     var key = el.getAttribute('data-config');
     var value = cfg[key];
     if (!value) { return; }
-    if (key === 'email') {
-      el.href = 'mailto:' + value;
+    if (key === 'phone') {
+      el.href = 'tel:' + value.replace(/[^+\d]/g, '');
       if (el.hasAttribute('data-show')) { el.textContent = value; }
     } else {
       el.href = value;
@@ -257,14 +257,14 @@
             form.reset();
           })
           .catch(function () {
-            say('That did not send. Try again, or email ' + (cfg.email || 'us') + ' directly.', 'error');
+            say('That did not send. Please try again in a moment, or call us.', 'error');
           });
         return;
       }
 
       if (!cfg.email) { say('This form is not connected yet. Add an email address in assets/config.js.', 'error'); return; }
       var href = 'mailto:' + cfg.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(summary());
-      say('Your email app should open with the details filled in. If it does not, email ' + cfg.email + ' directly.', 'ok');
+      say('Your email app should open with the details filled in. If it does not, please call us.', 'ok');
       window.location.href = href;
     });
   });
