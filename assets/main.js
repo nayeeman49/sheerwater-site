@@ -269,3 +269,66 @@
     });
   });
 })();
+
+/* Motion: scroll reveals, pointer spotlight, header shadow, page-leave fallback */
+(function () {
+  'use strict';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement;
+
+  /* Header shadow once scrolled */
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* Soft spotlight that follows the pointer over cards */
+  document.addEventListener('pointermove', function (e) {
+    var el = e.target.closest && e.target.closest('.pkg-row, .panel, .role summary');
+    if (!el) { return; }
+    var r = el.getBoundingClientRect();
+    el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }, { passive: true });
+
+  if (reduce) { return; }
+
+  /* Reveal sections as they scroll into view */
+  if ('IntersectionObserver' in window) {
+    var targets = Array.prototype.slice.call(document.querySelectorAll(
+      'main .section-head, main .steps li, main .pkg-list li, main .split > *, main .notice, main .role, main .pkg-detail, main .audience-intro, main form.panel'
+    )).filter(function (el) { return !el.closest('.hero, .page-hero, [hidden]'); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach(function (el, i) {
+      el.classList.add('reveal');
+      var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+      el.style.setProperty('--d', Math.min(sibs, 6) * 70 + 'ms');
+      io.observe(el);
+    });
+    /* Safety net: never leave content hidden */
+    setTimeout(function () { targets.forEach(function (el) { el.classList.add('in'); }); }, 4000);
+  }
+
+  /* Page transitions: use the browser's own when available, otherwise fade */
+  if (!('onpageswap' in window)) {
+    root.classList.add('vt-fallback');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) { return; }
+      if (a.target && a.target !== '_self') { return; }
+      var url;
+      try { url = new URL(a.href, location.href); } catch (err) { return; }
+      if (url.origin !== location.origin || url.pathname === location.pathname) { return; }
+      e.preventDefault();
+      root.classList.add('leaving');
+      setTimeout(function () { location.href = a.href; }, 220);
+    });
+    window.addEventListener('pageshow', function (ev) { if (ev.persisted) { root.classList.remove('leaving'); } });
+  }
+})();
