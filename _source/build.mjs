@@ -84,27 +84,47 @@ ${tailored}
     packages.map((p) => `<option value="${p.slug}">${esc(p.name)}</option>`).join('\n'),
 
   roles_list: () =>
-    roles.map((r) => `<details class="role" id="${r.slug}" data-group="${r.group}">
+    roles.map((r) => {
+      const ul = (a) => a.map((x) => `        <li>${esc(x)}</li>`).join('\n');
+      return `<details class="role" id="${r.slug}" data-group="${r.group}">
   <summary>
     <span><span class="role-title">${esc(r.title)}</span><br><span class="role-meta">${esc(r.summary)}</span></span>
     <span class="role-toggle"></span>
   </summary>
   <div class="role-body">
+    <ul class="role-facts" aria-label="Role details">
+      <li><span>Type</span>${esc(r.type)}</li>
+      <li><span>Location</span>Fully remote</li>
+      <li><span>Salary</span>Negotiable</li>
+    </ul>
+    <div class="role-wide">
+      <h4>About the role</h4>
+      <p>${esc(r.about)}</p>
+    </div>
     <div>
       <h4>What you would work on</h4>
       <ul>
-${r.work.map((w) => `        <li>${esc(w)}</li>`).join('\n')}
+${ul(r.work)}
       </ul>
     </div>
     <div>
-      <h4>What you bring</h4>
+      <h4>Requirements</h4>
       <ul>
-${r.bring.map((b) => `        <li>${esc(b)}</li>`).join('\n')}
+${ul(r.requirements)}
       </ul>
+      <h4 class="role-sub">Nice to have</h4>
+      <ul>
+${ul(r.nice)}
+      </ul>
+    </div>
+    <div class="role-wide">
+      <h4>How we assess</h4>
+      <p>${esc(r.trial)} Every trial task is paid.</p>
     </div>
     <a class="btn btn-primary btn-small" href="apply.html?role=${r.slug}">Apply for this role</a>
   </div>
-</details>`).join('\n'),
+</details>`;
+    }).join('\n'),
 
   role_options: () =>
     '<option value="">Choose a role</option>\n' +

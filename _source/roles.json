@@ -1,82 +1,195 @@
 [
   {
-    "slug": "full-stack-engineer",
-    "title": "Full-stack engineer",
+    "slug": "project-manager",
+    "title": "Project Manager",
+    "group": "management",
+    "type": "Contract",
+    "summary": "Keep our remote engineering interns organised, on schedule and talking clearly with the UK.",
+    "about": "You are the day-to-day link between the founder in the UK and our team of engineering interns. You turn written scopes into plans, keep everyone unblocked and make sure clients get honest, regular updates. You do not write production code.",
+    "work": [
+      "Break each project scope into weekly plans, tasks and milestones",
+      "Run a short daily stand-up and a weekly demo with the UK",
+      "Track progress, risks and blockers, and raise them early",
+      "Write clear weekly status reports that the founder can share with clients",
+      "Match interns to tasks and help new starters settle in",
+      "Keep the project board, meeting notes and handover documents up to date"
+    ],
+    "requirements": [
+      "A degree in any subject; a business, IT or engineering degree is a plus",
+      "At least two years coordinating software, IT or similar project delivery",
+      "Good fluency in written and spoken English, as most communication is in English",
+      "Confident using a task board such as Jira, Trello or Linear",
+      "A working understanding of agile ways of working (sprints, stand-ups, retrospectives)",
+      "Reliable, organised and calm when plans change",
+      "Able to give feedback kindly and clearly, and to say when something is at risk"
+    ],
+    "nice": [
+      "A project management qualification such as PRINCE2, PMP or a Scrum certificate",
+      "Experience supervising students or junior staff",
+      "Basic understanding of cloud, DevOps or web development"
+    ],
+    "trial": "A paid task: turn a short sample scope into a two-week plan with risks and a status report."
+  },
+  {
+    "slug": "devops-platform-engineer-intern",
+    "title": "DevOps and Platform Engineer Intern",
     "group": "engineering",
+    "type": "Internship",
+    "summary": "Learn to build cloud, Kubernetes and automation for real client infrastructure projects.",
+    "about": "Work alongside an experienced technical lead and the founder to build the infrastructure that other software runs on. You will start with small, well-defined tasks and take on more as you grow. Everything you build is reviewed before it reaches a client.",
+    "work": [
+      "Write Terraform and Ansible to set up cloud and Linux servers",
+      "Help build and harden Kubernetes clusters",
+      "Create CI/CD pipelines that test and deploy software automatically",
+      "Set up monitoring with tools such as Prometheus and Grafana",
+      "Document every build in a runbook that clients can follow themselves",
+      "Take part in weekly demos and explain what you built"
+    ],
+    "requirements": [
+      "Minimum: a completed bachelor's degree (or final-year student finishing within six months) in computer science, IT, engineering or a related field",
+      "Good fluency in written and spoken English",
+      "Working knowledge of Linux on the command line",
+      "Basic scripting in Bash or Python",
+      "Understanding of Git and version control",
+      "Basic knowledge of networking: IP addresses, DNS, firewalls, SSH",
+      "Careful habits with passwords, keys and changes to live systems",
+      "Willing to explore new, fun challenges and to learn by building, breaking and fixing things",
+      "Curious, patient and honest about what you do not yet know"
+    ],
+    "nice": [
+      "A home lab, virtual machines or personal projects you can show us",
+      "Experience with Docker, Terraform, Ansible, Azure or AWS",
+      "Progress towards a certification such as Azure Fundamentals, CKA or Terraform Associate"
+    ],
+    "trial": "A paid task: deploy a small app to Kubernetes from a Git repository, with an automatic pipeline."
+  },
+  {
+    "slug": "ai-ml-engineer-intern",
+    "title": "AI and Machine Learning Engineer Intern",
+    "group": "engineering",
+    "type": "Internship",
+    "summary": "Help deploy private, self-hosted AI systems that run on a client's own servers.",
+    "about": "We help organisations use AI on their own data without sending it to third parties. As an intern you will help set up, test and measure open-weight language models and document search tools, with guidance from senior colleagues.",
+    "work": [
+      "Run and test open-weight language models on local and GPU servers",
+      "Build document search tools that answer questions using a client's own files",
+      "Prepare and clean data for search and evaluation",
+      "Measure answer quality and write up what works and what does not",
+      "Package models and tools in containers so they are easy to deploy",
+      "Help prototype AI agents where a human approves every action"
+    ],
+    "requirements": [
+      "Minimum: a completed bachelor's degree (or final-year student finishing within six months) in computer science, data science, AI, mathematics, engineering or a related field",
+      "Good fluency in written and spoken English",
+      "Solid Python, including working with libraries such as NumPy or pandas",
+      "Understanding of the basics of machine learning and how large language models work",
+      "Comfortable using Linux and the command line",
+      "Understanding of Git and version control",
+      "A habit of testing claims and checking results before reporting them",
+      "Willing to explore new, fun challenges, including problems nobody has solved before",
+      "Respect for data privacy and confidentiality"
+    ],
+    "nice": [
+      "Experience with tools such as Ollama, vLLM, LangChain or vector databases",
+      "Familiarity with Docker and GPUs",
+      "A thesis, project or portfolio involving machine learning"
+    ],
+    "trial": "A paid task: run a local model with a simple question-and-answer interface over a handful of PDF files."
+  },
+  {
+    "slug": "full-stack-engineer-intern",
+    "title": "Full-Stack Engineer Intern",
+    "group": "engineering",
+    "type": "Internship",
     "summary": "Build web and mobile products for our own studio products and for client projects.",
+    "about": "Help build the apps, websites and APIs that make up our product and client work. You will pair with experienced engineers, write real features and see them shipped, with code review on everything you submit.",
     "work": [
       "Build features across a React or Next.js front end and a Node.js or Python back end",
-      "Design and query PostgreSQL databases and write clear APIs",
-      "Work from written briefs and take part in weekly demos"
+      "Design databases and write clear, tested APIs",
+      "Build responsive web pages and, where needed, mobile screens",
+      "Write automated tests alongside your code",
+      "Review other people's code and learn from reviews of yours",
+      "Take part in weekly demos and written updates"
     ],
-    "bring": [
-      "Two or more years building production web applications",
-      "Comfort with Git, code review and automated tests",
-      "Flutter or React Native experience is a bonus"
-    ]
+    "requirements": [
+      "Minimum: a completed bachelor's degree (or final-year student finishing within six months) in computer science, software engineering, IT or a related field",
+      "Good fluency in written and spoken English",
+      "Solid grounding in JavaScript or TypeScript, plus HTML and CSS",
+      "Experience building at least one full project with a framework such as React, Node.js, Django or Flask",
+      "Knowledge of SQL and relational databases",
+      "Understanding of Git, pull requests and basic testing",
+      "Willing to explore new, fun challenges and pick up unfamiliar tools quickly",
+      "Clear written communication and a willingness to ask questions"
+    ],
+    "nice": [
+      "Mobile experience with Flutter or React Native",
+      "Experience deploying an app to the cloud",
+      "A public portfolio or GitHub profile with projects you are proud of"
+    ],
+    "trial": "A paid task: build a small app with login and a simple API in a few days."
   },
   {
-    "slug": "devops-platform-engineer",
-    "title": "DevOps and platform engineer",
+    "slug": "qa-test-engineer-intern",
+    "title": "QA and Test Automation Engineer Intern",
     "group": "engineering",
-    "summary": "Deliver cloud, Kubernetes and automation work for client infrastructure projects.",
-    "work": [
-      "Write Terraform and Ansible for cloud and Linux projects",
-      "Build and harden Kubernetes clusters and CI/CD pipelines",
-      "Document every build so clients can run it themselves"
-    ],
-    "bring": [
-      "Hands-on Linux administration and scripting in Bash or Python",
-      "Experience with Terraform, Docker and either Azure or AWS",
-      "Careful habits around credentials, change control and handover notes"
-    ]
-  },
-  {
-    "slug": "ai-ml-engineer",
-    "title": "AI and machine learning engineer",
-    "group": "engineering",
-    "summary": "Help deploy private, self-hosted AI systems on client infrastructure.",
-    "work": [
-      "Deploy and test open-weight language models on GPU servers",
-      "Build document search and approval-gated agent workflows",
-      "Measure quality and write up what works and what does not"
-    ],
-    "bring": [
-      "Strong Python and experience serving models or building retrieval systems",
-      "Familiarity with GPUs, containers and Linux",
-      "A habit of testing claims before repeating them"
-    ]
-  },
-  {
-    "slug": "qa-test-engineer",
-    "title": "QA and test automation engineer",
-    "group": "engineering",
+    "type": "Internship",
     "summary": "Check our products and client deliveries before anyone else sees them.",
+    "about": "Quality is how we earn trust. You will test what the team builds, automate the checks that matter and report problems so clearly that they are easy to fix. It is a strong starting role if you like finding things that others miss.",
     "work": [
-      "Write automated tests for web, mobile and API features",
-      "Test infrastructure changes in staging and report clearly",
-      "Keep a simple, up-to-date test plan for each project"
+      "Write and run test cases for web, mobile and API features",
+      "Automate repeated checks with tools such as Playwright, Selenium or Postman",
+      "Test infrastructure changes in a staging environment",
+      "Log defects with clear steps to reproduce them",
+      "Check fixes and run a release checklist before delivery",
+      "Keep a simple, current test plan for each project"
     ],
-    "bring": [
-      "Experience with Playwright, Cypress, pytest or similar tools",
-      "Clear written English for bug reports",
-      "Interest in infrastructure testing is a bonus"
-    ]
+    "requirements": [
+      "Minimum: a completed bachelor's degree (or final-year student finishing within six months) in computer science, IT, engineering or a related field",
+      "Good fluency in written and spoken English, since clear bug reports matter",
+      "Basic programming in Python or JavaScript",
+      "Understanding of how websites and APIs work",
+      "Strong attention to detail and a patient, methodical approach",
+      "Understanding of Git",
+      "Willing to explore new, fun challenges, including breaking things on purpose",
+      "Honest and constructive when reporting problems"
+    ],
+    "nice": [
+      "Experience with Playwright, Selenium, Cypress or Postman",
+      "Knowledge of software testing concepts (ISTQB or similar)",
+      "Basic knowledge of performance or security testing"
+    ],
+    "trial": "A paid task: test a sample website, report defects clearly and automate three checks."
   },
   {
-    "slug": "ui-ux-designer",
-    "title": "UI and UX designer",
+    "slug": "ui-ux-designer-intern",
+    "title": "UI and UX Designer Intern",
     "group": "design",
-    "summary": "Design clear, accessible interfaces for mobile and web products, project by project.",
+    "type": "Internship",
+    "summary": "Design clear, accessible interfaces for mobile and web products.",
+    "about": "Design the screens and flows people actually use. You will work with engineers and the founder from sketch to finished interface, and see your designs built and shipped.",
     "work": [
-      "Turn product ideas into flows, wireframes and finished screens in Figma",
-      "Build and maintain a small design system for each product",
-      "Review builds against the design and flag differences"
+      "Turn short briefs into wireframes, flows and polished screens in Figma",
+      "Design mobile and web interfaces that are clear and accessible",
+      "Build and maintain small design systems of colours, type and components",
+      "Prepare designs and notes that developers can build from",
+      "Review the finished build against the design",
+      "Test designs with simple user feedback and improve them"
     ],
-    "bring": [
-      "A portfolio with shipped web or mobile work",
-      "Knowledge of accessibility basics",
-      "Ability to explain design choices to engineers and clients"
-    ]
+    "requirements": [
+      "Minimum: a completed bachelor's degree (or final-year student finishing within six months) in design, HCI, computer science, media or a related field, or an equivalent portfolio",
+      "Good fluency in written and spoken English",
+      "A portfolio of at least two projects; student and personal work counts",
+      "Skill in Figma or a similar design tool",
+      "Understanding of layout, typography, colour and accessibility basics",
+      "Able to explain your design choices clearly",
+      "Willing to explore new, fun challenges and take feedback well",
+      "Interest in how products are built and how real people use them"
+    ],
+    "nice": [
+      "Basic HTML and CSS",
+      "Experience with prototyping or user testing",
+      "Mobile app design experience"
+    ],
+    "trial": "A paid task: redesign one screen from a short brief and explain your choices."
   }
 ]
