@@ -98,14 +98,18 @@
         var show = value === 'all' || list.indexOf(value) !== -1;
         el.hidden = !show;
         if (show) { shown += 1; }
+        $$('.pkg-view', el).forEach(function (v) { v.hidden = v.getAttribute('data-view') !== value; });
       });
+      $$('.audience-intro').forEach(function (box) { box.hidden = box.getAttribute('data-audience') !== value; });
       chips.forEach(function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-filter') === value ? 'true' : 'false'); });
       if (countEl) { countEl.textContent = 'Showing ' + shown + ' of ' + details.length + ' packages'; }
     };
     chips.forEach(function (c) {
       c.addEventListener('click', function () { applyFilter(c.getAttribute('data-filter')); });
     });
-    applyFilter('all');
+    var wantedAudience = params().get('audience');
+    var known = chips.some(function (c) { return c.getAttribute('data-filter') === wantedAudience; });
+    applyFilter(known ? wantedAudience : 'all');
   }
 
   /* Services page: estimator */

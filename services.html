@@ -60,31 +60,127 @@
       <button type="button" class="chip" data-filter="msp" aria-pressed="false">IT providers</button>
     </div>
     <p id="audience-count" class="muted" aria-live="polite"></p>
+    <div class="audience-intro" data-audience="research" hidden>
+  <h2>For research groups</h2>
+  <p>Research groups usually have capable people, fixed funding and no spare engineer. These packages focus on getting compute, storage and software environments working for scientists, and on leaving a setup your own team can run once we have gone.</p>
+</div>
+<div class="audience-intro" data-audience="startup" hidden>
+  <h2>For startups</h2>
+  <p>Startups need to move quickly without building up infrastructure debt. These packages give you a repeatable base, faster releases and a clear handover, so your first engineer is not stuck untangling hand-built servers.</p>
+</div>
+<div class="audience-intro" data-audience="regulated" hidden>
+  <h2>For regulated businesses</h2>
+  <p>Law, health and finance teams carry duties around client and patient data. These packages put access control, audit trails and documented data flows first. We are clear about what we build and what remains your responsibility, including compliance itself.</p>
+</div>
+<div class="audience-intro" data-audience="msp" hidden>
+  <h2>For IT providers</h2>
+  <p>IT providers need dependable extra capacity for client work. These packages are scoped as repeatable engagements. We work as an extension of your team and hand over documentation your own engineers can pick up and reuse.</p>
+</div>
     <article class="pkg-detail" id="cloud-landing-zone" data-audiences="startup regulated msp">
   <div class="pkg-detail-head">
     <h3>Cloud landing zone</h3>
     <p class="pkg-facts"><span class="pkg-price">£1,750 to £3,000 plus VAT</span><span class="pkg-time">2-3 weeks</span></p>
   </div>
-  <p class="lede">An Azure or AWS foundation written in Terraform: networking, identity, logging and cost controls.</p>
-  <div class="pkg-detail-grid">
-    <div>
-      <h4>What you get</h4>
-      <ul>
-        <li>Terraform modules in your own repository</li>
-        <li>Network layout: virtual networks, subnets and security rules</li>
-        <li>Identity and access baseline, with least-privilege roles</li>
-        <li>Central logging and budget alerts</li>
-        <li>A handover session and a written runbook</li>
-      </ul>
+  <div class="pkg-view" data-view="all">
+    <p class="lede">An Azure or AWS foundation written in Terraform: networking, identity, logging and cost controls.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Terraform modules in your own repository</li>
+          <li>Network layout: virtual networks, subnets and security rules</li>
+          <li>Identity and access baseline, with least-privilege roles</li>
+          <li>Central logging and budget alerts</li>
+          <li>A handover session and a written runbook</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Teams whose cloud account was built by hand and now needs to be repeatable and safe to change.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Cloud account access and a list of the workloads you plan to run.</dd>
+        <dt><h4>Often chosen by</h4></dt>
+        <dd>startups, regulated businesses, IT providers</dd>
+      </dl>
     </div>
-    <dl>
-      <dt><h4>Good fit for</h4></dt>
-      <dd>Teams whose cloud account was built by hand and now needs to be repeatable and safe to change.</dd>
-      <dt><h4>What we need from you</h4></dt>
-      <dd>Cloud account access and a list of the workloads you plan to run.</dd>
-      <dt><h4>Often chosen by</h4></dt>
-      <dd>startups, regulated businesses, IT providers</dd>
-    </dl>
+  </div>
+  <div class="pkg-view" data-view="startup" hidden>
+    <p class="lede">A cloud account you can grow into, set up in your first month instead of your first crisis.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A seed-stage team has been deploying to an AWS or Azure account by hand, with shared logins and no record of what is running. We rebuild the foundation as code, separate development from production and add cost alerts, so your first hires inherit something safe.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Separate development, staging and production accounts or subscriptions</li>
+          <li>Terraform modules for networking, identity and shared services, in your repository</li>
+          <li>Single sign-on and role-based access instead of shared credentials</li>
+          <li>Budget alerts and tagging, so the cost of each environment is visible</li>
+          <li>A layout your CI/CD pipeline can deploy into without admin rights</li>
+          <li>A recorded walkthrough and runbook for new engineers</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Seed to Series A teams about to hire their first engineers, or about to answer a customer's security questionnaire.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Admin access to the current account, a list of the services in use and the order you expect to launch environments.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the lower end for one cloud and two environments. Nearer the upper end for several regions, existing resources to import or a customer security review to answer.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="regulated" hidden>
+    <p class="lede">A cloud foundation built around who can see what, with the evidence to show it.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A small firm is moving a line-of-business system to the cloud and needs to explain to clients where data lives and who can reach it. We design the network and access model first, log everything that matters and document the data flows for your data protection lead.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Deployment in a UK region, with data residency choices written down</li>
+          <li>Private networking, with no public access to data stores by default</li>
+          <li>Role design with least privilege and mandatory multi-factor sign-in</li>
+          <li>Central audit logging with a retention period you choose</li>
+          <li>Encryption settings documented for data at rest and in transit</li>
+          <li>A data-flow diagram and control summary for your data protection lead</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Law firms, clinics, accountants and advisers moving client or patient information to the cloud.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>The systems and data types involved, any client or contract security requirements and a named person responsible for data protection.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the upper end where long audit retention, extra environments or client-specific control requirements apply. We document the controls, but compliance itself stays your responsibility.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="msp" hidden>
+    <p class="lede">A repeatable cloud baseline you can offer to more than one client.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">An IT provider keeps rebuilding similar Azure or AWS setups for small clients, each slightly different. We turn your best version into a parameterised Terraform baseline, so the next client takes days instead of weeks.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A parameterised Terraform baseline for a typical small-business tenancy</li>
+          <li>Guardrails for naming, tagging, policy and budget alerts, applied the same way every time</li>
+          <li>Separate state and access for each client</li>
+          <li>A pull-request workflow, so your engineers review every change</li>
+          <li>A deployment checklist and handover pack you can reuse</li>
+          <li>A training session on running and extending the code</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Providers with several small clients on Azure or AWS who want consistency and fewer one-off builds.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>An example of your current client build, your tenancy and billing model, and how many client types you expect.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the lower end for one client type on one cloud. Nearer the upper end for several client profiles, or migration of existing client builds.</dd>
+      </dl>
+    </div>
   </div>
   <p><a class="btn btn-primary btn-small" href="contact.html?package=cloud-landing-zone">Request this package</a></p>
 </article>
@@ -93,26 +189,106 @@
     <h3>Kubernetes baseline</h3>
     <p class="pkg-facts"><span class="pkg-price">£2,000 to £4,000 plus VAT</span><span class="pkg-time">2-4 weeks</span></p>
   </div>
-  <p class="lede">A hardened cluster with ingress, TLS and monitoring, ready for your first workloads.</p>
-  <div class="pkg-detail-grid">
-    <div>
-      <h4>What you get</h4>
-      <ul>
-        <li>Cluster build, managed or self-hosted, defined as code</li>
-        <li>Ingress and automatic TLS certificates</li>
-        <li>Hardening to a baseline we agree with you</li>
-        <li>Prometheus and Grafana monitoring with starter dashboards</li>
-        <li>A worked example deployment and a runbook</li>
-      </ul>
+  <div class="pkg-view" data-view="all">
+    <p class="lede">A hardened cluster with ingress, TLS and monitoring, ready for your first workloads.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Cluster build, managed or self-hosted, defined as code</li>
+          <li>Ingress and automatic TLS certificates</li>
+          <li>Hardening to a baseline we agree with you</li>
+          <li>Prometheus and Grafana monitoring with starter dashboards</li>
+          <li>A worked example deployment and a runbook</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Teams moving from single servers to containers, or taking over a cluster nobody fully understands.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Details of the applications to run and where the cluster will live.</dd>
+        <dt><h4>Often chosen by</h4></dt>
+        <dd>startups, research groups, IT providers</dd>
+      </dl>
     </div>
-    <dl>
-      <dt><h4>Good fit for</h4></dt>
-      <dd>Teams moving from single servers to containers, or taking over a cluster nobody fully understands.</dd>
-      <dt><h4>What we need from you</h4></dt>
-      <dd>Details of the applications to run and where the cluster will live.</dd>
-      <dt><h4>Often chosen by</h4></dt>
-      <dd>startups, research groups, IT providers</dd>
-    </dl>
+  </div>
+  <div class="pkg-view" data-view="startup" hidden>
+    <p class="lede">A cluster your team can deploy to on day one, without hiring a platform engineer.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A product team has outgrown a couple of servers and deploys containers by hand. We stand up a managed cluster, set up ingress and certificates, and give developers one clear way to ship a service.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A managed cluster on your chosen cloud, defined in Terraform</li>
+          <li>Ingress and automatic TLS certificates</li>
+          <li>Namespaces and resource limits for each team or environment</li>
+          <li>A deployment template for a new service, with health checks</li>
+          <li>Prometheus and Grafana, with alerts for the failures that wake people up</li>
+          <li>A cost and scaling note, so the first bill is no surprise</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Startups running three or more services, or planning to, with developers but no dedicated operations engineer.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Your services and how they are built today, your preferred cloud and the traffic you expect.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the lower end for a managed cluster and two environments. Nearer the upper end for stateful services, several clusters or a service mesh.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="research" hidden>
+    <p class="lede">Containers for reproducible research, on the hardware you already have.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A group wants to run analysis pipelines and models in containers so results can be repeated, on a small on-premises cluster or a few GPU machines. We build a cluster that fits the hardware and the way researchers work.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A cluster on your own servers or a university cloud allocation</li>
+          <li>GPU scheduling, so notebooks and jobs can request a card</li>
+          <li>Shared storage mounted into workloads, with quotas</li>
+          <li>A container registry and a worked example for one of your own pipelines</li>
+          <li>Monitoring of node, GPU and storage use, with a simple usage report</li>
+          <li>A guide for researchers in plain language</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Research groups moving analysis and model training into containers, or sharing a few GPU machines between people.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Hardware details, the software and datasets involved and how many people will use it.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the lower end for a single small cluster. Nearer the upper end for GPU scheduling, large shared storage or integration with a university login.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="msp" hidden>
+    <p class="lede">A hardened cluster you can run for a client without owning every decision.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A provider has a client who wants Kubernetes, but nobody on the team has run it in production. We build and harden the cluster to a written baseline and leave runbooks your engineers can follow.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A cluster built to a written hardening baseline</li>
+          <li>Role-based access mapped to your engineers and the client's staff</li>
+          <li>Backup and restore for cluster state and one example workload</li>
+          <li>Monitoring and alert routing into your existing tools</li>
+          <li>An upgrade plan and a tested first upgrade</li>
+          <li>A runbook and handover session for your support team</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>IT providers supporting a client's first production cluster, or taking over one with no documentation.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>The client's requirements, your ticketing and alerting tools, and who will provide support after handover.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the upper end where backup, upgrade testing or integration with your tools is included. Support after handover is priced separately.</dd>
+      </dl>
+    </div>
   </div>
   <p><a class="btn btn-primary btn-small" href="contact.html?package=kubernetes-baseline">Request this package</a></p>
 </article>
@@ -121,26 +297,80 @@
     <h3>CI/CD pipeline</h3>
     <p class="pkg-facts"><span class="pkg-price">£1,250 to £2,500 plus VAT</span><span class="pkg-time">1-3 weeks</span></p>
   </div>
-  <p class="lede">Automated build, test and deploy, so releases stop depending on one person's laptop.</p>
-  <div class="pkg-detail-grid">
-    <div>
-      <h4>What you get</h4>
-      <ul>
-        <li>Pipeline in GitHub Actions or Jenkins, whichever suits your team</li>
-        <li>Containerised builds with Docker</li>
-        <li>Separate staging and production environments</li>
-        <li>Secrets handling and a documented rollback step</li>
-        <li>Short written guide for your developers</li>
-      </ul>
+  <div class="pkg-view" data-view="all">
+    <p class="lede">Automated build, test and deploy, so releases stop depending on one person's laptop.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Pipeline in GitHub Actions or Jenkins, whichever suits your team</li>
+          <li>Containerised builds with Docker</li>
+          <li>Separate staging and production environments</li>
+          <li>Secrets handling and a documented rollback step</li>
+          <li>Short written guide for your developers</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Small engineering teams that deploy by hand and want faster, safer releases.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Repository access and a description of how you release today.</dd>
+        <dt><h4>Often chosen by</h4></dt>
+        <dd>startups, IT providers</dd>
+      </dl>
     </div>
-    <dl>
-      <dt><h4>Good fit for</h4></dt>
-      <dd>Small engineering teams that deploy by hand and want faster, safer releases.</dd>
-      <dt><h4>What we need from you</h4></dt>
-      <dd>Repository access and a description of how you release today.</dd>
-      <dt><h4>Often chosen by</h4></dt>
-      <dd>startups, IT providers</dd>
-    </dl>
+  </div>
+  <div class="pkg-view" data-view="startup" hidden>
+    <p class="lede">Releases that take minutes and do not depend on one person.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A small team deploys by copying files or running scripts from a laptop, and every release is a stressful event. We build a pipeline that tests, packages and deploys on every merge, with a clear way back if something breaks.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A pipeline in GitHub Actions or Jenkins, matched to your team</li>
+          <li>Automated tests and linting on every pull request</li>
+          <li>Containerised builds with caching to keep them fast</li>
+          <li>Staging deploys on merge and production deploys on approval</li>
+          <li>Secrets stored safely, with no keys in the repository</li>
+          <li>A documented rollback and a one-page guide for developers</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Startups with two to ten developers who want faster, safer releases and fewer late-night deployments.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Repository access, a description of how you release today and the hosting you deploy to.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the lower end for one application and one pipeline. Nearer the upper end for several services, database migrations or mobile app builds.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="msp" hidden>
+    <p class="lede">A pipeline template you can reuse across client projects.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">An IT provider supports software for several clients, each deployed differently. We build one standard pipeline with client-specific settings, so builds, tests and deployments follow a single process.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Reusable pipeline templates with per-client settings</li>
+          <li>Per-client secrets and permissions kept separate</li>
+          <li>Approval steps that match each client's change process</li>
+          <li>Deployment logs kept as part of your change records</li>
+          <li>A starter repository and onboarding checklist for new clients</li>
+          <li>Training for your engineers on adapting the templates</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Providers delivering or supporting applications for several clients who want one consistent release process.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Two or three example client projects, your change-approval rules and your preferred tooling.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the upper end for several client templates, approval workflows or a move from Jenkins to GitHub Actions.</dd>
+      </dl>
+    </div>
   </div>
   <p><a class="btn btn-primary btn-small" href="contact.html?package=cicd-pipeline">Request this package</a></p>
 </article>
@@ -149,26 +379,106 @@
     <h3>Linux estate automation</h3>
     <p class="pkg-facts"><span class="pkg-price">£1,500 to £3,500 plus VAT</span><span class="pkg-time">2-4 weeks</span></p>
   </div>
-  <p class="lede">Ansible roles that build, patch and harden your Linux servers the same way every time.</p>
-  <div class="pkg-detail-grid">
-    <div>
-      <h4>What you get</h4>
-      <ul>
-        <li>Ansible roles for builds, patching and hardening</li>
-        <li>An inventory and tests so changes can be checked before they run</li>
-        <li>Patch status reporting you can show an auditor</li>
-        <li>A Git workflow for reviewing configuration changes</li>
-        <li>A runbook for your own team</li>
-      </ul>
+  <div class="pkg-view" data-view="all">
+    <p class="lede">Ansible roles that build, patch and harden your Linux servers the same way every time.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Ansible roles for builds, patching and hardening</li>
+          <li>An inventory and tests so changes can be checked before they run</li>
+          <li>Patch status reporting you can show an auditor</li>
+          <li>A Git workflow for reviewing configuration changes</li>
+          <li>A runbook for your own team</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Organisations running a mix of Red Hat, Rocky, Ubuntu and older systems, patched by hand.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>A server list, access to a test machine and your current patching rules.</dd>
+        <dt><h4>Often chosen by</h4></dt>
+        <dd>research groups, regulated businesses, IT providers</dd>
+      </dl>
     </div>
-    <dl>
-      <dt><h4>Good fit for</h4></dt>
-      <dd>Organisations running a mix of Red Hat, Rocky, Ubuntu and older systems, patched by hand.</dd>
-      <dt><h4>What we need from you</h4></dt>
-      <dd>A server list, access to a test machine and your current patching rules.</dd>
-      <dt><h4>Often chosen by</h4></dt>
-      <dd>research groups, regulated businesses, IT providers</dd>
-    </dl>
+  </div>
+  <div class="pkg-view" data-view="research" hidden>
+    <p class="lede">One tested way to build and patch every research server, whatever its distribution.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A research computing team looks after a mix of Rocky, Red Hat and Ubuntu machines built over several years, with scientific software installed by hand. We capture the standard build in Ansible so new nodes match, and patching becomes planned instead of improvised.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Ansible roles for the base build, users, storage mounts and monitoring agents</li>
+          <li>Support for several distributions in one codebase</li>
+          <li>Scientific software environments managed as code where practical</li>
+          <li>Staged patching, with a test group first and a rollback note</li>
+          <li>Reports on patch status and pending reboots</li>
+          <li>A runbook and a Git workflow for reviewing changes</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Research computing teams and labs with a mixed fleet of servers and a small support team.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>A server list, access to a test machine and the software your researchers depend on.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the lower end for one distribution and a small fleet. Nearer the upper end for several distributions, software environments to capture or many nodes.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="regulated" hidden>
+    <p class="lede">Patching and hardening you can show an auditor.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A firm has to evidence that its servers are patched and configured to a standard, and currently relies on spreadsheets and memory. We write the standard into Ansible and produce the reports from the same run.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Hardening roles aligned to a baseline you choose, such as the CIS Benchmarks</li>
+          <li>Scheduled patching with maintenance windows and an approval step</li>
+          <li>Evidence reports: what was patched, when and on which servers</li>
+          <li>Drift checks that flag servers which have moved away from the standard</li>
+          <li>Access and logging settings applied consistently</li>
+          <li>A change history in Git that records who approved what</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Regulated businesses with a Linux estate and a duty to show that systems are patched and secured.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>A server list, your patching policy or client requirements and the person who approves change.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the upper end for large estates, several distributions or detailed evidence reporting. We build to the baseline you select but do not certify compliance.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="msp" hidden>
+    <p class="lede">Fewer one-off fixes and a cleaner patching routine across client estates.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A provider patches client Linux servers by hand, with different scripts for each client. We build shared Ansible roles with a separate inventory per client, so patching runs the same way everywhere and reports are produced automatically.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Shared Ansible roles with a separate inventory for each client</li>
+          <li>Patch windows per client and a staged rollout order</li>
+          <li>Pre-checks and post-checks, with failures raised in your ticketing system</li>
+          <li>A monthly patch report you can send to each client</li>
+          <li>Build roles for the server types you provision most often</li>
+          <li>Training and a runbook for your engineers</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Providers managing Linux servers for several clients, with scripts and habits that differ from engineer to engineer.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Access to a representative client estate, your ticketing system and your current patching steps.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the upper end for many client estates, ticketing integration or custom reporting.</dd>
+      </dl>
+    </div>
   </div>
   <p><a class="btn btn-primary btn-small" href="contact.html?package=linux-automation">Request this package</a></p>
 </article>
@@ -177,26 +487,55 @@
     <h3>HPC and GPU cluster setup</h3>
     <p class="pkg-facts"><span class="pkg-price">£2,500 to £7,500 plus VAT</span><span class="pkg-time">3-6 weeks</span></p>
   </div>
-  <p class="lede">Slurm scheduling, shared storage and GPU support for a research group or lab.</p>
-  <div class="pkg-detail-grid">
-    <div>
-      <h4>What you get</h4>
-      <ul>
-        <li>Slurm scheduler set up and tuned for your workloads</li>
-        <li>Shared storage layout and user accounts</li>
-        <li>GPU drivers and a container runtime for researchers</li>
-        <li>Monitoring and usage reports</li>
-        <li>A user guide written for scientists, not administrators</li>
-      </ul>
+  <div class="pkg-view" data-view="all">
+    <p class="lede">Slurm scheduling, shared storage and GPU support for a research group or lab.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>Slurm scheduler set up and tuned for your workloads</li>
+          <li>Shared storage layout and user accounts</li>
+          <li>GPU drivers and a container runtime for researchers</li>
+          <li>Monitoring and usage reports</li>
+          <li>A user guide written for scientists, not administrators</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Research groups with new or shared compute and nobody on staff to run it.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Hardware details, the software your researchers use and the number of users.</dd>
+        <dt><h4>Often chosen by</h4></dt>
+        <dd>research groups</dd>
+      </dl>
     </div>
-    <dl>
-      <dt><h4>Good fit for</h4></dt>
-      <dd>Research groups with new or shared compute and nobody on staff to run it.</dd>
-      <dt><h4>What we need from you</h4></dt>
-      <dd>Hardware details, the software your researchers use and the number of users.</dd>
-      <dt><h4>Often chosen by</h4></dt>
-      <dd>research groups</dd>
-    </dl>
+  </div>
+  <div class="pkg-view" data-view="research" hidden>
+    <p class="lede">A shared compute system that scientists can use and your team can run.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A group has bought or been given GPU servers and a storage array, and everyone is logging in with shared accounts and competing for the same cards. We set up Slurm with fair-share rules, a storage layout with quotas and the software environments people need.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A Slurm scheduler with partitions, limits and fair-share rules for your groups</li>
+          <li>GPU drivers, CUDA and container support for reproducible jobs</li>
+          <li>A storage layout for home, project and scratch areas, with quotas</li>
+          <li>User accounts, login or single sign-on, and onboarding steps</li>
+          <li>Software environments, as modules or containers, for your main tools</li>
+          <li>Monitoring of queues, GPU use and storage, with a usage report for funders</li>
+          <li>A user guide for researchers and a runbook for administrators</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Research groups and labs with new or shared compute and nobody employed to run it.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>A hardware list and network layout, the software and datasets in use, the number of users and how time should be shared fairly.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the lower end for a handful of nodes. Nearer the upper end for many nodes, high-speed networking, large shared storage or a move from an existing scheduler.</dd>
+      </dl>
+    </div>
   </div>
   <p><a class="btn btn-primary btn-small" href="contact.html?package=hpc-gpu-cluster">Request this package</a></p>
 </article>
@@ -205,26 +544,106 @@
     <h3>Private AI pilot</h3>
     <p class="pkg-facts"><span class="pkg-price">£3,000 to £6,000 plus VAT</span><span class="pkg-time">3-5 weeks</span></p>
   </div>
-  <p class="lede">A language model running on your own infrastructure, tested on one real use case.</p>
-  <div class="pkg-detail-grid">
-    <div>
-      <h4>What you get</h4>
-      <ul>
-        <li>A self-hosted language model on your servers or in your private cloud</li>
-        <li>Access controls and audit logging</li>
-        <li>One use case tested against your own documents</li>
-        <li>A human approval step before the AI changes anything</li>
-        <li>A usage guide and a plan for what comes after the pilot</li>
-      </ul>
+  <div class="pkg-view" data-view="all">
+    <p class="lede">A language model running on your own infrastructure, tested on one real use case.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A self-hosted language model on your servers or in your private cloud</li>
+          <li>Access controls and audit logging</li>
+          <li>One use case tested against your own documents</li>
+          <li>A human approval step before the AI changes anything</li>
+          <li>A usage guide and a plan for what comes after the pilot</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Teams that want AI on sensitive information without sending it to a third-party service.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>One clear use case, sample documents and a decision-maker for data access.</dd>
+        <dt><h4>Often chosen by</h4></dt>
+        <dd>regulated businesses, startups, research groups</dd>
+      </dl>
     </div>
-    <dl>
-      <dt><h4>Good fit for</h4></dt>
-      <dd>Teams that want AI on sensitive information without sending it to a third-party service.</dd>
-      <dt><h4>What we need from you</h4></dt>
-      <dd>One clear use case, sample documents and a decision-maker for data access.</dd>
-      <dt><h4>Often chosen by</h4></dt>
-      <dd>regulated businesses, startups, research groups</dd>
-    </dl>
+  </div>
+  <div class="pkg-view" data-view="regulated" hidden>
+    <p class="lede">Try AI on client documents without those documents leaving your control.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A practice wants to summarise and search long documents, such as contracts or case files, but cannot send them to a public AI service. We run a model inside your environment, limit who can use it, log what it does and test it on one real task.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A self-hosted model on your servers or in a UK private cloud</li>
+          <li>Document search limited to the folders and people you approve</li>
+          <li>Per-person access and an audit log of the questions asked</li>
+          <li>A human review step before anything is saved, sent or changed</li>
+          <li>A test on one real task, compared with how your staff do it today</li>
+          <li>A data-flow note for your data protection lead and a plan for what comes after the pilot</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Law firms, clinics, accountants and advisers who want AI on client or patient information.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>One task, sample documents you are allowed to use and a person who can approve data access.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the upper end for several document sources, stricter access rules or dedicated GPU hardware. Hardware is a separate cost, and we help you size it before you buy.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="startup" hidden>
+    <p class="lede">Build an AI feature on infrastructure you control, before you commit to a vendor.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A startup wants an AI assistant over its own data, but customers keep asking where their data goes. We deploy an open-weight model, test retrieval over your content and show what quality and cost look like with self-hosting.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>An open-weight model served through an API your product can call</li>
+          <li>Retrieval over your documents or knowledge base, with a test set</li>
+          <li>Quality results on your own questions, not generic benchmarks</li>
+          <li>Cost and speed per request on the hardware used</li>
+          <li>Authentication, rate limits and logging at the API</li>
+          <li>A written comparison with a hosted service, ending in a clear recommendation</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Startups adding AI to a product where customers care about data location, or where hosted per-use costs may become high.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>The product feature you have in mind, sample content and the number of users or requests you expect.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the upper end for several data sources, an agent that takes actions or load testing at scale.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="research" hidden>
+    <p class="lede">Run language models on unpublished or restricted data, on hardware you own.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A group wants to use a language model on unpublished results or restricted datasets that cannot leave the institution. We deploy a model on your GPU servers, connect it to a collection of papers or data descriptions and test it on one research task.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A model deployed on your GPU servers, sharing capacity fairly with other work</li>
+          <li>Search over your own papers, notes or data descriptions</li>
+          <li>Access limited to the project team, with usage logged</li>
+          <li>A test on one research task, with errors recorded for review</li>
+          <li>A reproducible setup, with model versions and settings recorded</li>
+          <li>A short report you can reuse in ethics or data-governance discussions</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Research groups with restricted or unpublished data, and spare GPU capacity or a budget to get some.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>The research task, the data rules that apply and details of your GPU hardware.</dd>
+        <dt><h4>What moves the price</h4></dt>
+        <dd>Nearer the lower end if suitable GPUs are already in place. Nearer the upper end for new hardware setup or integration with an existing cluster.</dd>
+      </dl>
+    </div>
   </div>
   <p><a class="btn btn-primary btn-small" href="contact.html?package=private-ai-pilot">Request this package</a></p>
 </article>

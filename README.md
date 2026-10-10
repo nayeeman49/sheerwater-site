@@ -40,7 +40,8 @@ GitHub Pages cannot run server code, so the forms need one of two options:
 
 Everything you see is built from files in `_source/`:
 
-- `_source/packages.json`: package names, prices, timelines and deliverables. Changing it updates the home page list, the services page, the finder and the estimator together.
+- `_source/packages.json`: package names, prices, timelines and deliverables, plus the text each audience button on the Services page shows (`views`). Changing it updates the home page list, the services page, the finder and the estimator together. Every audience listed for a package needs its own view, or the build stops with an error.
+- `_source/audiences.json`: the intro paragraph shown above the packages for each audience button.
 - `_source/roles.json`: the roles on the Careers page and in the Apply form.
 - `_source/pages/*.html`: the text of each page.
 - `_source/site.json`: site address and navigation.

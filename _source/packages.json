@@ -6,11 +6,7 @@
     "timeline": "2-3 weeks",
     "low": 1750,
     "high": 3000,
-    "audiences": [
-      "startup",
-      "regulated",
-      "msp"
-    ],
+    "audiences": ["startup", "regulated", "msp"],
     "need": "cloud",
     "deliverables": [
       "Terraform modules in your own repository",
@@ -20,7 +16,54 @@
       "A handover session and a written runbook"
     ],
     "fit": "Teams whose cloud account was built by hand and now needs to be repeatable and safe to change.",
-    "needs": "Cloud account access and a list of the workloads you plan to run."
+    "needs": "Cloud account access and a list of the workloads you plan to run.",
+    "views": {
+      "startup": {
+        "headline": "A cloud account you can grow into, set up in your first month instead of your first crisis.",
+        "scenario": "A seed-stage team has been deploying to an AWS or Azure account by hand, with shared logins and no record of what is running. We rebuild the foundation as code, separate development from production and add cost alerts, so your first hires inherit something safe.",
+        "deliverables": [
+          "Separate development, staging and production accounts or subscriptions",
+          "Terraform modules for networking, identity and shared services, in your repository",
+          "Single sign-on and role-based access instead of shared credentials",
+          "Budget alerts and tagging, so the cost of each environment is visible",
+          "A layout your CI/CD pipeline can deploy into without admin rights",
+          "A recorded walkthrough and runbook for new engineers"
+        ],
+        "fit": "Seed to Series A teams about to hire their first engineers, or about to answer a customer's security questionnaire.",
+        "needs": "Admin access to the current account, a list of the services in use and the order you expect to launch environments.",
+        "priceNote": "Nearer the lower end for one cloud and two environments. Nearer the upper end for several regions, existing resources to import or a customer security review to answer."
+      },
+      "regulated": {
+        "headline": "A cloud foundation built around who can see what, with the evidence to show it.",
+        "scenario": "A small firm is moving a line-of-business system to the cloud and needs to explain to clients where data lives and who can reach it. We design the network and access model first, log everything that matters and document the data flows for your data protection lead.",
+        "deliverables": [
+          "Deployment in a UK region, with data residency choices written down",
+          "Private networking, with no public access to data stores by default",
+          "Role design with least privilege and mandatory multi-factor sign-in",
+          "Central audit logging with a retention period you choose",
+          "Encryption settings documented for data at rest and in transit",
+          "A data-flow diagram and control summary for your data protection lead"
+        ],
+        "fit": "Law firms, clinics, accountants and advisers moving client or patient information to the cloud.",
+        "needs": "The systems and data types involved, any client or contract security requirements and a named person responsible for data protection.",
+        "priceNote": "Nearer the upper end where long audit retention, extra environments or client-specific control requirements apply. We document the controls, but compliance itself stays your responsibility."
+      },
+      "msp": {
+        "headline": "A repeatable cloud baseline you can offer to more than one client.",
+        "scenario": "An IT provider keeps rebuilding similar Azure or AWS setups for small clients, each slightly different. We turn your best version into a parameterised Terraform baseline, so the next client takes days instead of weeks.",
+        "deliverables": [
+          "A parameterised Terraform baseline for a typical small-business tenancy",
+          "Guardrails for naming, tagging, policy and budget alerts, applied the same way every time",
+          "Separate state and access for each client",
+          "A pull-request workflow, so your engineers review every change",
+          "A deployment checklist and handover pack you can reuse",
+          "A training session on running and extending the code"
+        ],
+        "fit": "Providers with several small clients on Azure or AWS who want consistency and fewer one-off builds.",
+        "needs": "An example of your current client build, your tenancy and billing model, and how many client types you expect.",
+        "priceNote": "Nearer the lower end for one client type on one cloud. Nearer the upper end for several client profiles, or migration of existing client builds."
+      }
+    }
   },
   {
     "slug": "kubernetes-baseline",
@@ -29,11 +72,7 @@
     "timeline": "2-4 weeks",
     "low": 2000,
     "high": 4000,
-    "audiences": [
-      "startup",
-      "research",
-      "msp"
-    ],
+    "audiences": ["startup", "research", "msp"],
     "need": "containers",
     "deliverables": [
       "Cluster build, managed or self-hosted, defined as code",
@@ -43,7 +82,54 @@
       "A worked example deployment and a runbook"
     ],
     "fit": "Teams moving from single servers to containers, or taking over a cluster nobody fully understands.",
-    "needs": "Details of the applications to run and where the cluster will live."
+    "needs": "Details of the applications to run and where the cluster will live.",
+    "views": {
+      "startup": {
+        "headline": "A cluster your team can deploy to on day one, without hiring a platform engineer.",
+        "scenario": "A product team has outgrown a couple of servers and deploys containers by hand. We stand up a managed cluster, set up ingress and certificates, and give developers one clear way to ship a service.",
+        "deliverables": [
+          "A managed cluster on your chosen cloud, defined in Terraform",
+          "Ingress and automatic TLS certificates",
+          "Namespaces and resource limits for each team or environment",
+          "A deployment template for a new service, with health checks",
+          "Prometheus and Grafana, with alerts for the failures that wake people up",
+          "A cost and scaling note, so the first bill is no surprise"
+        ],
+        "fit": "Startups running three or more services, or planning to, with developers but no dedicated operations engineer.",
+        "needs": "Your services and how they are built today, your preferred cloud and the traffic you expect.",
+        "priceNote": "Nearer the lower end for a managed cluster and two environments. Nearer the upper end for stateful services, several clusters or a service mesh."
+      },
+      "research": {
+        "headline": "Containers for reproducible research, on the hardware you already have.",
+        "scenario": "A group wants to run analysis pipelines and models in containers so results can be repeated, on a small on-premises cluster or a few GPU machines. We build a cluster that fits the hardware and the way researchers work.",
+        "deliverables": [
+          "A cluster on your own servers or a university cloud allocation",
+          "GPU scheduling, so notebooks and jobs can request a card",
+          "Shared storage mounted into workloads, with quotas",
+          "A container registry and a worked example for one of your own pipelines",
+          "Monitoring of node, GPU and storage use, with a simple usage report",
+          "A guide for researchers in plain language"
+        ],
+        "fit": "Research groups moving analysis and model training into containers, or sharing a few GPU machines between people.",
+        "needs": "Hardware details, the software and datasets involved and how many people will use it.",
+        "priceNote": "Nearer the lower end for a single small cluster. Nearer the upper end for GPU scheduling, large shared storage or integration with a university login."
+      },
+      "msp": {
+        "headline": "A hardened cluster you can run for a client without owning every decision.",
+        "scenario": "A provider has a client who wants Kubernetes, but nobody on the team has run it in production. We build and harden the cluster to a written baseline and leave runbooks your engineers can follow.",
+        "deliverables": [
+          "A cluster built to a written hardening baseline",
+          "Role-based access mapped to your engineers and the client's staff",
+          "Backup and restore for cluster state and one example workload",
+          "Monitoring and alert routing into your existing tools",
+          "An upgrade plan and a tested first upgrade",
+          "A runbook and handover session for your support team"
+        ],
+        "fit": "IT providers supporting a client's first production cluster, or taking over one with no documentation.",
+        "needs": "The client's requirements, your ticketing and alerting tools, and who will provide support after handover.",
+        "priceNote": "Nearer the upper end where backup, upgrade testing or integration with your tools is included. Support after handover is priced separately."
+      }
+    }
   },
   {
     "slug": "cicd-pipeline",
@@ -52,10 +138,7 @@
     "timeline": "1-3 weeks",
     "low": 1250,
     "high": 2500,
-    "audiences": [
-      "startup",
-      "msp"
-    ],
+    "audiences": ["startup", "msp"],
     "need": "ship",
     "deliverables": [
       "Pipeline in GitHub Actions or Jenkins, whichever suits your team",
@@ -65,7 +148,39 @@
       "Short written guide for your developers"
     ],
     "fit": "Small engineering teams that deploy by hand and want faster, safer releases.",
-    "needs": "Repository access and a description of how you release today."
+    "needs": "Repository access and a description of how you release today.",
+    "views": {
+      "startup": {
+        "headline": "Releases that take minutes and do not depend on one person.",
+        "scenario": "A small team deploys by copying files or running scripts from a laptop, and every release is a stressful event. We build a pipeline that tests, packages and deploys on every merge, with a clear way back if something breaks.",
+        "deliverables": [
+          "A pipeline in GitHub Actions or Jenkins, matched to your team",
+          "Automated tests and linting on every pull request",
+          "Containerised builds with caching to keep them fast",
+          "Staging deploys on merge and production deploys on approval",
+          "Secrets stored safely, with no keys in the repository",
+          "A documented rollback and a one-page guide for developers"
+        ],
+        "fit": "Startups with two to ten developers who want faster, safer releases and fewer late-night deployments.",
+        "needs": "Repository access, a description of how you release today and the hosting you deploy to.",
+        "priceNote": "Nearer the lower end for one application and one pipeline. Nearer the upper end for several services, database migrations or mobile app builds."
+      },
+      "msp": {
+        "headline": "A pipeline template you can reuse across client projects.",
+        "scenario": "An IT provider supports software for several clients, each deployed differently. We build one standard pipeline with client-specific settings, so builds, tests and deployments follow a single process.",
+        "deliverables": [
+          "Reusable pipeline templates with per-client settings",
+          "Per-client secrets and permissions kept separate",
+          "Approval steps that match each client's change process",
+          "Deployment logs kept as part of your change records",
+          "A starter repository and onboarding checklist for new clients",
+          "Training for your engineers on adapting the templates"
+        ],
+        "fit": "Providers delivering or supporting applications for several clients who want one consistent release process.",
+        "needs": "Two or three example client projects, your change-approval rules and your preferred tooling.",
+        "priceNote": "Nearer the upper end for several client templates, approval workflows or a move from Jenkins to GitHub Actions."
+      }
+    }
   },
   {
     "slug": "linux-automation",
@@ -74,11 +189,7 @@
     "timeline": "2-4 weeks",
     "low": 1500,
     "high": 3500,
-    "audiences": [
-      "research",
-      "regulated",
-      "msp"
-    ],
+    "audiences": ["research", "regulated", "msp"],
     "need": "linux",
     "deliverables": [
       "Ansible roles for builds, patching and hardening",
@@ -88,7 +199,54 @@
       "A runbook for your own team"
     ],
     "fit": "Organisations running a mix of Red Hat, Rocky, Ubuntu and older systems, patched by hand.",
-    "needs": "A server list, access to a test machine and your current patching rules."
+    "needs": "A server list, access to a test machine and your current patching rules.",
+    "views": {
+      "research": {
+        "headline": "One tested way to build and patch every research server, whatever its distribution.",
+        "scenario": "A research computing team looks after a mix of Rocky, Red Hat and Ubuntu machines built over several years, with scientific software installed by hand. We capture the standard build in Ansible so new nodes match, and patching becomes planned instead of improvised.",
+        "deliverables": [
+          "Ansible roles for the base build, users, storage mounts and monitoring agents",
+          "Support for several distributions in one codebase",
+          "Scientific software environments managed as code where practical",
+          "Staged patching, with a test group first and a rollback note",
+          "Reports on patch status and pending reboots",
+          "A runbook and a Git workflow for reviewing changes"
+        ],
+        "fit": "Research computing teams and labs with a mixed fleet of servers and a small support team.",
+        "needs": "A server list, access to a test machine and the software your researchers depend on.",
+        "priceNote": "Nearer the lower end for one distribution and a small fleet. Nearer the upper end for several distributions, software environments to capture or many nodes."
+      },
+      "regulated": {
+        "headline": "Patching and hardening you can show an auditor.",
+        "scenario": "A firm has to evidence that its servers are patched and configured to a standard, and currently relies on spreadsheets and memory. We write the standard into Ansible and produce the reports from the same run.",
+        "deliverables": [
+          "Hardening roles aligned to a baseline you choose, such as the CIS Benchmarks",
+          "Scheduled patching with maintenance windows and an approval step",
+          "Evidence reports: what was patched, when and on which servers",
+          "Drift checks that flag servers which have moved away from the standard",
+          "Access and logging settings applied consistently",
+          "A change history in Git that records who approved what"
+        ],
+        "fit": "Regulated businesses with a Linux estate and a duty to show that systems are patched and secured.",
+        "needs": "A server list, your patching policy or client requirements and the person who approves change.",
+        "priceNote": "Nearer the upper end for large estates, several distributions or detailed evidence reporting. We build to the baseline you select but do not certify compliance."
+      },
+      "msp": {
+        "headline": "Fewer one-off fixes and a cleaner patching routine across client estates.",
+        "scenario": "A provider patches client Linux servers by hand, with different scripts for each client. We build shared Ansible roles with a separate inventory per client, so patching runs the same way everywhere and reports are produced automatically.",
+        "deliverables": [
+          "Shared Ansible roles with a separate inventory for each client",
+          "Patch windows per client and a staged rollout order",
+          "Pre-checks and post-checks, with failures raised in your ticketing system",
+          "A monthly patch report you can send to each client",
+          "Build roles for the server types you provision most often",
+          "Training and a runbook for your engineers"
+        ],
+        "fit": "Providers managing Linux servers for several clients, with scripts and habits that differ from engineer to engineer.",
+        "needs": "Access to a representative client estate, your ticketing system and your current patching steps.",
+        "priceNote": "Nearer the upper end for many client estates, ticketing integration or custom reporting."
+      }
+    }
   },
   {
     "slug": "hpc-gpu-cluster",
@@ -97,9 +255,7 @@
     "timeline": "3-6 weeks",
     "low": 2500,
     "high": 7500,
-    "audiences": [
-      "research"
-    ],
+    "audiences": ["research"],
     "need": "compute",
     "deliverables": [
       "Slurm scheduler set up and tuned for your workloads",
@@ -109,7 +265,25 @@
       "A user guide written for scientists, not administrators"
     ],
     "fit": "Research groups with new or shared compute and nobody on staff to run it.",
-    "needs": "Hardware details, the software your researchers use and the number of users."
+    "needs": "Hardware details, the software your researchers use and the number of users.",
+    "views": {
+      "research": {
+        "headline": "A shared compute system that scientists can use and your team can run.",
+        "scenario": "A group has bought or been given GPU servers and a storage array, and everyone is logging in with shared accounts and competing for the same cards. We set up Slurm with fair-share rules, a storage layout with quotas and the software environments people need.",
+        "deliverables": [
+          "A Slurm scheduler with partitions, limits and fair-share rules for your groups",
+          "GPU drivers, CUDA and container support for reproducible jobs",
+          "A storage layout for home, project and scratch areas, with quotas",
+          "User accounts, login or single sign-on, and onboarding steps",
+          "Software environments, as modules or containers, for your main tools",
+          "Monitoring of queues, GPU use and storage, with a usage report for funders",
+          "A user guide for researchers and a runbook for administrators"
+        ],
+        "fit": "Research groups and labs with new or shared compute and nobody employed to run it.",
+        "needs": "A hardware list and network layout, the software and datasets in use, the number of users and how time should be shared fairly.",
+        "priceNote": "Nearer the lower end for a handful of nodes. Nearer the upper end for many nodes, high-speed networking, large shared storage or a move from an existing scheduler."
+      }
+    }
   },
   {
     "slug": "private-ai-pilot",
@@ -118,11 +292,7 @@
     "timeline": "3-5 weeks",
     "low": 3000,
     "high": 6000,
-    "audiences": [
-      "regulated",
-      "startup",
-      "research"
-    ],
+    "audiences": ["regulated", "startup", "research"],
     "need": "ai",
     "deliverables": [
       "A self-hosted language model on your servers or in your private cloud",
@@ -132,6 +302,53 @@
       "A usage guide and a plan for what comes after the pilot"
     ],
     "fit": "Teams that want AI on sensitive information without sending it to a third-party service.",
-    "needs": "One clear use case, sample documents and a decision-maker for data access."
+    "needs": "One clear use case, sample documents and a decision-maker for data access.",
+    "views": {
+      "regulated": {
+        "headline": "Try AI on client documents without those documents leaving your control.",
+        "scenario": "A practice wants to summarise and search long documents, such as contracts or case files, but cannot send them to a public AI service. We run a model inside your environment, limit who can use it, log what it does and test it on one real task.",
+        "deliverables": [
+          "A self-hosted model on your servers or in a UK private cloud",
+          "Document search limited to the folders and people you approve",
+          "Per-person access and an audit log of the questions asked",
+          "A human review step before anything is saved, sent or changed",
+          "A test on one real task, compared with how your staff do it today",
+          "A data-flow note for your data protection lead and a plan for what comes after the pilot"
+        ],
+        "fit": "Law firms, clinics, accountants and advisers who want AI on client or patient information.",
+        "needs": "One task, sample documents you are allowed to use and a person who can approve data access.",
+        "priceNote": "Nearer the upper end for several document sources, stricter access rules or dedicated GPU hardware. Hardware is a separate cost, and we help you size it before you buy."
+      },
+      "startup": {
+        "headline": "Build an AI feature on infrastructure you control, before you commit to a vendor.",
+        "scenario": "A startup wants an AI assistant over its own data, but customers keep asking where their data goes. We deploy an open-weight model, test retrieval over your content and show what quality and cost look like with self-hosting.",
+        "deliverables": [
+          "An open-weight model served through an API your product can call",
+          "Retrieval over your documents or knowledge base, with a test set",
+          "Quality results on your own questions, not generic benchmarks",
+          "Cost and speed per request on the hardware used",
+          "Authentication, rate limits and logging at the API",
+          "A written comparison with a hosted service, ending in a clear recommendation"
+        ],
+        "fit": "Startups adding AI to a product where customers care about data location, or where hosted per-use costs may become high.",
+        "needs": "The product feature you have in mind, sample content and the number of users or requests you expect.",
+        "priceNote": "Nearer the upper end for several data sources, an agent that takes actions or load testing at scale."
+      },
+      "research": {
+        "headline": "Run language models on unpublished or restricted data, on hardware you own.",
+        "scenario": "A group wants to use a language model on unpublished results or restricted datasets that cannot leave the institution. We deploy a model on your GPU servers, connect it to a collection of papers or data descriptions and test it on one research task.",
+        "deliverables": [
+          "A model deployed on your GPU servers, sharing capacity fairly with other work",
+          "Search over your own papers, notes or data descriptions",
+          "Access limited to the project team, with usage logged",
+          "A test on one research task, with errors recorded for review",
+          "A reproducible setup, with model versions and settings recorded",
+          "A short report you can reuse in ethics or data-governance discussions"
+        ],
+        "fit": "Research groups with restricted or unpublished data, and spare GPU capacity or a budget to get some.",
+        "needs": "The research task, the data rules that apply and details of your GPU hardware.",
+        "priceNote": "Nearer the lower end if suitable GPUs are already in place. Nearer the upper end for new hardware setup or integration with an existing cluster."
+      }
+    }
   }
 ]

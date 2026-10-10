@@ -12,6 +12,7 @@ const read = (p) => readFileSync(join(here, p), 'utf8');
 const site = JSON.parse(read('site.json'));
 const packages = JSON.parse(read('packages.json'));
 const roles = JSON.parse(read('roles.json'));
+const audiences = JSON.parse(read('audiences.json'));
 const layout = read('layout.html');
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -29,30 +30,51 @@ const blocks = {
     '\n</ul>',
 
   packages_detail: () =>
-    packages.map((p) => `<article class="pkg-detail" id="${p.slug}" data-audiences="${p.audiences.join(' ')}">
+    packages.map((p) => {
+      const missing = p.audiences.filter((a) => !(p.views && p.views[a]));
+      if (missing.length) throw new Error(`${p.slug}: missing audience views for ${missing.join(', ')}`);
+
+      const view = (key, v, extra = '') => `  <div class="pkg-view" data-view="${key}"${key === 'all' ? '' : ' hidden'}>
+    <p class="lede">${esc(v.headline)}</p>
+${v.scenario ? `    <h4>A typical project</h4>\n    <p class="scenario">${esc(v.scenario)}</p>\n` : ''}    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+${v.deliverables.map((d) => `          <li>${esc(d)}</li>`).join('\n')}
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>${esc(v.fit)}</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>${esc(v.needs)}</dd>
+${v.priceNote ? `        <dt><h4>What moves the price</h4></dt>\n        <dd>${esc(v.priceNote)}</dd>\n` : ''}${extra}      </dl>
+    </div>
+  </div>`;
+
+      const general = view(
+        'all',
+        { headline: p.summary, deliverables: p.deliverables, fit: p.fit, needs: p.needs },
+        `        <dt><h4>Often chosen by</h4></dt>\n        <dd>${p.audiences.map((a) => audienceLabel[a]).join(', ')}</dd>\n`
+      );
+      const tailored = p.audiences.map((a) => view(a, p.views[a])).join('\n');
+
+      return `<article class="pkg-detail" id="${p.slug}" data-audiences="${p.audiences.join(' ')}">
   <div class="pkg-detail-head">
     <h3>${esc(p.name)}</h3>
     <p class="pkg-facts"><span class="pkg-price">${gbp(p.low)} to ${gbp(p.high)} plus VAT</span><span class="pkg-time">${esc(p.timeline)}</span></p>
   </div>
-  <p class="lede">${esc(p.summary)}</p>
-  <div class="pkg-detail-grid">
-    <div>
-      <h4>What you get</h4>
-      <ul>
-${p.deliverables.map((d) => `        <li>${esc(d)}</li>`).join('\n')}
-      </ul>
-    </div>
-    <dl>
-      <dt><h4>Good fit for</h4></dt>
-      <dd>${esc(p.fit)}</dd>
-      <dt><h4>What we need from you</h4></dt>
-      <dd>${esc(p.needs)}</dd>
-      <dt><h4>Often chosen by</h4></dt>
-      <dd>${p.audiences.map((a) => audienceLabel[a]).join(', ')}</dd>
-    </dl>
-  </div>
+${general}
+${tailored}
   <p><a class="btn btn-primary btn-small" href="contact.html?package=${p.slug}">Request this package</a></p>
-</article>`).join('\n'),
+</article>`;
+    }).join('\n'),
+
+  audience_intros: () =>
+    Object.entries(audiences).map(([key, a]) => `<div class="audience-intro" data-audience="${key}" hidden>
+  <h2>${esc(a.title)}</h2>
+  <p>${esc(a.intro)}</p>
+</div>`).join('\n'),
 
   package_options: () =>
     '<option value="">Not sure yet</option>\n' +

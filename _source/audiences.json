@@ -1,0 +1,22 @@
+{
+  "research": {
+    "label": "Research groups",
+    "title": "For research groups",
+    "intro": "Research groups usually have capable people, fixed funding and no spare engineer. These packages focus on getting compute, storage and software environments working for scientists, and on leaving a setup your own team can run once we have gone."
+  },
+  "startup": {
+    "label": "Startups",
+    "title": "For startups",
+    "intro": "Startups need to move quickly without building up infrastructure debt. These packages give you a repeatable base, faster releases and a clear handover, so your first engineer is not stuck untangling hand-built servers."
+  },
+  "regulated": {
+    "label": "Regulated businesses",
+    "title": "For regulated businesses",
+    "intro": "Law, health and finance teams carry duties around client and patient data. These packages put access control, audit trails and documented data flows first. We are clear about what we build and what remains your responsibility, including compliance itself."
+  },
+  "msp": {
+    "label": "IT providers",
+    "title": "For IT providers",
+    "intro": "IT providers need dependable extra capacity for client work. These packages are scoped as repeatable engagements. We work as an extension of your team and hand over documentation your own engineers can pick up and reuse."
+  }
+}
