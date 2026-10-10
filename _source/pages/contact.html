@@ -1,0 +1,84 @@
+<!--meta {"title":"Start a project","description":"Tell Sheerwater Studios what you want to build or fix. Free scoping call, a written scope and a fixed price within a couple of working days.","key":"contact"} -->
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Start a project</h1>
+    <p class="lede">Tell us what you are trying to do. We reply with questions or a straight answer on scope, price and timing, normally within two working days.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="wrap split wide-left">
+    <form data-form="contact" class="panel" aria-label="Project enquiry form">
+      <div class="form-grid two">
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input type="text" id="f-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-org">Organisation <span class="hint">Optional</span></label>
+          <input type="text" id="f-org" name="organisation" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="f-package">Package</label>
+          <select id="f-package" name="package">
+            {{package_options}}
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-size">Size of the work</label>
+          <select id="f-size" name="size">
+            <option value="">Not sure yet</option>
+            <option value="small">Small: one environment or a few servers</option>
+            <option value="medium">Medium: a typical team</option>
+            <option value="large">Large: several environments or a bigger estate</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-when">When do you want to start?</label>
+          <select id="f-when" name="start">
+            <option value="">Not sure yet</option>
+            <option value="As soon as possible">As soon as possible</option>
+            <option value="Within a month">Within a month</option>
+            <option value="In two to three months">In two to three months</option>
+            <option value="Just exploring">Just exploring</option>
+          </select>
+        </div>
+      </div>
+      <div class="choice" style="margin-bottom:1rem">
+        <input type="checkbox" id="f-retainer" name="retainer">
+        <label for="f-retainer">I am interested in monthly support after the project</label>
+      </div>
+      <div class="field">
+        <label for="f-message">What are you trying to do? <span class="hint">What you have today, what is going wrong and what good looks like.</span></label>
+        <textarea id="f-message" name="message" required></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="f-gotcha">Leave this field empty</label>
+        <input type="text" id="f-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="choice">
+        <input type="checkbox" id="f-consent" name="consent" data-label="Consent given" required>
+        <label for="f-consent">I agree that Sheerwater Studios may store these details to reply to my enquiry. See the <a href="privacy.html">privacy notice</a>.</label>
+      </div>
+      <div class="btn-row"><button class="btn btn-primary" type="submit">Send enquiry</button></div>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <div>
+      <h2>What happens next</h2>
+      <ol>
+        <li>We read your enquiry and reply with questions or a time for a free thirty-minute call.</li>
+        <li>After the call, you get a one-page written scope with a fixed price.</li>
+        <li>If you agree, we agree a start date and begin.</li>
+      </ol>
+      <div class="notice">
+        <p><strong>Early client pricing.</strong> Mention it in your message if you would be happy to give a short written reference when the work is done.</p>
+      </div>
+      <p>Prefer email? Write to <a data-config="email" data-show href="contact.html">our inbox</a>, or find us on <a href="https://www.linkedin.com/company/sheerwater-studios/" rel="noopener">LinkedIn</a>.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+<meta name="theme-color" content="#0E2830">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sheerwater Studios">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<script>document.documentElement.className += ' js';</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E2830'/%3E%3Cpath d='M5 13c4-5 7 5 11 0s7 5 11 0M5 21c4-5 7 5 11 0s7 5 11 0' fill='none' stroke='%23F2B100' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="Sheerwater Studios, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="7" fill="currentColor"/>
+        <path d="M5 13c4-5 7 5 11 0s7 5 11 0M5 21c4-5 7 5 11 0s7 5 11 0" fill="none" stroke="var(--buoy)" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Sheerwater <span class="brand-sub">Studios</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      {{nav}}
+      <a class="btn btn-primary btn-small" href="contact.html">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{{content}}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-brand">Sheerwater Studios</p>
+      <p class="footer-text">A founder-led engineering studio in Woking, Surrey. Infrastructure, automation and private AI for UK research teams, startups and small businesses.</p>
+    </div>
+    <div>
+      <p class="footer-head">Studio</p>
+      <ul class="footer-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="private-ai.html">Private AI</a></li>
+        <li><a href="lab.html">Lab</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-head">Work with us</p>
+      <ul class="footer-links">
+        <li><a href="contact.html">Start a project</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="apply.html">Register your interest</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-head">Find us</p>
+      <ul class="footer-links">
+        <li><a data-config="email" data-show href="contact.html">Email us</a></li>
+        <li><a href="https://www.linkedin.com/company/sheerwater-studios/" rel="noopener">LinkedIn</a></li>
+        <li><a data-config="github" href="lab.html" rel="noopener">GitHub</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p>&copy; {{year}} Sheerwater Studios. Woking, Surrey, United Kingdom.</p>
+  </div>
+  <!-- When the business is incorporated, add the company name, number and registered office here. -->
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/packages.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+[
+  {
+    "slug": "cloud-landing-zone",
+    "name": "Cloud landing zone",
+    "summary": "An Azure or AWS foundation written in Terraform: networking, identity, logging and cost controls.",
+    "timeline": "2-3 weeks",
+    "low": 3500,
+    "high": 6000,
+    "audiences": ["startup", "regulated", "msp"],
+    "need": "cloud",
+    "deliverables": [
+      "Terraform modules in your own repository",
+      "Network layout: virtual networks, subnets and security rules",
+      "Identity and access baseline, with least-privilege roles",
+      "Central logging and budget alerts",
+      "A handover session and a written runbook"
+    ],
+    "fit": "Teams whose cloud account was built by hand and now needs to be repeatable and safe to change.",
+    "needs": "Cloud account access and a list of the workloads you plan to run."
+  },
+  {
+    "slug": "kubernetes-baseline",
+    "name": "Kubernetes baseline",
+    "summary": "A hardened cluster with ingress, TLS and monitoring, ready for your first workloads.",
+    "timeline": "2-4 weeks",
+    "low": 4000,
+    "high": 8000,
+    "audiences": ["startup", "research", "msp"],
+    "need": "containers",
+    "deliverables": [
+      "Cluster build, managed or self-hosted, defined as code",
+      "Ingress and automatic TLS certificates",
+      "Hardening to a baseline we agree with you",
+      "Prometheus and Grafana monitoring with starter dashboards",
+      "A worked example deployment and a runbook"
+    ],
+    "fit": "Teams moving from single servers to containers, or taking over a cluster nobody fully understands.",
+    "needs": "Details of the applications to run and where the cluster will live."
+  },
+  {
+    "slug": "cicd-pipeline",
+    "name": "CI/CD pipeline",
+    "summary": "Automated build, test and deploy, so releases stop depending on one person's laptop.",
+    "timeline": "1-3 weeks",
+    "low": 2500,
+    "high": 5000,
+    "audiences": ["startup", "msp"],
+    "need": "ship",
+    "deliverables": [
+      "Pipeline in GitHub Actions or Jenkins, whichever suits your team",
+      "Containerised builds with Docker",
+      "Separate staging and production environments",
+      "Secrets handling and a documented rollback step",
+      "Short written guide for your developers"
+    ],
+    "fit": "Small engineering teams that deploy by hand and want faster, safer releases.",
+    "needs": "Repository access and a description of how you release today."
+  },
+  {
+    "slug": "linux-automation",
+    "name": "Linux estate automation",
+    "summary": "Ansible roles that build, patch and harden your Linux servers the same way every time.",
+    "timeline": "2-4 weeks",
+    "low": 3000,
+    "high": 7000,
+    "audiences": ["research", "regulated", "msp"],
+    "need": "linux",
+    "deliverables": [
+      "Ansible roles for builds, patching and hardening",
+      "An inventory and tests so changes can be checked before they run",
+      "Patch status reporting you can show an auditor",
+      "A Git workflow for reviewing configuration changes",
+      "A runbook for your own team"
+    ],
+    "fit": "Organisations running a mix of Red Hat, Rocky, Ubuntu and older systems, patched by hand.",
+    "needs": "A server list, access to a test machine and your current patching rules."
+  },
+  {
+    "slug": "hpc-gpu-cluster",
+    "name": "HPC and GPU cluster setup",
+    "summary": "Slurm scheduling, shared storage and GPU support for a research group or lab.",
+    "timeline": "3-6 weeks",
+    "low": 5000,
+    "high": 15000,
+    "audiences": ["research"],
+    "need": "compute",
+    "deliverables": [
+      "Slurm scheduler set up and tuned for your workloads",
+      "Shared storage layout and user accounts",
+      "GPU drivers and a container runtime for researchers",
+      "Monitoring and usage reports",
+      "A user guide written for scientists, not administrators"
+    ],
+    "fit": "Research groups with new or shared compute and nobody on staff to run it.",
+    "needs": "Hardware details, the software your researchers use and the number of users."
+  },
+  {
+    "slug": "private-ai-pilot",
+    "name": "Private AI pilot",
+    "summary": "A language model running on your own infrastructure, tested on one real use case.",
+    "timeline": "3-5 weeks",
+    "low": 6000,
+    "high": 12000,
+    "audiences": ["regulated", "startup", "research"],
+    "need": "ai",
+    "deliverables": [
+      "A self-hosted language model on your servers or in your private cloud",
+      "Access controls and audit logging",
+      "One use case tested against your own documents",
+      "A human approval step before the AI changes anything",
+      "A usage guide and a plan for what comes after the pilot"
+    ],
+    "fit": "Teams that want AI on sensitive information without sending it to a third-party service.",
+    "needs": "One clear use case, sample documents and a decision-maker for data access."
+  }
+]

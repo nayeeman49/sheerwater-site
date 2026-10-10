@@ -1,0 +1,69 @@
+<!--meta {"title":"Services and fixed-price packages","description":"Six fixed-scope packages: cloud landing zones, Kubernetes, CI/CD, Linux automation, HPC and GPU clusters, and private AI. See what is included and estimate a price.","key":"services"} -->
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Services and fixed-price packages</h1>
+    <p class="lede">Each package has a stated deliverable, timeline and price range. Choose the closest one and we adjust the scope to fit you.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="wrap">
+    <div id="audience-filter" class="chips" role="group" aria-label="Filter packages by who they suit">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">All packages</button>
+      <button type="button" class="chip" data-filter="research" aria-pressed="false">Research groups</button>
+      <button type="button" class="chip" data-filter="startup" aria-pressed="false">Startups</button>
+      <button type="button" class="chip" data-filter="regulated" aria-pressed="false">Regulated businesses</button>
+      <button type="button" class="chip" data-filter="msp" aria-pressed="false">IT providers</button>
+    </div>
+    <p id="audience-count" class="muted" aria-live="polite"></p>
+    {{packages_detail}}
+  </div>
+</section>
+
+<section class="section tint" id="estimate">
+  <div class="wrap split wide-left">
+    <div>
+      <h2>Estimate your price</h2>
+      <p>Pick a package and a size. Small means one environment or a handful of servers, medium is a typical team, and large is several environments or a bigger estate. This gives an indicative range only. The fixed price comes after a scoping call.</p>
+    </div>
+    <form class="panel" id="estimator" aria-labelledby="est-title" onsubmit="return false">
+      <h3 id="est-title">Indicative price</h3>
+      <div class="field">
+        <label for="est-package">Package</label>
+        <select id="est-package">
+          {{estimator_options}}
+        </select>
+      </div>
+      <fieldset>
+        <legend class="label">Size of the work</legend>
+        <div class="choice-row">
+          <div class="choice"><input type="radio" id="est-small" name="est-size" value="small"><label for="est-small">Small</label></div>
+          <div class="choice"><input type="radio" id="est-medium" name="est-size" value="medium" checked><label for="est-medium">Medium</label></div>
+          <div class="choice"><input type="radio" id="est-large" name="est-size" value="large"><label for="est-large">Large</label></div>
+        </div>
+      </fieldset>
+      <div class="choice"><input type="checkbox" id="est-retainer"><label for="est-retainer">Include monthly support after handover</label></div>
+      <div class="result" aria-live="polite">
+        <p class="estimate" id="est-total"></p>
+        <p class="result-meta" id="est-time"></p>
+        <p id="est-retainer-out" class="result-meta" hidden></p>
+        <p class="estimate-note">Excluding VAT. Estimates are a guide, not an offer.</p>
+        <a class="btn btn-primary btn-small" id="est-link" href="contact.html">Request a fixed quote</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>Monthly support</h2>
+      <p>After a project, you can keep us on for patching, monitoring and change requests. Support typically runs from about &pound;750 to &pound;2,500 a month, depending on the size of the estate and the hours agreed.</p>
+    </div>
+    <div>
+      <h2>Something not listed?</h2>
+      <p>If your need sits between packages, describe it. We build custom scopes for Linux, cloud, networking and automation work, and say plainly when it is outside what we do well.</p>
+      <p><a href="contact.html">Tell us what you need</a></p>
+    </div>
+  </div>
+</section>

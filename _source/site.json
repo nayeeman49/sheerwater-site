@@ -1,0 +1,11 @@
+{
+  "name": "Sheerwater Studios",
+  "siteUrl": "https://nayeeman49.github.io/sheerwater-site",
+  "nav": [
+    { "href": "services.html", "label": "Services", "key": "services" },
+    { "href": "private-ai.html", "label": "Private AI", "key": "private-ai" },
+    { "href": "lab.html", "label": "Lab", "key": "lab" },
+    { "href": "about.html", "label": "About", "key": "about" },
+    { "href": "careers.html", "label": "Careers", "key": "careers" }
+  ]
+}

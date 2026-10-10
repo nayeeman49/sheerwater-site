@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services and fixed-price packages | Sheerwater Studios</title>
+<meta name="description" content="Six fixed-scope packages: cloud landing zones, Kubernetes, CI/CD, Linux automation, HPC and GPU clusters, and private AI. See what is included and estimate a price.">
+<link rel="canonical" href="https://nayeeman49.github.io/sheerwater-site/services.html">
+<meta name="theme-color" content="#0E2830">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sheerwater Studios">
+<meta property="og:title" content="Services and fixed-price packages | Sheerwater Studios">
+<meta property="og:description" content="Six fixed-scope packages: cloud landing zones, Kubernetes, CI/CD, Linux automation, HPC and GPU clusters, and private AI. See what is included and estimate a price.">
+<meta property="og:url" content="https://nayeeman49.github.io/sheerwater-site/services.html">
+<script>document.documentElement.className += ' js';</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E2830'/%3E%3Cpath d='M5 13c4-5 7 5 11 0s7 5 11 0M5 21c4-5 7 5 11 0s7 5 11 0' fill='none' stroke='%23F2B100' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="Sheerwater Studios, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="7" fill="currentColor"/>
+        <path d="M5 13c4-5 7 5 11 0s7 5 11 0M5 21c4-5 7 5 11 0s7 5 11 0" fill="none" stroke="var(--buoy)" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Sheerwater <span class="brand-sub">Studios</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="private-ai.html">Private AI</a>
+      <a href="lab.html">Lab</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a class="btn btn-primary btn-small" href="contact.html">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Services and fixed-price packages</h1>
+    <p class="lede">Each package has a stated deliverable, timeline and price range. Choose the closest one and we adjust the scope to fit you.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="wrap">
+    <div id="audience-filter" class="chips" role="group" aria-label="Filter packages by who they suit">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">All packages</button>
+      <button type="button" class="chip" data-filter="research" aria-pressed="false">Research groups</button>
+      <button type="button" class="chip" data-filter="startup" aria-pressed="false">Startups</button>
+      <button type="button" class="chip" data-filter="regulated" aria-pressed="false">Regulated businesses</button>
+      <button type="button" class="chip" data-filter="msp" aria-pressed="false">IT providers</button>
+    </div>
+    <p id="audience-count" class="muted" aria-live="polite"></p>
+    <article class="pkg-detail" id="cloud-landing-zone" data-audiences="startup regulated msp">
+  <div class="pkg-detail-head">
+    <h3>Cloud landing zone</h3>
+    <p class="pkg-facts"><span class="pkg-price">£3,500 to £6,000 plus VAT</span><span class="pkg-time">2-3 weeks</span></p>
+  </div>
+  <p class="lede">An Azure or AWS foundation written in Terraform: networking, identity, logging and cost controls.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What you get</h4>
+      <ul>
+        <li>Terraform modules in your own repository</li>
+        <li>Network layout: virtual networks, subnets and security rules</li>
+        <li>Identity and access baseline, with least-privilege roles</li>
+        <li>Central logging and budget alerts</li>
+        <li>A handover session and a written runbook</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Teams whose cloud account was built by hand and now needs to be repeatable and safe to change.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>Cloud account access and a list of the workloads you plan to run.</dd>
+      <dt><h4>Often chosen by</h4></dt>
+      <dd>startups, regulated businesses, IT providers</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=cloud-landing-zone">Request this package</a></p>
+</article>
+<article class="pkg-detail" id="kubernetes-baseline" data-audiences="startup research msp">
+  <div class="pkg-detail-head">
+    <h3>Kubernetes baseline</h3>
+    <p class="pkg-facts"><span class="pkg-price">£4,000 to £8,000 plus VAT</span><span class="pkg-time">2-4 weeks</span></p>
+  </div>
+  <p class="lede">A hardened cluster with ingress, TLS and monitoring, ready for your first workloads.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What you get</h4>
+      <ul>
+        <li>Cluster build, managed or self-hosted, defined as code</li>
+        <li>Ingress and automatic TLS certificates</li>
+        <li>Hardening to a baseline we agree with you</li>
+        <li>Prometheus and Grafana monitoring with starter dashboards</li>
+        <li>A worked example deployment and a runbook</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Teams moving from single servers to containers, or taking over a cluster nobody fully understands.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>Details of the applications to run and where the cluster will live.</dd>
+      <dt><h4>Often chosen by</h4></dt>
+      <dd>startups, research groups, IT providers</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=kubernetes-baseline">Request this package</a></p>
+</article>
+<article class="pkg-detail" id="cicd-pipeline" data-audiences="startup msp">
+  <div class="pkg-detail-head">
+    <h3>CI/CD pipeline</h3>
+    <p class="pkg-facts"><span class="pkg-price">£2,500 to £5,000 plus VAT</span><span class="pkg-time">1-3 weeks</span></p>
+  </div>
+  <p class="lede">Automated build, test and deploy, so releases stop depending on one person's laptop.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What you get</h4>
+      <ul>
+        <li>Pipeline in GitHub Actions or Jenkins, whichever suits your team</li>
+        <li>Containerised builds with Docker</li>
+        <li>Separate staging and production environments</li>
+        <li>Secrets handling and a documented rollback step</li>
+        <li>Short written guide for your developers</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Small engineering teams that deploy by hand and want faster, safer releases.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>Repository access and a description of how you release today.</dd>
+      <dt><h4>Often chosen by</h4></dt>
+      <dd>startups, IT providers</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=cicd-pipeline">Request this package</a></p>
+</article>
+<article class="pkg-detail" id="linux-automation" data-audiences="research regulated msp">
+  <div class="pkg-detail-head">
+    <h3>Linux estate automation</h3>
+    <p class="pkg-facts"><span class="pkg-price">£3,000 to £7,000 plus VAT</span><span class="pkg-time">2-4 weeks</span></p>
+  </div>
+  <p class="lede">Ansible roles that build, patch and harden your Linux servers the same way every time.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What you get</h4>
+      <ul>
+        <li>Ansible roles for builds, patching and hardening</li>
+        <li>An inventory and tests so changes can be checked before they run</li>
+        <li>Patch status reporting you can show an auditor</li>
+        <li>A Git workflow for reviewing configuration changes</li>
+        <li>A runbook for your own team</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Organisations running a mix of Red Hat, Rocky, Ubuntu and older systems, patched by hand.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>A server list, access to a test machine and your current patching rules.</dd>
+      <dt><h4>Often chosen by</h4></dt>
+      <dd>research groups, regulated businesses, IT providers</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=linux-automation">Request this package</a></p>
+</article>
+<article class="pkg-detail" id="hpc-gpu-cluster" data-audiences="research">
+  <div class="pkg-detail-head">
+    <h3>HPC and GPU cluster setup</h3>
+    <p class="pkg-facts"><span class="pkg-price">£5,000 to £15,000 plus VAT</span><span class="pkg-time">3-6 weeks</span></p>
+  </div>
+  <p class="lede">Slurm scheduling, shared storage and GPU support for a research group or lab.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What you get</h4>
+      <ul>
+        <li>Slurm scheduler set up and tuned for your workloads</li>
+        <li>Shared storage layout and user accounts</li>
+        <li>GPU drivers and a container runtime for researchers</li>
+        <li>Monitoring and usage reports</li>
+        <li>A user guide written for scientists, not administrators</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Research groups with new or shared compute and nobody on staff to run it.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>Hardware details, the software your researchers use and the number of users.</dd>
+      <dt><h4>Often chosen by</h4></dt>
+      <dd>research groups</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=hpc-gpu-cluster">Request this package</a></p>
+</article>
+<article class="pkg-detail" id="private-ai-pilot" data-audiences="regulated startup research">
+  <div class="pkg-detail-head">
+    <h3>Private AI pilot</h3>
+    <p class="pkg-facts"><span class="pkg-price">£6,000 to £12,000 plus VAT</span><span class="pkg-time">3-5 weeks</span></p>
+  </div>
+  <p class="lede">A language model running on your own infrastructure, tested on one real use case.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What you get</h4>
+      <ul>
+        <li>A self-hosted language model on your servers or in your private cloud</li>
+        <li>Access controls and audit logging</li>
+        <li>One use case tested against your own documents</li>
+        <li>A human approval step before the AI changes anything</li>
+        <li>A usage guide and a plan for what comes after the pilot</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Teams that want AI on sensitive information without sending it to a third-party service.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>One clear use case, sample documents and a decision-maker for data access.</dd>
+      <dt><h4>Often chosen by</h4></dt>
+      <dd>regulated businesses, startups, research groups</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=private-ai-pilot">Request this package</a></p>
+</article>
+  </div>
+</section>
+
+<section class="section tint" id="estimate">
+  <div class="wrap split wide-left">
+    <div>
+      <h2>Estimate your price</h2>
+      <p>Pick a package and a size. Small means one environment or a handful of servers, medium is a typical team, and large is several environments or a bigger estate. This gives an indicative range only. The fixed price comes after a scoping call.</p>
+    </div>
+    <form class="panel" id="estimator" aria-labelledby="est-title" onsubmit="return false">
+      <h3 id="est-title">Indicative price</h3>
+      <div class="field">
+        <label for="est-package">Package</label>
+        <select id="est-package">
+          <option value="cloud-landing-zone">Cloud landing zone</option>
+<option value="kubernetes-baseline">Kubernetes baseline</option>
+<option value="cicd-pipeline">CI/CD pipeline</option>
+<option value="linux-automation">Linux estate automation</option>
+<option value="hpc-gpu-cluster">HPC and GPU cluster setup</option>
+<option value="private-ai-pilot">Private AI pilot</option>
+        </select>
+      </div>
+      <fieldset>
+        <legend class="label">Size of the work</legend>
+        <div class="choice-row">
+          <div class="choice"><input type="radio" id="est-small" name="est-size" value="small"><label for="est-small">Small</label></div>
+          <div class="choice"><input type="radio" id="est-medium" name="est-size" value="medium" checked><label for="est-medium">Medium</label></div>
+          <div class="choice"><input type="radio" id="est-large" name="est-size" value="large"><label for="est-large">Large</label></div>
+        </div>
+      </fieldset>
+      <div class="choice"><input type="checkbox" id="est-retainer"><label for="est-retainer">Include monthly support after handover</label></div>
+      <div class="result" aria-live="polite">
+        <p class="estimate" id="est-total"></p>
+        <p class="result-meta" id="est-time"></p>
+        <p id="est-retainer-out" class="result-meta" hidden></p>
+        <p class="estimate-note">Excluding VAT. Estimates are a guide, not an offer.</p>
+        <a class="btn btn-primary btn-small" id="est-link" href="contact.html">Request a fixed quote</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>Monthly support</h2>
+      <p>After a project, you can keep us on for patching, monitoring and change requests. Support typically runs from about &pound;750 to &pound;2,500 a month, depending on the size of the estate and the hours agreed.</p>
+    </div>
+    <div>
+      <h2>Something not listed?</h2>
+      <p>If your need sits between packages, describe it. We build custom scopes for Linux, cloud, networking and automation work, and say plainly when it is outside what we do well.</p>
+      <p><a href="contact.html">Tell us what you need</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-brand">Sheerwater Studios</p>
+      <p class="footer-text">A founder-led engineering studio in Woking, Surrey. Infrastructure, automation and private AI for UK research teams, startups and small businesses.</p>
+    </div>
+    <div>
+      <p class="footer-head">Studio</p>
+      <ul class="footer-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="private-ai.html">Private AI</a></li>
+        <li><a href="lab.html">Lab</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-head">Work with us</p>
+      <ul class="footer-links">
+        <li><a href="contact.html">Start a project</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="apply.html">Register your interest</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-head">Find us</p>
+      <ul class="footer-links">
+        <li><a data-config="email" data-show href="contact.html">Email us</a></li>
+        <li><a href="https://www.linkedin.com/company/sheerwater-studios/" rel="noopener">LinkedIn</a></li>
+        <li><a data-config="github" href="lab.html" rel="noopener">GitHub</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p>&copy; 2026 Sheerwater Studios. Woking, Surrey, United Kingdom.</p>
+  </div>
+  <!-- When the business is incorporated, add the company name, number and registered office here. -->
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/packages.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

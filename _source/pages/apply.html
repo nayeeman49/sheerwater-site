@@ -1,0 +1,80 @@
+<!--meta {"title":"Apply or register your interest","description":"Apply for a contract role at Sheerwater Studios, or register your interest for future projects. A short form takes about five minutes.","key":"careers"} -->
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Apply or register your interest</h1>
+    <p class="lede">Tell us what you do and where we can see it. Links to code or designs help more than a long CV.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="wrap split wide-left">
+    <form data-form="apply" class="panel" aria-label="Application form">
+      <div class="form-grid two">
+        <div class="field">
+          <label for="f-name">Full name</label>
+          <input type="text" id="f-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-location">Where are you based? <span class="hint">City and country</span></label>
+          <input type="text" id="f-location" name="location" autocomplete="address-level2" required>
+        </div>
+        <div class="field">
+          <label for="f-role">Role</label>
+          <select id="f-role" name="role" required>
+            {{role_options}}
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-years">Years of professional experience</label>
+          <input type="number" id="f-years" name="years" min="0" max="50" inputmode="numeric" required>
+        </div>
+        <div class="field">
+          <label for="f-hours">Hours a week you could offer</label>
+          <select id="f-hours" name="hours" required>
+            <option value="">Choose one</option>
+            <option value="Under 10">Under 10</option>
+            <option value="10 to 20">10 to 20</option>
+            <option value="20 to 30">20 to 30</option>
+            <option value="Full time">Full time</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-links">Links to your work <span class="hint">GitHub, portfolio, LinkedIn or Figma. One or more.</span></label>
+        <input type="url" id="f-links" name="links" placeholder="https://" required>
+      </div>
+      <div class="field">
+        <label for="f-rate">Rate you expect <span class="hint">Optional. Say the currency and whether it is hourly, daily or monthly.</span></label>
+        <input type="text" id="f-rate" name="rate">
+      </div>
+      <div class="field">
+        <label for="f-message">Tell us about your best piece of work <span class="hint">A few sentences: what it was, what you did and what you would change.</span></label>
+        <textarea id="f-message" name="message" required></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="f-gotcha">Leave this field empty</label>
+        <input type="text" id="f-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="choice">
+        <input type="checkbox" id="f-consent" name="consent" data-label="Consent given" required>
+        <label for="f-consent">I agree that Sheerwater Studios may store these details to contact me about work. I can ask for them to be deleted at any time. See the <a href="privacy.html">privacy notice</a>.</label>
+      </div>
+      <div class="btn-row"><button class="btn btn-primary" type="submit">Send application</button></div>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <div>
+      <h2>What happens next</h2>
+      <ol>
+        <li>We read every application ourselves.</li>
+        <li>If a project matches your skills, we invite you to a thirty-minute call.</li>
+        <li>If there is no match yet, we keep your details for future projects and tell you if that changes.</li>
+      </ol>
+      <p class="muted">Roles are contract work. There is no equity or unpaid work, and any trial task is paid.</p>
+    </div>
+  </div>
+</section>

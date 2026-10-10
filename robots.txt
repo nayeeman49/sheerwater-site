@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nayeeman49.github.io/sheerwater-site/sitemap.xml

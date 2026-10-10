@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "full-stack-engineer",
+    "title": "Full-stack engineer",
+    "group": "engineering",
+    "summary": "Build web and mobile products for our own studio products and for client projects.",
+    "work": [
+      "Build features across a React or Next.js front end and a Node.js or Python back end",
+      "Design and query PostgreSQL databases and write clear APIs",
+      "Work from written briefs and take part in weekly demos"
+    ],
+    "bring": [
+      "Two or more years building production web applications",
+      "Comfort with Git, code review and automated tests",
+      "Flutter or React Native experience is a bonus"
+    ]
+  },
+  {
+    "slug": "devops-platform-engineer",
+    "title": "DevOps and platform engineer",
+    "group": "engineering",
+    "summary": "Deliver cloud, Kubernetes and automation work for client infrastructure projects.",
+    "work": [
+      "Write Terraform and Ansible for cloud and Linux projects",
+      "Build and harden Kubernetes clusters and CI/CD pipelines",
+      "Document every build so clients can run it themselves"
+    ],
+    "bring": [
+      "Hands-on Linux administration and scripting in Bash or Python",
+      "Experience with Terraform, Docker and either Azure or AWS",
+      "Careful habits around credentials, change control and handover notes"
+    ]
+  },
+  {
+    "slug": "ai-ml-engineer",
+    "title": "AI and machine learning engineer",
+    "group": "engineering",
+    "summary": "Help deploy private, self-hosted AI systems on client infrastructure.",
+    "work": [
+      "Deploy and test open-weight language models on GPU servers",
+      "Build document search and approval-gated agent workflows",
+      "Measure quality and write up what works and what does not"
+    ],
+    "bring": [
+      "Strong Python and experience serving models or building retrieval systems",
+      "Familiarity with GPUs, containers and Linux",
+      "A habit of testing claims before repeating them"
+    ]
+  },
+  {
+    "slug": "qa-test-engineer",
+    "title": "QA and test automation engineer",
+    "group": "engineering",
+    "summary": "Check our products and client deliveries before anyone else sees them.",
+    "work": [
+      "Write automated tests for web, mobile and API features",
+      "Test infrastructure changes in staging and report clearly",
+      "Keep a simple, up-to-date test plan for each project"
+    ],
+    "bring": [
+      "Experience with Playwright, Cypress, pytest or similar tools",
+      "Clear written English for bug reports",
+      "Interest in infrastructure testing is a bonus"
+    ]
+  },
+  {
+    "slug": "ui-ux-designer",
+    "title": "UI and UX designer",
+    "group": "design",
+    "summary": "Design clear, accessible interfaces for mobile and web products, project by project.",
+    "work": [
+      "Turn product ideas into flows, wireframes and finished screens in Figma",
+      "Build and maintain a small design system for each product",
+      "Review builds against the design and flag differences"
+    ],
+    "bring": [
+      "A portfolio with shipped web or mobile work",
+      "Knowledge of accessibility basics",
+      "Ability to explain design choices to engineers and clients"
+    ]
+  }
+]
