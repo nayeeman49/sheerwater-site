@@ -9,7 +9,6 @@ A static, multi-page website with no framework and no server. It works on GitHub
 | Home | `index.html` | Package finder: two questions, one recommended package |
 | Services | `services.html` | Six packages, audience filter, price estimator |
 | Private AI | `private-ai.html` | Pilot explainer, five-week plan, FAQ |
-| Lab | `lab.html` | Projects the studio is building |
 | About | `about.html` | Founder and how the studio works |
 | Careers | `careers.html` | How hiring works, filterable roles with details |
 | Apply | `apply.html` | Application form, with the role pre-selected from the Careers page |
@@ -59,7 +58,6 @@ Then upload the changed files. You can also edit the built `.html` files directl
 - [ ] Set your site address in `_source/site.json` (`siteUrl`), rebuild, so the sitemap and canonical links are correct.
 - [ ] Check the contact email in `assets/config.js`. It is currently the address from your CV, and it will be public.
 - [ ] Read `privacy.html`. The retention periods (12 and 24 months) are suggestions, so set the ones you will actually follow.
-- [ ] Confirm the Lab page describes your projects accurately, and add repository links when you are happy for them to be public.
 - [ ] Check that nothing on the site draws on your employer's work, clients or information.
 - [ ] Check your employment contract allows outside business activity.
 - [ ] Once the business is a limited company, add its name, number and registered office to the footer (there is a comment marking the spot in `_source/layout.html`).
