@@ -192,6 +192,9 @@
       if (cfg.formEndpoint) {
         var data = new FormData(form);
         data.append('_subject', subject);
+        var roleSel = form.querySelector('[name="role"]');
+        if (roleSel && roleSel.selectedIndex > 0) { data.append('role_title', roleSel.options[roleSel.selectedIndex].text); }
+        data.append('from_name', 'Sheerwater Consulting website');
         if (cfg.formAccessKey) { data.append('access_key', cfg.formAccessKey); data.append('subject', subject); }
         say('Sending...', '');
         fetch(cfg.formEndpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
