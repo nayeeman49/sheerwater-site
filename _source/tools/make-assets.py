@@ -58,7 +58,33 @@ def crop(img, box, pad):
 
 # Content boxes measured from the original: mark, and the whole lockup (mark + wordmark + subtitle).
 mark = crop(clear, (145, 67, 355, 307), 8)
-lockup = crop(clear, (103, 67, 398, 418), 12)
+
+
+def build_lockup(name='Sheerwater', sub='Consulting'):
+    """Mark above a drawn wordmark, so the business name can change without the original artwork."""
+    from PIL import ImageDraw, ImageFont
+    fonts = '/usr/share/fonts/truetype/google-fonts/'
+    f_name = ImageFont.truetype(fonts + 'Poppins-Medium.ttf', 58)
+    f_sub = ImageFont.truetype(fonts + 'Poppins-Light.ttf', 24)
+    spacing = 9
+    sub_w = sum(f_sub.getlength(c) for c in sub) + spacing * (len(sub) - 1)
+    name_w = f_name.getlength(name)
+    W = int(max(mark.size[0], name_w, sub_w)) + 40
+    H = mark.size[1] + 24 + 74 + 22 + 34 + 12
+    canvas = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    canvas.alpha_composite(mark, ((W - mark.size[0]) // 2, 6))
+    d = ImageDraw.Draw(canvas)
+    y = mark.size[1] + 24
+    d.text(((W - name_w) / 2, y), name, font=f_name, fill=(255, 255, 255, 255))
+    x = (W - sub_w) / 2
+    y2 = y + 84
+    for c in sub:
+        d.text((x, y2), c, font=f_sub, fill=(8, 251, 250, 255))
+        x += f_sub.getlength(c) + spacing
+    return canvas
+
+
+lockup = build_lockup()
 mark.save(os.path.join(OUT, 'logo-mark.png'), optimize=True)
 lockup.save(os.path.join(OUT, 'logo.png'), optimize=True)
 

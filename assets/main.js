@@ -1,4 +1,4 @@
-/* Sheerwater Studios: small, dependency-free enhancements. The site works without this file. */
+/* Sheerwater Consulting: small, dependency-free enhancements. The site works without this file. */
 (function () {
   'use strict';
 

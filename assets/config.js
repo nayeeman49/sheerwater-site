@@ -1,5 +1,5 @@
 /*
-  Sheerwater Studios: settings you can edit without rebuilding anything.
+  Sheerwater Consulting: settings you can edit without rebuilding anything.
 
   email         Where form submissions are delivered when no form service is set up.
                 Never shown on the site. Clear it once formEndpoint is working.

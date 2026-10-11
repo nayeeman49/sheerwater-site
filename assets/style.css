@@ -1,4 +1,4 @@
-/* Sheerwater Studios. The palette and the rounded, right-angled line style come from the logo. */
+/* Sheerwater Consulting. The palette and the rounded, right-angled line style come from the logo. */
 
 :root {
   color-scheme: dark;
@@ -92,7 +92,7 @@ a:hover { text-decoration-thickness: 2px; }
 .brand-mark { display: block; height: 44px; width: auto; flex: none; }
 .brand-text { display: flex; flex-direction: column; line-height: 1; }
 .brand-name { font-family: var(--display); font-weight: 700; font-size: 1.3rem; letter-spacing: -0.01em; color: #fff; }
-.brand-sub { font-family: var(--display); font-weight: 400; font-size: 0.64rem; letter-spacing: 0.5em; color: var(--cyan); margin-top: 0.45rem; }
+.brand-sub { font-family: var(--display); font-weight: 400; font-size: 0.64rem; letter-spacing: 0.34em; color: var(--cyan); margin-top: 0.45rem; }
 
 .site-nav { display: flex; align-items: center; gap: 0.25rem 1.4rem; flex-wrap: wrap; justify-content: flex-end; }
 .site-nav a:not(.btn) { color: var(--soft); text-decoration: none; padding: 0.4rem 0.1rem; border-bottom: 2px solid transparent; font-weight: 500; }
