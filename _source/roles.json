@@ -28,7 +28,8 @@
       "Experience supervising students or junior staff",
       "Basic understanding of cloud, DevOps or web development"
     ],
-    "trial": "A paid task: turn a short sample scope into a two-week plan with risks and a status report."
+    "trial": "A paid task: turn a short sample scope into a two-week plan with risks and a status report.",
+    "openings": 1
   },
   {
     "slug": "devops-platform-engineer-intern",
@@ -61,7 +62,8 @@
       "Experience with Docker, Terraform, Ansible, Azure or AWS",
       "Progress towards a certification such as Azure Fundamentals, CKA or Terraform Associate"
     ],
-    "trial": "A paid task: deploy a small app to Kubernetes from a Git repository, with an automatic pipeline."
+    "trial": "A paid task: deploy a small app to Kubernetes from a Git repository, with an automatic pipeline.",
+    "openings": 2
   },
   {
     "slug": "ai-ml-engineer-intern",
@@ -94,76 +96,13 @@
       "Familiarity with Docker and GPUs",
       "A thesis, project or portfolio involving machine learning"
     ],
-    "trial": "A paid task: run a local model with a simple question-and-answer interface over a handful of PDF files."
-  },
-  {
-    "slug": "full-stack-engineer-intern",
-    "title": "Full-Stack Engineer Intern",
-    "group": "engineering",
-    "type": "Internship",
-    "summary": "Build web and mobile products for our own studio products and for client projects.",
-    "about": "Help build the apps, websites and APIs that make up our product and client work. You will pair with experienced engineers, write real features and see them shipped, with code review on everything you submit.",
-    "work": [
-      "Build features across a React or Next.js front end and a Node.js or Python back end",
-      "Design databases and write clear, tested APIs",
-      "Build responsive web pages and, where needed, mobile screens",
-      "Write automated tests alongside your code",
-      "Review other people's code and learn from reviews of yours",
-      "Take part in weekly demos and written updates"
-    ],
-    "requirements": [
-      "Minimum: a completed bachelor's degree (or final-year student finishing within six months) in computer science, software engineering, IT or a related field",
-      "Good fluency in written and spoken English",
-      "Solid grounding in JavaScript or TypeScript, plus HTML and CSS",
-      "Experience building at least one full project with a framework such as React, Node.js, Django or Flask",
-      "Knowledge of SQL and relational databases",
-      "Understanding of Git, pull requests and basic testing",
-      "Willing to explore new, fun challenges and pick up unfamiliar tools quickly",
-      "Clear written communication and a willingness to ask questions"
-    ],
-    "nice": [
-      "Mobile experience with Flutter or React Native",
-      "Experience deploying an app to the cloud",
-      "A public portfolio or GitHub profile with projects you are proud of"
-    ],
-    "trial": "A paid task: build a small app with login and a simple API in a few days."
-  },
-  {
-    "slug": "ui-ux-designer-intern",
-    "title": "UI and UX Designer Intern",
-    "group": "design",
-    "type": "Internship",
-    "summary": "Design clear, accessible interfaces for mobile and web products.",
-    "about": "Design the screens and flows people actually use. You will work with engineers and the founder from sketch to finished interface, and see your designs built and shipped.",
-    "work": [
-      "Turn short briefs into wireframes, flows and polished screens in Figma",
-      "Design mobile and web interfaces that are clear and accessible",
-      "Build and maintain small design systems of colours, type and components",
-      "Prepare designs and notes that developers can build from",
-      "Review the finished build against the design",
-      "Test designs with simple user feedback and improve them"
-    ],
-    "requirements": [
-      "Minimum: a completed bachelor's degree (or final-year student finishing within six months) in design, HCI, computer science, media or a related field, or an equivalent portfolio",
-      "Good fluency in written and spoken English",
-      "A portfolio of at least two projects; student and personal work counts",
-      "Skill in Figma or a similar design tool",
-      "Understanding of layout, typography, colour and accessibility basics",
-      "Able to explain your design choices clearly",
-      "Willing to explore new, fun challenges and take feedback well",
-      "Interest in how products are built and how real people use them"
-    ],
-    "nice": [
-      "Basic HTML and CSS",
-      "Experience with prototyping or user testing",
-      "Mobile app design experience"
-    ],
-    "trial": "A paid task: redesign one screen from a short brief and explain your choices."
+    "trial": "A paid task: run a local model with a simple question-and-answer interface over a handful of PDF files.",
+    "openings": 1
   },
   {
     "slug": "social-media-video-editor-intern",
     "title": "Social Media and Video Editor Intern",
-    "group": "design",
+    "group": "media",
     "type": "Internship",
     "summary": "Shape how Sheerwater Consulting looks and sounds online, with short videos, posts and campaigns.",
     "about": "Help us tell the story of our work and our products. You will plan, shoot, edit and publish content for LinkedIn and other channels, turning technical projects into short, clear and engaging pieces that people want to watch and share.",
@@ -191,6 +130,7 @@
       "Interest in technology, cloud or AI, and the ability to explain it simply",
       "Basic photography, audio or motion-graphics skills (After Effects or similar)"
     ],
-    "trial": "A paid task: edit a 30 to 60 second video from supplied footage, with subtitles and a caption."
+    "trial": "A paid task: edit a 30 to 60 second video from supplied footage, with subtitles and a caption.",
+    "openings": 1
   }
 ]

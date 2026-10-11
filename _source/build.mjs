@@ -87,7 +87,7 @@ ${tailored}
     '<ul class="pkg-list">\n' +
     roles.map((r) => `  <li class="job" data-group="${r.group}"><a class="pkg-row" href="job-${r.slug}.html">
     <div><h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p></div>
-    <div class="pkg-facts"><span class="pkg-price">${esc(r.type)}</span><span class="pkg-time">Fully remote, fixed salary</span></div>
+    <div class="pkg-facts"><span class="pkg-price">${esc(r.type)}</span><span class="pkg-time">Fully remote, fixed salary${r.openings > 1 ? `, ${r.openings} positions` : ''}</span></div>
   </a></li>`).join('\n') +
     '\n</ul>',
 
@@ -149,6 +149,7 @@ for (const r of roles) {
       <li><span>Type</span>${esc(r.type)}</li>
       <li><span>Location</span>Fully remote</li>
       <li><span>Salary</span>Fixed</li>
+      <li><span>Positions</span>${r.openings}</li>
     </ul>
     <div class="btn-row"><a class="btn btn-primary" href="apply.html?role=${r.slug}">Apply for this role</a></div>
   </div>
