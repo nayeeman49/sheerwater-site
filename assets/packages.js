@@ -41,5 +41,11 @@ window.SW_PACKAGES = [
     "name": "Application development",
     "summary": "A custom web or mobile app, designed, built and launched in agreed phases, on infrastructure we set up properly.",
     "timeline": "4-12 weeks, in phases"
+  },
+  {
+    "slug": "on-prem-infrastructure",
+    "name": "On-prem infrastructure design and build",
+    "summary": "Servers, storage and networking designed and built in your own rooms or racks, on VMware or Proxmox, and handed over documented.",
+    "timeline": "3-8 weeks"
   }
 ];

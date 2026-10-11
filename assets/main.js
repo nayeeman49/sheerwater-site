@@ -49,7 +49,8 @@
       compute: 'hpc-gpu-cluster',
       ai: 'private-ai-pilot',
       ship: 'cicd-pipeline',
-      app: 'application-development'
+      app: 'application-development',
+      onprem: 'on-prem-infrastructure'
     };
     var whoNote = {
       research: 'Research groups usually start with scheduling and storage. We can size GPUs as part of the work.',
