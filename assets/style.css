@@ -419,3 +419,10 @@ input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 4px rgba(8,251,250
 .crumb a { text-decoration: none; color: var(--soft); transition: color .2s ease; }
 .crumb a:hover { color: var(--cyan); }
 .page-hero .role-facts { margin-top: 1.25rem; }
+
+.leader-photo { display: block; width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 0 1.5rem;
+  border: 4px solid var(--cyan); padding: 4px; background: var(--bg);
+  box-shadow: 0 0 0 2px rgba(0,191,99,.55), 0 0 36px rgba(8,251,250,.28);
+  transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease; }
+.leader-photo:hover { transform: scale(1.04) rotate(-2deg); box-shadow: 0 0 0 2px var(--green), 0 0 50px rgba(8,251,250,.5); }
+@media (max-width: 600px) { .leader-photo { width: 160px; height: 160px; } }
