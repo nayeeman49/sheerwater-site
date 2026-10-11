@@ -87,7 +87,7 @@ ${tailored}
     '<ul class="pkg-list">\n' +
     roles.map((r) => `  <li class="job" data-group="${r.group}"><a class="pkg-row" href="job-${r.slug}.html">
     <div><h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p></div>
-    <div class="pkg-facts"><span class="pkg-price">${esc(r.type)}</span><span class="pkg-time">Fully remote, salary negotiable</span></div>
+    <div class="pkg-facts"><span class="pkg-price">${esc(r.type)}</span><span class="pkg-time">Fully remote, fixed salary</span></div>
   </a></li>`).join('\n') +
     '\n</ul>',
 
@@ -148,7 +148,7 @@ for (const r of roles) {
     <ul class="role-facts" aria-label="Role details">
       <li><span>Type</span>${esc(r.type)}</li>
       <li><span>Location</span>Fully remote</li>
-      <li><span>Salary</span>Negotiable</li>
+      <li><span>Salary</span>Fixed</li>
     </ul>
     <div class="btn-row"><a class="btn btn-primary" href="apply.html?role=${r.slug}">Apply for this role</a></div>
   </div>
@@ -200,7 +200,7 @@ ${ul(r.nice)}
   </div>
 </section>
 `;
-  writePage(`job-${r.slug}.html`, { title: `${r.title}, fully remote`, description: `${r.summary} Fully remote ${r.type.toLowerCase()} with ${site.name}. Salary negotiable.`, key: 'careers' }, content);
+  writePage(`job-${r.slug}.html`, { title: `${r.title}, fully remote`, description: `${r.summary} Fully remote ${r.type.toLowerCase()} with ${site.name}. Fixed salary.`, key: 'careers' }, content);
 }
 
 // Package data for the finder and the estimator, from the same source as the page text.

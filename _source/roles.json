@@ -129,38 +129,6 @@
     "trial": "A paid task: build a small app with login and a simple API in a few days."
   },
   {
-    "slug": "qa-test-engineer-intern",
-    "title": "QA and Test Automation Engineer Intern",
-    "group": "engineering",
-    "type": "Internship",
-    "summary": "Check our products and client deliveries before anyone else sees them.",
-    "about": "Quality is how we earn trust. You will test what the team builds, automate the checks that matter and report problems so clearly that they are easy to fix. It is a strong starting role if you like finding things that others miss.",
-    "work": [
-      "Write and run test cases for web, mobile and API features",
-      "Automate repeated checks with tools such as Playwright, Selenium or Postman",
-      "Test infrastructure changes in a staging environment",
-      "Log defects with clear steps to reproduce them",
-      "Check fixes and run a release checklist before delivery",
-      "Keep a simple, current test plan for each project"
-    ],
-    "requirements": [
-      "Minimum: a completed bachelor's degree (or final-year student finishing within six months) in computer science, IT, engineering or a related field",
-      "Good fluency in written and spoken English, since clear bug reports matter",
-      "Basic programming in Python or JavaScript",
-      "Understanding of how websites and APIs work",
-      "Strong attention to detail and a patient, methodical approach",
-      "Understanding of Git",
-      "Willing to explore new, fun challenges, including breaking things on purpose",
-      "Honest and constructive when reporting problems"
-    ],
-    "nice": [
-      "Experience with Playwright, Selenium, Cypress or Postman",
-      "Knowledge of software testing concepts (ISTQB or similar)",
-      "Basic knowledge of performance or security testing"
-    ],
-    "trial": "A paid task: test a sample website, report defects clearly and automate three checks."
-  },
-  {
     "slug": "ui-ux-designer-intern",
     "title": "UI and UX Designer Intern",
     "group": "design",
@@ -191,5 +159,38 @@
       "Mobile app design experience"
     ],
     "trial": "A paid task: redesign one screen from a short brief and explain your choices."
+  },
+  {
+    "slug": "social-media-video-editor-intern",
+    "title": "Social Media and Video Editor Intern",
+    "group": "design",
+    "type": "Internship",
+    "summary": "Shape how Sheerwater Consulting looks and sounds online, with short videos, posts and campaigns.",
+    "about": "Help us tell the story of our work and our products. You will plan, shoot, edit and publish content for LinkedIn and other channels, turning technical projects into short, clear and engaging pieces that people want to watch and share.",
+    "work": [
+      "Edit short videos, demos and clips for LinkedIn, YouTube and other social channels",
+      "Plan and schedule a regular calendar of posts, and write clear, friendly captions",
+      "Turn technical project updates and screen recordings into simple, engaging stories",
+      "Add subtitles, graphics and our brand look to every piece",
+      "Track what performs well and suggest what to make next",
+      "Help produce launch announcements and recruitment posts"
+    ],
+    "requirements": [
+      "Minimum: a completed bachelor's degree (or final-year student finishing within six months) in media, marketing, communications, design, computer science or a related field, or an equivalent portfolio",
+      "Good fluency in written and spoken English, as most captions and scripts are in English",
+      "A portfolio or sample reel of at least two videos or social campaigns; student and personal work counts",
+      "Skill with a video editor such as Premiere Pro, DaVinci Resolve, Final Cut or CapCut",
+      "Good eye for pacing, sound, text and simple motion graphics",
+      "Comfortable with Canva or Figma for thumbnails and post graphics",
+      "Willing to explore new, fun challenges and try new formats and trends",
+      "Reliable with deadlines and happy to take feedback"
+    ],
+    "nice": [
+      "Experience growing a social media account or running a page",
+      "Basic understanding of social media analytics and scheduling tools",
+      "Interest in technology, cloud or AI, and the ability to explain it simply",
+      "Basic photography, audio or motion-graphics skills (After Effects or similar)"
+    ],
+    "trial": "A paid task: edit a 30 to 60 second video from supplied footage, with subtitles and a caption."
   }
 ]
