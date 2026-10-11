@@ -35,5 +35,11 @@ window.SW_PACKAGES = [
     "name": "Private AI pilot",
     "summary": "A language model running on your own infrastructure, tested on one real use case.",
     "timeline": "3-5 weeks"
+  },
+  {
+    "slug": "application-development",
+    "name": "Application development",
+    "summary": "A custom web or mobile app, designed, built and launched in agreed phases, on infrastructure we set up properly.",
+    "timeline": "4-12 weeks, in phases"
   }
 ];

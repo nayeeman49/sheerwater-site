@@ -6,7 +6,11 @@
     "timeline": "2-3 weeks",
     "low": 1750,
     "high": 3000,
-    "audiences": ["startup", "regulated", "msp"],
+    "audiences": [
+      "startup",
+      "regulated",
+      "msp"
+    ],
     "need": "cloud",
     "deliverables": [
       "Terraform modules in your own repository",
@@ -72,7 +76,11 @@
     "timeline": "2-4 weeks",
     "low": 2000,
     "high": 4000,
-    "audiences": ["startup", "research", "msp"],
+    "audiences": [
+      "startup",
+      "research",
+      "msp"
+    ],
     "need": "containers",
     "deliverables": [
       "Cluster build, managed or self-hosted, defined as code",
@@ -138,7 +146,10 @@
     "timeline": "1-3 weeks",
     "low": 1250,
     "high": 2500,
-    "audiences": ["startup", "msp"],
+    "audiences": [
+      "startup",
+      "msp"
+    ],
     "need": "ship",
     "deliverables": [
       "Pipeline in GitHub Actions or Jenkins, whichever suits your team",
@@ -189,7 +200,11 @@
     "timeline": "2-4 weeks",
     "low": 1500,
     "high": 3500,
-    "audiences": ["research", "regulated", "msp"],
+    "audiences": [
+      "research",
+      "regulated",
+      "msp"
+    ],
     "need": "linux",
     "deliverables": [
       "Ansible roles for builds, patching and hardening",
@@ -255,7 +270,9 @@
     "timeline": "3-6 weeks",
     "low": 2500,
     "high": 7500,
-    "audiences": ["research"],
+    "audiences": [
+      "research"
+    ],
     "need": "compute",
     "deliverables": [
       "Slurm scheduler set up and tuned for your workloads",
@@ -292,7 +309,11 @@
     "timeline": "3-5 weeks",
     "low": 3000,
     "high": 6000,
-    "audiences": ["regulated", "startup", "research"],
+    "audiences": [
+      "regulated",
+      "startup",
+      "research"
+    ],
     "need": "ai",
     "deliverables": [
       "A self-hosted language model on your servers or in your private cloud",
@@ -348,6 +369,91 @@
         "fit": "Research groups with restricted or unpublished data, and spare GPU capacity or a budget to get some.",
         "needs": "The research task, the data rules that apply and details of your GPU hardware.",
         "priceNote": "Smaller if suitable GPUs are already in place. Larger: new hardware setup or integration with an existing cluster."
+      }
+    }
+  },
+  {
+    "slug": "application-development",
+    "name": "Application development",
+    "summary": "A custom web or mobile app, designed, built and launched in agreed phases, on infrastructure we set up properly.",
+    "timeline": "4-12 weeks, in phases",
+    "audiences": [
+      "research",
+      "startup",
+      "regulated",
+      "msp"
+    ],
+    "need": "app",
+    "deliverables": [
+      "A written scope and a clickable design before any code is written",
+      "Web application, mobile app or both, built in short stages with weekly demos",
+      "Back end, database and APIs, with automated tests",
+      "Hosting, deployment pipeline and monitoring set up for you",
+      "Source code in your own repository, with a handover guide",
+      "Optional support after launch"
+    ],
+    "fit": "Teams with a clear idea for a web or mobile product or internal tool who want it built to a fixed scope, phase by phase.",
+    "needs": "A short brief or sketch of what the app should do, who will use it and any systems it must connect to.",
+    "views": {
+      "startup": {
+        "headline": "From idea to a working product your first customers can use.",
+        "scenario": "A founding team has validated an idea but has no engineers free to build it. We agree a small first release, design the key screens, build it in weekly stages and launch it on infrastructure that will not need rebuilding when you grow.",
+        "deliverables": [
+          "A one-page scope of the first release, and what waits for later",
+          "Clickable designs for the key screens, agreed before building starts",
+          "A web app, mobile app or both, with login, a database and an admin view",
+          "Automated tests and a deployment pipeline from the first week",
+          "Hosting, monitoring and backups set up in your own cloud account",
+          "Source code and a handover guide, so you can hire developers later"
+        ],
+        "fit": "Founders and early teams who want a minimum viable product built quickly, with a clean base to grow from.",
+        "needs": "A short brief or sketch, an idea of your first users and any must-have integrations such as payments or email.",
+        "priceNote": "Smaller: one platform, a few screens and standard login. Larger: web and mobile together, payments, many integrations or complex roles and permissions."
+      },
+      "research": {
+        "headline": "Research tools and portals built around how your group works.",
+        "scenario": "A research group tracks samples, runs and results in spreadsheets, and sharing data with collaborators is slow. We build a simple web application that captures the data, controls who can see it and connects to the group's compute and storage.",
+        "deliverables": [
+          "A written scope agreed with the people who will use the tool",
+          "A web application for data entry, search and sharing between collaborators",
+          "Login and permissions that fit your group, including outside collaborators",
+          "Connection to your storage, cluster or existing data sources",
+          "Export of results in the formats your group already uses",
+          "Documentation so a future student or postdoc can maintain it"
+        ],
+        "fit": "Research groups and labs that need a custom tool for data capture, sharing or analysis, and want it maintainable after the project.",
+        "needs": "A description of your current workflow, example data and who needs access.",
+        "priceNote": "Smaller: one workflow and a handful of users. Larger: several data sources, a cluster connection or detailed access rules."
+      },
+      "regulated": {
+        "headline": "Business applications built with your data and access rules in mind.",
+        "scenario": "A professional firm handles client matters through email and shared folders, and wants a secure portal and internal tool. We build the application so that data stays in your environment, access is logged and every change is recorded.",
+        "deliverables": [
+          "A written scope that records data handling and access requirements",
+          "A web application or client portal with role-based access",
+          "Audit logging of who viewed or changed what, and when",
+          "Hosting inside your own cloud account or on your own servers",
+          "Encrypted storage and backups, with a documented recovery step",
+          "A handover guide and a security note for your own reviewers"
+        ],
+        "fit": "Law, health, finance and other firms that handle sensitive client data and need a portal or internal tool they control.",
+        "needs": "Your data and access requirements, where data must be hosted and any review process we must follow.",
+        "priceNote": "Smaller: one portal and a small set of roles. Larger: several user types, document handling, integrations or detailed audit reporting. We build to your requirements, but compliance itself stays your responsibility."
+      },
+      "msp": {
+        "headline": "Extra build capacity for the software your clients ask you for.",
+        "scenario": "An IT provider is asked by clients for custom apps and integrations that sit outside its team's skills. We act as your build partner: we scope, build and hand over the software, and you stay the point of contact for the client.",
+        "deliverables": [
+          "A scope you can put in front of your client, in your own branding if you wish",
+          "A web or mobile application built to the agreed scope in weekly stages",
+          "Deployment to your client's environment, or yours",
+          "Source code, documentation and a handover session for your engineers",
+          "A clear support option for after launch",
+          "Confidentiality terms that protect your client relationship"
+        ],
+        "fit": "IT providers and agencies that want to say yes to client software requests without hiring a developer for each one.",
+        "needs": "The client's brief, your preferred hosting and any rules about branding and communication.",
+        "priceNote": "Smaller: one clear internal tool. Larger: customer-facing apps, several integrations or ongoing change requests."
       }
     }
   }

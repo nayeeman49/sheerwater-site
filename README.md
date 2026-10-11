@@ -7,7 +7,7 @@ A static, multi-page website with no framework and no server. It works on GitHub
 | Page | File | What it does |
 | --- | --- | --- |
 | Home | `index.html` | Package finder: two questions, one recommended package |
-| Services | `services.html` | Six packages, audience filter |
+| Services | `services.html` | Seven packages (incl. application development), audience filter |
 | Private AI | `private-ai.html` | Pilot explainer, five-week plan, FAQ |
 | About | `about.html` | Founder and how the studio works |
 | Careers | `careers.html` | How hiring works, filterable roles with details |
