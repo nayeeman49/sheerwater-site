@@ -7,8 +7,6 @@
 
   function $(sel, root) { return (root || document).querySelector(sel); }
   function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
-  function gbp(n) { return '£' + Math.round(n).toLocaleString('en-GB'); }
-  function round100(n) { return Math.round(n / 100) * 100; }
   function pkg(slug) {
     for (var i = 0; i < packages.length; i++) { if (packages[i].slug === slug) { return packages[i]; } }
     return null;
@@ -74,7 +72,7 @@
         '<div class="btn-row"><a class="btn btn-primary btn-small result-quote">Request this package</a>' +
         '<a class="btn btn-quiet btn-small result-detail">See what is included</a></div>';
       $('.result-name', out).textContent = p.name;
-      $('.result-meta', out).textContent = gbp(p.low) + ' to ' + gbp(p.high) + ' plus VAT, ' + p.timeline;
+      $('.result-meta', out).textContent = 'Fixed price, ' + p.timeline;
       $('.result-summary', out).textContent = p.summary;
       if (note) { $('.result-note', out).textContent = note; }
       $('.result-quote', out).href = 'contact.html?package=' + encodeURIComponent(p.slug);
@@ -112,58 +110,10 @@
     applyFilter(known ? wantedAudience : 'all');
   }
 
-  /* Services page: estimator */
-  var est = $('#estimator');
-  if (est) {
-    var estPkg = $('#est-package');
-    var estTotal = $('#est-total');
-    var estTime = $('#est-time');
-    var estRetain = $('#est-retainer');
-    var estRetainOut = $('#est-retainer-out');
-    var estLink = $('#est-link');
-
-    var sizeBand = {
-      small: [0, 0.34],
-      medium: [0.33, 0.67],
-      large: [0.66, 1]
-    };
-    var retainerBand = { small: [750, 1250], medium: [1250, 1750], large: [1750, 2500] };
-
-    var selectedSize = function () {
-      var r = $('input[name="est-size"]:checked', est);
-      return r ? r.value : 'medium';
-    };
-
-    var renderEstimate = function () {
-      var p = pkg(estPkg.value);
-      if (!p) { return; }
-      var size = selectedSize();
-      var band = sizeBand[size];
-      var span = p.high - p.low;
-      var low = round100(p.low + span * band[0]);
-      var high = round100(p.low + span * band[1]);
-      estTotal.textContent = gbp(low) + ' to ' + gbp(high);
-      estTime.textContent = p.timeline + ' once the scope is agreed';
-      if (estRetain.checked) {
-        var rb = retainerBand[size];
-        estRetainOut.textContent = 'Monthly support afterwards: about ' + gbp(rb[0]) + ' to ' + gbp(rb[1]) + ' a month.';
-        estRetainOut.hidden = false;
-      } else {
-        estRetainOut.hidden = true;
-      }
-      estLink.href = 'contact.html?package=' + encodeURIComponent(p.slug) + '&size=' + size + (estRetain.checked ? '&retainer=1' : '');
-    };
-
-    est.addEventListener('change', renderEstimate);
-    var wanted = params().get('package');
-    if (wanted && pkg(wanted)) { estPkg.value = wanted; }
-    renderEstimate();
-  }
-
   /* Careers page: group filter */
   var roleBar = $('#role-filter');
   if (roleBar) {
-    var roles = $$('.role');
+    var roles = $$('.job');
     var roleChips = $$('.chip', roleBar);
     var roleCount = $('#role-count');
     var applyRoleFilter = function (value) {
@@ -180,10 +130,6 @@
       c.addEventListener('click', function () { applyRoleFilter(c.getAttribute('data-filter')); });
     });
     applyRoleFilter('all');
-    if (window.location.hash) {
-      var target = $(window.location.hash);
-      if (target && target.tagName === 'DETAILS') { target.open = true; }
-    }
   }
 
   /* Prefill forms from the address (?package=, ?size=, ?retainer=, ?role=) */
@@ -298,7 +244,7 @@
   /* Reveal sections as they scroll into view */
   if ('IntersectionObserver' in window) {
     var targets = Array.prototype.slice.call(document.querySelectorAll(
-      'main .section-head, main .steps li, main .pkg-list li, main .split > *, main .notice, main .role, main .pkg-detail, main .audience-intro, main form.panel'
+      'main .section-head, main .steps li, main .pkg-list li, main .split > *, main .notice, main .job, main .pkg-detail, main .audience-intro, main form.panel'
     )).filter(function (el) { return !el.closest('.hero, .page-hero, [hidden]'); });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {

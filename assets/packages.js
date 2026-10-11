@@ -4,48 +4,36 @@ window.SW_PACKAGES = [
     "slug": "cloud-landing-zone",
     "name": "Cloud landing zone",
     "summary": "An Azure or AWS foundation written in Terraform: networking, identity, logging and cost controls.",
-    "timeline": "2-3 weeks",
-    "low": 1750,
-    "high": 3000
+    "timeline": "2-3 weeks"
   },
   {
     "slug": "kubernetes-baseline",
     "name": "Kubernetes baseline",
     "summary": "A hardened cluster with ingress, TLS and monitoring, ready for your first workloads.",
-    "timeline": "2-4 weeks",
-    "low": 2000,
-    "high": 4000
+    "timeline": "2-4 weeks"
   },
   {
     "slug": "cicd-pipeline",
     "name": "CI/CD pipeline",
     "summary": "Automated build, test and deploy, so releases stop depending on one person's laptop.",
-    "timeline": "1-3 weeks",
-    "low": 1250,
-    "high": 2500
+    "timeline": "1-3 weeks"
   },
   {
     "slug": "linux-automation",
     "name": "Linux estate automation",
     "summary": "Ansible roles that build, patch and harden your Linux servers the same way every time.",
-    "timeline": "2-4 weeks",
-    "low": 1500,
-    "high": 3500
+    "timeline": "2-4 weeks"
   },
   {
     "slug": "hpc-gpu-cluster",
     "name": "HPC and GPU cluster setup",
     "summary": "Slurm scheduling, shared storage and GPU support for a research group or lab.",
-    "timeline": "3-6 weeks",
-    "low": 2500,
-    "high": 7500
+    "timeline": "3-6 weeks"
   },
   {
     "slug": "private-ai-pilot",
     "name": "Private AI pilot",
     "summary": "A language model running on your own infrastructure, tested on one real use case.",
-    "timeline": "3-5 weeks",
-    "low": 3000,
-    "high": 6000
+    "timeline": "3-5 weeks"
   }
 ];

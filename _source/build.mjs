@@ -25,7 +25,7 @@ const blocks = {
     '<ul class="pkg-list">\n' +
     packages.map((p) => `  <li><a class="pkg-row" href="services.html#${p.slug}">
     <div><h3>${esc(p.name)}</h3><p>${esc(p.summary)}</p></div>
-    <div class="pkg-facts"><span class="pkg-price">${gbp(p.low)} to ${gbp(p.high)}</span><span class="pkg-time">${esc(p.timeline)}</span></div>
+    <div class="pkg-facts"><span class="pkg-price">Fixed price</span><span class="pkg-time">${esc(p.timeline)}</span></div>
   </a></li>`).join('\n') +
     '\n</ul>',
 
@@ -48,7 +48,7 @@ ${v.deliverables.map((d) => `          <li>${esc(d)}</li>`).join('\n')}
         <dd>${esc(v.fit)}</dd>
         <dt><h4>What we need from you</h4></dt>
         <dd>${esc(v.needs)}</dd>
-${v.priceNote ? `        <dt><h4>What moves the price</h4></dt>\n        <dd>${esc(v.priceNote)}</dd>\n` : ''}${extra}      </dl>
+${v.priceNote ? `        <dt><h4>What shapes the scope</h4></dt>\n        <dd>${esc(v.priceNote)}</dd>\n` : ''}${extra}      </dl>
     </div>
   </div>`;
 
@@ -62,7 +62,7 @@ ${v.priceNote ? `        <dt><h4>What moves the price</h4></dt>\n        <dd>${e
       return `<article class="pkg-detail" id="${p.slug}" data-audiences="${p.audiences.join(' ')}">
   <div class="pkg-detail-head">
     <h3>${esc(p.name)}</h3>
-    <p class="pkg-facts"><span class="pkg-price">${gbp(p.low)} to ${gbp(p.high)} plus VAT</span><span class="pkg-time">${esc(p.timeline)}</span></p>
+    <p class="pkg-facts"><span class="pkg-price">Fixed price</span><span class="pkg-time">${esc(p.timeline)}</span></p>
   </div>
 ${general}
 ${tailored}
@@ -84,47 +84,12 @@ ${tailored}
     packages.map((p) => `<option value="${p.slug}">${esc(p.name)}</option>`).join('\n'),
 
   roles_list: () =>
-    roles.map((r) => {
-      const ul = (a) => a.map((x) => `        <li>${esc(x)}</li>`).join('\n');
-      return `<details class="role" id="${r.slug}" data-group="${r.group}">
-  <summary>
-    <span><span class="role-title">${esc(r.title)}</span><br><span class="role-meta">${esc(r.summary)}</span></span>
-    <span class="role-toggle"></span>
-  </summary>
-  <div class="role-body">
-    <ul class="role-facts" aria-label="Role details">
-      <li><span>Type</span>${esc(r.type)}</li>
-      <li><span>Location</span>Fully remote</li>
-      <li><span>Salary</span>Negotiable</li>
-    </ul>
-    <div class="role-wide">
-      <h4>About the role</h4>
-      <p>${esc(r.about)}</p>
-    </div>
-    <div>
-      <h4>What you would work on</h4>
-      <ul>
-${ul(r.work)}
-      </ul>
-    </div>
-    <div>
-      <h4>Requirements</h4>
-      <ul>
-${ul(r.requirements)}
-      </ul>
-      <h4 class="role-sub">Nice to have</h4>
-      <ul>
-${ul(r.nice)}
-      </ul>
-    </div>
-    <div class="role-wide">
-      <h4>How we assess</h4>
-      <p>${esc(r.trial)} Every trial task is paid.</p>
-    </div>
-    <a class="btn btn-primary btn-small" href="apply.html?role=${r.slug}">Apply for this role</a>
-  </div>
-</details>`;
-    }).join('\n'),
+    '<ul class="pkg-list">\n' +
+    roles.map((r) => `  <li class="job" data-group="${r.group}"><a class="pkg-row" href="job-${r.slug}.html">
+    <div><h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p></div>
+    <div class="pkg-facts"><span class="pkg-price">${esc(r.type)}</span><span class="pkg-time">Fully remote, salary negotiable</span></div>
+  </a></li>`).join('\n') +
+    '\n</ul>',
 
   role_options: () =>
     '<option value="">Choose a role</option>\n' +
@@ -141,24 +106,12 @@ const year = String(new Date().getFullYear());
 const pageFiles = readdirSync(join(here, 'pages')).filter((f) => f.endsWith('.html')).sort();
 const urls = [];
 
-for (const file of pageFiles) {
-  let raw = read(join('pages', file));
-  const m = raw.match(/^<!--meta\s*(\{[\s\S]*?\})\s*-->\s*/);
-  if (!m) throw new Error(`${file}: missing <!--meta {...} --> first line`);
-  const meta = JSON.parse(m[1]);
-  raw = raw.slice(m[0].length);
-
-  const tokens = {};
-  for (const key of Object.keys(blocks)) tokens[key] = blocks[key]();
-  const content = fill(raw, tokens);
-
+function writePage(file, meta, content) {
   const nav = site.nav
     .map((n) => `<a href="${n.href}"${n.key === meta.key ? ' aria-current="page"' : ''}>${n.label}</a>`)
     .join('\n      ');
-
   const title = meta.home ? meta.title : `${meta.title} | ${site.name}`;
   const canonical = file === 'index.html' ? `${base}/` : `${base}/${file}`;
-
   const html = fill(layout, {
     title: esc(title),
     description: esc(meta.description),
@@ -168,17 +121,93 @@ for (const file of pageFiles) {
     year,
     content,
   });
-
   writeFileSync(join(root, file), html);
   if (!meta.noindex) urls.push(canonical);
   console.log('built', file);
+}
+
+for (const file of pageFiles) {
+  let raw = read(join('pages', file));
+  const m = raw.match(/^<!--meta\s*(\{[\s\S]*?\})\s*-->\s*/);
+  if (!m) throw new Error(`${file}: missing <!--meta {...} --> first line`);
+  const meta = JSON.parse(m[1]);
+  raw = raw.slice(m[0].length);
+  const tokens = {};
+  for (const key of Object.keys(blocks)) tokens[key] = blocks[key]();
+  writePage(file, meta, fill(raw, tokens));
+}
+
+// One page per job advert: job-<slug>.html
+const ul = (a) => a.map((x) => `          <li>${esc(x)}</li>`).join('\n');
+for (const r of roles) {
+  const content = `<section class="page-hero">
+  <div class="wrap">
+    <p class="crumb"><a href="careers.html#roles">&larr; All roles</a></p>
+    <h1>${esc(r.title)}</h1>
+    <p class="lede">${esc(r.summary)}</p>
+    <ul class="role-facts" aria-label="Role details">
+      <li><span>Type</span>${esc(r.type)}</li>
+      <li><span>Location</span>Fully remote</li>
+      <li><span>Salary</span>Negotiable</li>
+    </ul>
+    <div class="btn-row"><a class="btn btn-primary" href="apply.html?role=${r.slug}">Apply for this role</a></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="role-body">
+      <div class="role-wide">
+        <h2>About the role</h2>
+        <p>${esc(r.about)}</p>
+      </div>
+      <div>
+        <h3>What you would work on</h3>
+        <ul>
+${ul(r.work)}
+        </ul>
+      </div>
+      <div>
+        <h3>Requirements</h3>
+        <ul>
+${ul(r.requirements)}
+        </ul>
+        <h3 class="role-sub">Nice to have</h3>
+        <ul>
+${ul(r.nice)}
+        </ul>
+      </div>
+      <div class="role-wide">
+        <h3>How we assess</h3>
+        <p>${esc(r.trial)} Every trial task is paid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How to apply</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Send the form</h3><p>About five minutes. Include links to your work, such as GitHub, a portfolio or an online CV.</p></li>
+      <li><h3>Intro call</h3><p>Thirty minutes about your experience and availability.</p></li>
+      <li><h3>Paid trial task</h3><p>A small, real task with a written brief. You are paid for it.</p></li>
+      <li><h3>Offer</h3><p>A written agreement covering the work, salary, confidentiality and ownership of what you build.</p></li>
+    </ol>
+    <div class="btn-row"><a class="btn btn-primary" href="apply.html?role=${r.slug}">Apply for this role</a><a class="btn btn-quiet" href="careers.html#roles">See other roles</a></div>
+  </div>
+</section>
+`;
+  writePage(`job-${r.slug}.html`, { title: `${r.title}, fully remote`, description: `${r.summary} Fully remote ${r.type.toLowerCase()} with ${site.name}. Salary negotiable.`, key: 'careers' }, content);
 }
 
 // Package data for the finder and the estimator, from the same source as the page text.
 writeFileSync(
   join(root, 'assets', 'packages.js'),
   '// Generated by _source/build.mjs from _source/packages.json. Edit that file, then rebuild.\n' +
-    'window.SW_PACKAGES = ' + JSON.stringify(packages.map(({ slug, name, summary, timeline, low, high }) => ({ slug, name, summary, timeline, low, high })), null, 2) + ';\n'
+    'window.SW_PACKAGES = ' + JSON.stringify(packages.map(({ slug, name, summary, timeline }) => ({ slug, name, summary, timeline })), null, 2) + ';\n'
 );
 
 writeFileSync(
@@ -189,4 +218,4 @@ writeFileSync(
 );
 writeFileSync(join(root, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${base}/sitemap.xml\n`);
 
-console.log(`done: ${pageFiles.length} pages`);
+console.log(`done: ${pageFiles.length + roles.length} pages`);

@@ -414,3 +414,8 @@ input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 4px rgba(8,251,250
   .js .reveal { opacity: 1; transform: none; }
   ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
 }
+
+.crumb { margin: 0 0 1rem; }
+.crumb a { text-decoration: none; color: var(--soft); transition: color .2s ease; }
+.crumb a:hover { color: var(--cyan); }
+.page-hero .role-facts { margin-top: 1.25rem; }

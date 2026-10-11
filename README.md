@@ -7,12 +7,12 @@ A static, multi-page website with no framework and no server. It works on GitHub
 | Page | File | What it does |
 | --- | --- | --- |
 | Home | `index.html` | Package finder: two questions, one recommended package |
-| Services | `services.html` | Six packages, audience filter, price estimator |
+| Services | `services.html` | Six packages, audience filter |
 | Private AI | `private-ai.html` | Pilot explainer, five-week plan, FAQ |
 | About | `about.html` | Founder and how the studio works |
 | Careers | `careers.html` | How hiring works, filterable roles with details |
 | Apply | `apply.html` | Application form, with the role pre-selected from the Careers page |
-| Start a project | `contact.html` | Enquiry form, with the package and size pre-filled from the estimator |
+| Start a project | `contact.html` | Enquiry form, with the package pre-filled |
 | Privacy | `privacy.html` | Plain-language privacy notice |
 | Not found | `404.html` | Shown for unknown addresses |
 
@@ -40,9 +40,9 @@ GitHub Pages cannot run server code, so the forms need one of two options:
 
 Everything you see is built from files in `_source/`:
 
-- `_source/packages.json`: package names, prices, timelines and deliverables, plus the text each audience button on the Services page shows (`views`). Changing it updates the home page list, the services page, the finder and the estimator together. Every audience listed for a package needs its own view, or the build stops with an error.
+- `_source/packages.json`: package names, timelines and deliverables, plus the text each audience button on the Services page shows (`views`). Changing it updates the home page list, the services page, the finder together (no prices are shown on the site). Every audience listed for a package needs its own view, or the build stops with an error.
 - `_source/audiences.json`: the intro paragraph shown above the packages for each audience button.
-- `_source/roles.json`: the roles on the Careers page and in the Apply form.
+- `_source/roles.json`: the roles on the Careers page and in the Apply form. Each role also gets its own page, `job-<slug>.html`, created by the build.
 - `_source/pages/*.html`: the text of each page.
 - `_source/site.json`: site address and navigation.
 

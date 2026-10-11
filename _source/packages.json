@@ -31,7 +31,7 @@
         ],
         "fit": "Seed to Series A teams about to hire their first engineers, or about to answer a customer's security questionnaire.",
         "needs": "Admin access to the current account, a list of the services in use and the order you expect to launch environments.",
-        "priceNote": "Nearer the lower end for one cloud and two environments. Nearer the upper end for several regions, existing resources to import or a customer security review to answer."
+        "priceNote": "Smaller: one cloud and two environments. Larger: several regions, existing resources to import or a customer security review to answer."
       },
       "regulated": {
         "headline": "A cloud foundation built around who can see what, with the evidence to show it.",
@@ -46,7 +46,7 @@
         ],
         "fit": "Law firms, clinics, accountants and advisers moving client or patient information to the cloud.",
         "needs": "The systems and data types involved, any client or contract security requirements and a named person responsible for data protection.",
-        "priceNote": "Nearer the upper end where long audit retention, extra environments or client-specific control requirements apply. We document the controls, but compliance itself stays your responsibility."
+        "priceNote": "Larger where long audit retention, extra environments or client-specific control requirements apply. We document the controls, but compliance itself stays your responsibility."
       },
       "msp": {
         "headline": "A repeatable cloud baseline you can offer to more than one client.",
@@ -61,7 +61,7 @@
         ],
         "fit": "Providers with several small clients on Azure or AWS who want consistency and fewer one-off builds.",
         "needs": "An example of your current client build, your tenancy and billing model, and how many client types you expect.",
-        "priceNote": "Nearer the lower end for one client type on one cloud. Nearer the upper end for several client profiles, or migration of existing client builds."
+        "priceNote": "Smaller: one client type on one cloud. Larger: several client profiles, or migration of existing client builds."
       }
     }
   },
@@ -97,7 +97,7 @@
         ],
         "fit": "Startups running three or more services, or planning to, with developers but no dedicated operations engineer.",
         "needs": "Your services and how they are built today, your preferred cloud and the traffic you expect.",
-        "priceNote": "Nearer the lower end for a managed cluster and two environments. Nearer the upper end for stateful services, several clusters or a service mesh."
+        "priceNote": "Smaller: a managed cluster and two environments. Larger: stateful services, several clusters or a service mesh."
       },
       "research": {
         "headline": "Containers for reproducible research, on the hardware you already have.",
@@ -112,7 +112,7 @@
         ],
         "fit": "Research groups moving analysis and model training into containers, or sharing a few GPU machines between people.",
         "needs": "Hardware details, the software and datasets involved and how many people will use it.",
-        "priceNote": "Nearer the lower end for a single small cluster. Nearer the upper end for GPU scheduling, large shared storage or integration with a university login."
+        "priceNote": "Smaller: a single small cluster. Larger: GPU scheduling, large shared storage or integration with a university login."
       },
       "msp": {
         "headline": "A hardened cluster you can run for a client without owning every decision.",
@@ -127,7 +127,7 @@
         ],
         "fit": "IT providers supporting a client's first production cluster, or taking over one with no documentation.",
         "needs": "The client's requirements, your ticketing and alerting tools, and who will provide support after handover.",
-        "priceNote": "Nearer the upper end where backup, upgrade testing or integration with your tools is included. Support after handover is priced separately."
+        "priceNote": "Larger where backup, upgrade testing or integration with your tools is included. Support after handover is scoped separately."
       }
     }
   },
@@ -163,7 +163,7 @@
         ],
         "fit": "Startups with two to ten developers who want faster, safer releases and fewer late-night deployments.",
         "needs": "Repository access, a description of how you release today and the hosting you deploy to.",
-        "priceNote": "Nearer the lower end for one application and one pipeline. Nearer the upper end for several services, database migrations or mobile app builds."
+        "priceNote": "Smaller: one application and one pipeline. Larger: several services, database migrations or mobile app builds."
       },
       "msp": {
         "headline": "A pipeline template you can reuse across client projects.",
@@ -178,7 +178,7 @@
         ],
         "fit": "Providers delivering or supporting applications for several clients who want one consistent release process.",
         "needs": "Two or three example client projects, your change-approval rules and your preferred tooling.",
-        "priceNote": "Nearer the upper end for several client templates, approval workflows or a move from Jenkins to GitHub Actions."
+        "priceNote": "Larger: several client templates, approval workflows or a move from Jenkins to GitHub Actions."
       }
     }
   },
@@ -214,7 +214,7 @@
         ],
         "fit": "Research computing teams and labs with a mixed fleet of servers and a small support team.",
         "needs": "A server list, access to a test machine and the software your researchers depend on.",
-        "priceNote": "Nearer the lower end for one distribution and a small fleet. Nearer the upper end for several distributions, software environments to capture or many nodes."
+        "priceNote": "Smaller: one distribution and a small fleet. Larger: several distributions, software environments to capture or many nodes."
       },
       "regulated": {
         "headline": "Patching and hardening you can show an auditor.",
@@ -229,7 +229,7 @@
         ],
         "fit": "Regulated businesses with a Linux estate and a duty to show that systems are patched and secured.",
         "needs": "A server list, your patching policy or client requirements and the person who approves change.",
-        "priceNote": "Nearer the upper end for large estates, several distributions or detailed evidence reporting. We build to the baseline you select but do not certify compliance."
+        "priceNote": "Larger: large estates, several distributions or detailed evidence reporting. We build to the baseline you select but do not certify compliance."
       },
       "msp": {
         "headline": "Fewer one-off fixes and a cleaner patching routine across client estates.",
@@ -244,7 +244,7 @@
         ],
         "fit": "Providers managing Linux servers for several clients, with scripts and habits that differ from engineer to engineer.",
         "needs": "Access to a representative client estate, your ticketing system and your current patching steps.",
-        "priceNote": "Nearer the upper end for many client estates, ticketing integration or custom reporting."
+        "priceNote": "Larger: many client estates, ticketing integration or custom reporting."
       }
     }
   },
@@ -281,7 +281,7 @@
         ],
         "fit": "Research groups and labs with new or shared compute and nobody employed to run it.",
         "needs": "A hardware list and network layout, the software and datasets in use, the number of users and how time should be shared fairly.",
-        "priceNote": "Nearer the lower end for a handful of nodes. Nearer the upper end for many nodes, high-speed networking, large shared storage or a move from an existing scheduler."
+        "priceNote": "Smaller: a handful of nodes. Larger: many nodes, high-speed networking, large shared storage or a move from an existing scheduler."
       }
     }
   },
@@ -317,7 +317,7 @@
         ],
         "fit": "Law firms, clinics, accountants and advisers who want AI on client or patient information.",
         "needs": "One task, sample documents you are allowed to use and a person who can approve data access.",
-        "priceNote": "Nearer the upper end for several document sources, stricter access rules or dedicated GPU hardware. Hardware is a separate cost, and we help you size it before you buy."
+        "priceNote": "Larger: several document sources, stricter access rules or dedicated GPU hardware. Hardware is a separate cost, and we help you size it before you buy."
       },
       "startup": {
         "headline": "Build an AI feature on infrastructure you control, before you commit to a vendor.",
@@ -332,7 +332,7 @@
         ],
         "fit": "Startups adding AI to a product where customers care about data location, or where hosted per-use costs may become high.",
         "needs": "The product feature you have in mind, sample content and the number of users or requests you expect.",
-        "priceNote": "Nearer the upper end for several data sources, an agent that takes actions or load testing at scale."
+        "priceNote": "Larger: several data sources, an agent that takes actions or load testing at scale."
       },
       "research": {
         "headline": "Run language models on unpublished or restricted data, on hardware you own.",
@@ -347,7 +347,7 @@
         ],
         "fit": "Research groups with restricted or unpublished data, and spare GPU capacity or a budget to get some.",
         "needs": "The research task, the data rules that apply and details of your GPU hardware.",
-        "priceNote": "Nearer the lower end if suitable GPUs are already in place. Nearer the upper end for new hardware setup or integration with an existing cluster."
+        "priceNote": "Smaller if suitable GPUs are already in place. Larger: new hardware setup or integration with an existing cluster."
       }
     }
   }
