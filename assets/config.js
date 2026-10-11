@@ -13,9 +13,9 @@
                 (Web3Forms does). Leave empty for Formspree.
 */
 window.SW_CONFIG = {
-  email: "nayeeman49@googlemail.com",
+  email: "",
   phone: "+44 7498 840388",
   github: "https://github.com/nayeeman49",
-  formEndpoint: "",
-  formAccessKey: ""
+  formEndpoint: "https://api.web3forms.com/submit",
+  formAccessKey: "2696e9a1-194d-4256-8d5c-27f76ef0b08b"
 };
