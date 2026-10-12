@@ -1,18 +1,26 @@
-<!--meta {"title":"On-prem infrastructure for research teams | Sheerwater Consulting","description":"Proxmox and VMware infrastructure designed, built and documented at a fixed price for UK research groups, labs and small organisations. Founder-led, Woking, Surrey.","key":"home","home":true} -->
+<!--meta {"title":"On-prem, cloud and local AI infrastructure | Sheerwater Consulting","description":"Proxmox and VMware on-prem builds, cloud landing zones, Kubernetes, and local AI and GPU machines at a fixed price for UK research groups, startups and small organisations. Founder-led, Woking, Surrey.","key":"home","home":true} -->
 <section class="hero">
   <div class="hero-pattern" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div>
-      <h1>On-premises infrastructure, designed and built to a fixed price</h1>
-      <p class="lede">We design and build Proxmox and VMware platforms for UK research groups, labs and small organisations, with backups tested and a runbook your own team can follow. Led by an engineer with a Linux and HPC background in scientific computing.</p>
+      <h1>On-prem, cloud and local AI infrastructure, built to a fixed price</h1>
+      <p class="lede">We design and build Proxmox and VMware platforms, cloud foundations and Kubernetes, and local AI machines with GPU servers that keep your data on your own premises. For UK research groups, labs, startups and small organisations, with backups tested and a runbook your team can follow.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="contact.html">Get a fixed quote</a>
-        <a class="btn btn-quiet" href="services.html#on-prem-infrastructure">See what is included</a>
+        <a class="btn btn-quiet" href="services.html">See the packages</a>
       </div>
     </div>
 
     <div class="panel">
-      {{lead_package}}
+      <h2>What we build</h2>
+      <ul>
+        <li><strong>On-prem:</strong> Proxmox and VMware servers, storage and networking</li>
+        <li><strong>Cloud:</strong> Azure and AWS landing zones, Kubernetes, CI/CD</li>
+        <li><strong>Local AI:</strong> GPU servers and AI workstations running models on your premises</li>
+        <li><strong>Hybrid:</strong> steady workloads on your hardware, the cloud where it pays</li>
+        <li><strong>Also:</strong> Linux automation, HPC and GPU clusters, private AI pilots, apps</li>
+      </ul>
+      <p><a class="btn btn-primary btn-small" href="contact.html">Get a fixed quote</a></p>
     </div>
   </div>
 </section>
@@ -20,11 +28,11 @@
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Also available, at the same fixed-price terms</h2>
-      <p>Most clients start with the on-prem build. We also take on these related projects, each with a stated scope and a fixed price confirmed in writing after a scoping call.</p>
+      <h2>Nine packages, each with a stated scope and a fixed price</h2>
+      <p>You know the cost before we start. The fixed price is confirmed in writing after a scoping call.</p>
     </div>
-    {{other_packages_list}}
-    <p style="margin-top:1.5rem"><a href="services.html">Compare all packages</a></p>
+    {{packages_list}}
+    <p style="margin-top:1.5rem"><a href="services.html">Compare the packages</a></p>
   </div>
 </section>
 
@@ -53,7 +61,8 @@
             <option value="compute">Compute for researchers</option>
             <option value="ai">To use AI on private data</option>
             <option value="app">To build a web or mobile app</option>
-            <option value="onprem">To build servers on premises (VMware, Proxmox)</option>
+            <option value="gpu">To run AI on my own GPU machine</option>
+          <option value="onprem">To build servers on premises (VMware, Proxmox)</option>
           </select>
         </div>
         <div id="finder-result" class="result" aria-live="polite">

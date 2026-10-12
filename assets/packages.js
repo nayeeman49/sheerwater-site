@@ -7,6 +7,12 @@ window.SW_PACKAGES = [
     "timeline": "3-8 weeks"
   },
   {
+    "slug": "local-ai-gpu-machines",
+    "name": "Local AI and GPU machine build",
+    "summary": "A GPU workstation or server specified, built and configured to run language models on your own premises, so your data stays with you.",
+    "timeline": "2-6 weeks"
+  },
+  {
     "slug": "cloud-landing-zone",
     "name": "Cloud landing zone",
     "summary": "An Azure or AWS foundation written in Terraform: networking, identity, logging and cost controls.",

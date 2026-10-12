@@ -85,6 +85,77 @@
     }
   },
   {
+    "slug": "local-ai-gpu-machines",
+    "name": "Local AI and GPU machine build",
+    "summary": "A GPU workstation or server specified, built and configured to run language models on your own premises, so your data stays with you.",
+    "timeline": "2-6 weeks",
+    "low": 3000,
+    "high": 12000,
+    "audiences": [
+      "research",
+      "startup",
+      "regulated"
+    ],
+    "need": "gpu",
+    "deliverables": [
+      "A hardware specification sized to your models, with GPU, memory and storage choices explained",
+      "Machine built, tested and burned in, or your existing hardware assessed and upgraded",
+      "NVIDIA drivers, CUDA and container tooling installed and verified",
+      "A local model server (for example Ollama or vLLM) with open-weight models tested on your use case",
+      "Access controls, monitoring of GPU load and temperature, and backups of your configuration",
+      "Documentation and a handover session so your team can run and extend it"
+    ],
+    "fit": "Teams that want AI and GPU compute on their own premises, for privacy, cost control or offline use, from a single workstation to a multi-GPU server.",
+    "needs": "Your intended use cases, the models or data involved, your budget range for hardware and where the machine will live.",
+    "views": {
+      "research": {
+        "headline": "A GPU machine your group owns, ready for training, inference and experiments.",
+        "scenario": "A lab needs GPU compute for machine learning but queues for shared clusters. We specify and build a multi-GPU workstation or server, set up CUDA and containers, and make it usable by students through a simple access setup.",
+        "deliverables": [
+          "A GPU server or workstation specification sized to your models and datasets",
+          "Build, burn-in and benchmark of the GPUs",
+          "NVIDIA drivers, CUDA, PyTorch and container tooling installed and checked",
+          "Shared access for students and staff, with usage monitoring",
+          "Local model serving for inference and experiments",
+          "A short guide a new student can follow"
+        ],
+        "fit": "Research groups and labs that need dedicated GPU compute for machine learning without a cloud bill or a long queue.",
+        "needs": "The models and datasets you work with, the number of users and a budget range for hardware.",
+        "priceNote": "Smaller: one workstation with a single GPU. Larger: multi-GPU servers, fast storage or cluster integration. Hardware is a separate cost, and we help you size it before you buy."
+      },
+      "startup": {
+        "headline": "Run and test AI on your own GPUs before paying cloud GPU prices.",
+        "scenario": "A startup is spending heavily on cloud GPUs for development and demos. We build a local GPU machine that serves open-weight models through an API, so the team can build and test at a fixed, known cost.",
+        "deliverables": [
+          "A specification and cost comparison against cloud GPU rental",
+          "Machine built and configured with CUDA and containers",
+          "A local model server with an API your product can call",
+          "Remote access for your team and monitoring of GPU load",
+          "Backups of configuration and a rebuild guide",
+          "Handover so your engineers can maintain it"
+        ],
+        "fit": "Teams building AI features that want predictable costs and control of their data during development.",
+        "needs": "Your product use case, the models you want to run and your hardware budget.",
+        "priceNote": "Smaller: one GPU machine in one room. Larger: several GPUs, remote access for a distributed team or high-availability serving. Hardware is a separate cost."
+      },
+      "regulated": {
+        "headline": "AI on a machine in your own office, with client data that never leaves it.",
+        "scenario": "A practice wants to use AI on sensitive documents but cannot use a public service. We build a GPU machine that runs an open-weight model on site, with no external connection needed for the model to work.",
+        "deliverables": [
+          "A hardware specification for on-site AI with a clear data-flow note",
+          "Machine built and hardened, with disk encryption",
+          "A local model server with per-person access and an audit log",
+          "Document search limited to folders and people you approve",
+          "Backups and a recovery test",
+          "A short guide for staff and for your data protection lead"
+        ],
+        "fit": "Law firms, clinics, accountants and advisers who need AI on premises with controlled access.",
+        "needs": "Your use case, data sensitivity and where the machine will be kept.",
+        "priceNote": "Smaller: one machine for a small team. Larger: several users, stricter access rules or higher-capacity GPUs. Hardware is a separate cost."
+      }
+    }
+  },
+  {
     "slug": "cloud-landing-zone",
     "name": "Cloud landing zone",
     "summary": "An Azure or AWS foundation written in Terraform: networking, identity, logging and cost controls.",

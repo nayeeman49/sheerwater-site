@@ -50,7 +50,8 @@
       ai: 'private-ai-pilot',
       ship: 'cicd-pipeline',
       app: 'application-development',
-      onprem: 'on-prem-infrastructure'
+      onprem: 'on-prem-infrastructure',
+      gpu: 'local-ai-gpu-machines'
     };
     var whoNote = {
       research: 'Research groups usually start with scheduling and storage. We can size GPUs as part of the work.',
