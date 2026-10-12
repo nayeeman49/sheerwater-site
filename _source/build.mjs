@@ -29,6 +29,24 @@ const blocks = {
   </a></li>`).join('\n') +
     '\n</ul>',
 
+  lead_package: () => {
+    const p = packages.find((x) => x.slug === 'on-prem-infrastructure');
+    return `<h2>${esc(p.name)}</h2>
+      <p class="muted">${esc(p.timeline)} · Fixed price</p>
+      <ul>
+${p.deliverables.map((d) => `        <li>${esc(d)}</li>`).join('\n')}
+      </ul>
+      <p><a class="btn btn-primary btn-small" href="contact.html?package=${p.slug}">Request this package</a></p>`;
+  },
+
+  other_packages_list: () =>
+    '<ul class="pkg-list">\n' +
+    packages.filter((p) => p.slug !== 'on-prem-infrastructure').map((p) => `  <li><a class="pkg-row" href="services.html#${p.slug}">
+    <div><h3>${esc(p.name)}</h3><p>${esc(p.summary)}</p></div>
+    <div class="pkg-facts"><span class="pkg-price">Fixed price</span><span class="pkg-time">${esc(p.timeline)}</span></div>
+  </a></li>`).join('\n') +
+    '\n</ul>',
+
   packages_detail: () =>
     packages.map((p) => {
       const missing = p.audiences.filter((a) => !(p.views && p.views[a]));

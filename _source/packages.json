@@ -1,5 +1,90 @@
 [
   {
+    "slug": "on-prem-infrastructure",
+    "name": "On-prem infrastructure design and build",
+    "summary": "Servers, storage and networking designed and built in your own rooms or racks, on VMware or Proxmox, and handed over documented.",
+    "timeline": "3-8 weeks",
+    "audiences": [
+      "research",
+      "startup",
+      "regulated",
+      "msp"
+    ],
+    "need": "onprem",
+    "deliverables": [
+      "A written design covering capacity, networking, storage and backup",
+      "Hypervisor hosts installed and configured, on VMware vSphere or Proxmox VE",
+      "Virtual networks, VLANs and storage set up and tested",
+      "Backup, restore and failover tested end to end",
+      "Monitoring and alerting for hosts and virtual machines",
+      "Runbook and handover session for your own team"
+    ],
+    "fit": "Organisations that want to run their own virtualised infrastructure on premises, or move off an ageing or costly platform, with a design they can trust.",
+    "needs": "Your current kit and workloads if any, the number of virtual machines you expect, and your uptime and backup expectations.",
+    "views": {
+      "research": {
+        "headline": "Your own virtualised compute and storage, built to last.",
+        "scenario": "A research group has servers and storage but each one is configured by hand. We design a clustered, backed-up virtual environment on Proxmox or VMware, with shared storage and clear access for students and staff.",
+        "deliverables": [
+          "A written design sized to your workloads and growth",
+          "Hypervisor cluster on Proxmox VE or VMware vSphere",
+          "Shared storage and networks separated by project",
+          "Backup and restore tested for data you cannot lose",
+          "Monitoring and alerting for hosts and virtual machines",
+          "A runbook a new postdoc or student can follow"
+        ],
+        "fit": "Research groups and labs that run their own servers and need them consolidated, reliable and documented.",
+        "needs": "A list of current servers and storage, the workloads you run and who needs access.",
+        "priceNote": "Smaller: a single site with a few hosts. Larger: clustered storage, GPU hosts or many projects with separate networks."
+      },
+      "startup": {
+        "headline": "Own your infrastructure instead of renting it forever.",
+        "scenario": "A startup with steady workloads finds cloud bills growing faster than revenue. We design and build a small on-premises or colocated virtual platform, with backup and a path to burst into the cloud.",
+        "deliverables": [
+          "A cost comparison and design for an on-prem or colocated platform",
+          "Hypervisor hosts on Proxmox VE or VMware vSphere",
+          "Networking, firewalling and remote access",
+          "Backup and recovery tested against realistic failures",
+          "Monitoring and a simple capacity plan",
+          "Documentation so a small team can run it"
+        ],
+        "fit": "Teams with predictable workloads who want lower running costs and control over their data.",
+        "needs": "Your workloads and their size, where the hardware will live and your budget range for equipment.",
+        "priceNote": "Smaller: two or three hosts in one room. Larger: high availability, multiple sites or strict recovery targets."
+      },
+      "regulated": {
+        "headline": "Infrastructure that keeps data on premises, and can be explained to an auditor.",
+        "scenario": "A firm must keep client data in its own premises. We design a segmented, backed-up virtual environment with access control and logging, documented in terms an auditor can follow.",
+        "deliverables": [
+          "A written design with network segmentation and access control",
+          "Hypervisor cluster on VMware vSphere or Proxmox VE",
+          "Encrypted storage and tested backups held off site",
+          "Central logging and alerting",
+          "A recovery plan with tested restore times",
+          "Documentation for audits and for your own staff"
+        ],
+        "fit": "Law, health and finance firms that need data held on premises with clear controls and records.",
+        "needs": "Your data and compliance requirements, current systems and recovery expectations.",
+        "priceNote": "Smaller: one office with a few hosts. Larger: two sites, high availability or detailed audit evidence."
+      },
+      "msp": {
+        "headline": "A hosting platform your team can build services on, or a way off VMware costs.",
+        "scenario": "An IT provider wants a platform for hosting client workloads, or needs to move clients off VMware after licensing changes. We design the target platform, build it and plan the migration.",
+        "deliverables": [
+          "A platform design for multi-client hosting or migration",
+          "Build on Proxmox VE or VMware vSphere",
+          "Tenant networks, storage and role-based access",
+          "Migration plan and pilot move of selected virtual machines",
+          "Backup, monitoring and capacity reporting",
+          "Runbooks for your engineers"
+        ],
+        "fit": "Managed service providers building or replacing a virtualisation platform for client workloads.",
+        "needs": "Your current estate, number of clients and virtual machines, and any licensing deadline.",
+        "priceNote": "Smaller: a pilot platform and a few machines. Larger: many tenants, high availability or a full estate migration."
+      }
+    }
+  },
+  {
     "slug": "cloud-landing-zone",
     "name": "Cloud landing zone",
     "summary": "An Azure or AWS foundation written in Terraform: networking, identity, logging and cost controls.",
@@ -454,91 +539,6 @@
         "fit": "IT providers and agencies that want to say yes to client software requests without hiring a developer for each one.",
         "needs": "The client's brief, your preferred hosting and any rules about branding and communication.",
         "priceNote": "Smaller: one clear internal tool. Larger: customer-facing apps, several integrations or ongoing change requests."
-      }
-    }
-  },
-  {
-    "slug": "on-prem-infrastructure",
-    "name": "On-prem infrastructure design and build",
-    "summary": "Servers, storage and networking designed and built in your own rooms or racks, on VMware or Proxmox, and handed over documented.",
-    "timeline": "3-8 weeks",
-    "audiences": [
-      "research",
-      "startup",
-      "regulated",
-      "msp"
-    ],
-    "need": "onprem",
-    "deliverables": [
-      "A written design covering capacity, networking, storage and backup",
-      "Hypervisor hosts installed and configured, on VMware vSphere or Proxmox VE",
-      "Virtual networks, VLANs and storage set up and tested",
-      "Backup, restore and failover tested end to end",
-      "Monitoring and alerting for hosts and virtual machines",
-      "Runbook and handover session for your own team"
-    ],
-    "fit": "Organisations that want to run their own virtualised infrastructure on premises, or move off an ageing or costly platform, with a design they can trust.",
-    "needs": "Your current kit and workloads if any, the number of virtual machines you expect, and your uptime and backup expectations.",
-    "views": {
-      "research": {
-        "headline": "Your own virtualised compute and storage, built to last.",
-        "scenario": "A research group has servers and storage but each one is configured by hand. We design a clustered, backed-up virtual environment on Proxmox or VMware, with shared storage and clear access for students and staff.",
-        "deliverables": [
-          "A written design sized to your workloads and growth",
-          "Hypervisor cluster on Proxmox VE or VMware vSphere",
-          "Shared storage and networks separated by project",
-          "Backup and restore tested for data you cannot lose",
-          "Monitoring and alerting for hosts and virtual machines",
-          "A runbook a new postdoc or student can follow"
-        ],
-        "fit": "Research groups and labs that run their own servers and need them consolidated, reliable and documented.",
-        "needs": "A list of current servers and storage, the workloads you run and who needs access.",
-        "priceNote": "Smaller: a single site with a few hosts. Larger: clustered storage, GPU hosts or many projects with separate networks."
-      },
-      "startup": {
-        "headline": "Own your infrastructure instead of renting it forever.",
-        "scenario": "A startup with steady workloads finds cloud bills growing faster than revenue. We design and build a small on-premises or colocated virtual platform, with backup and a path to burst into the cloud.",
-        "deliverables": [
-          "A cost comparison and design for an on-prem or colocated platform",
-          "Hypervisor hosts on Proxmox VE or VMware vSphere",
-          "Networking, firewalling and remote access",
-          "Backup and recovery tested against realistic failures",
-          "Monitoring and a simple capacity plan",
-          "Documentation so a small team can run it"
-        ],
-        "fit": "Teams with predictable workloads who want lower running costs and control over their data.",
-        "needs": "Your workloads and their size, where the hardware will live and your budget range for equipment.",
-        "priceNote": "Smaller: two or three hosts in one room. Larger: high availability, multiple sites or strict recovery targets."
-      },
-      "regulated": {
-        "headline": "Infrastructure that keeps data on premises, and can be explained to an auditor.",
-        "scenario": "A firm must keep client data in its own premises. We design a segmented, backed-up virtual environment with access control and logging, documented in terms an auditor can follow.",
-        "deliverables": [
-          "A written design with network segmentation and access control",
-          "Hypervisor cluster on VMware vSphere or Proxmox VE",
-          "Encrypted storage and tested backups held off site",
-          "Central logging and alerting",
-          "A recovery plan with tested restore times",
-          "Documentation for audits and for your own staff"
-        ],
-        "fit": "Law, health and finance firms that need data held on premises with clear controls and records.",
-        "needs": "Your data and compliance requirements, current systems and recovery expectations.",
-        "priceNote": "Smaller: one office with a few hosts. Larger: two sites, high availability or detailed audit evidence."
-      },
-      "msp": {
-        "headline": "A hosting platform your team can build services on, or a way off VMware costs.",
-        "scenario": "An IT provider wants a platform for hosting client workloads, or needs to move clients off VMware after licensing changes. We design the target platform, build it and plan the migration.",
-        "deliverables": [
-          "A platform design for multi-client hosting or migration",
-          "Build on Proxmox VE or VMware vSphere",
-          "Tenant networks, storage and role-based access",
-          "Migration plan and pilot move of selected virtual machines",
-          "Backup, monitoring and capacity reporting",
-          "Runbooks for your engineers"
-        ],
-        "fit": "Managed service providers building or replacing a virtualisation platform for client workloads.",
-        "needs": "Your current estate, number of clients and virtual machines, and any licensing deadline.",
-        "priceNote": "Smaller: a pilot platform and a few machines. Larger: many tenants, high availability or a full estate migration."
       }
     }
   }

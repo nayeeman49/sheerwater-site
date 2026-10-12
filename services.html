@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Services and fixed-price packages | Sheerwater Consulting</title>
-<meta name="description" content="Eight fixed-scope packages: on-prem infrastructure, cloud landing zones, Kubernetes, CI/CD, Linux automation, HPC and GPU clusters, private AI and application development. See what is included.">
+<meta name="description" content="Proxmox and VMware infrastructure design and build at a fixed price, plus cloud landing zones, Kubernetes, CI/CD, Linux automation, HPC and GPU clusters, private AI and application development.">
 <link rel="canonical" href="https://sheerwaterconsulting.co.uk/services.html">
 <meta name="theme-color" content="#001119">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sheerwater Consulting">
 <meta property="og:title" content="Services and fixed-price packages | Sheerwater Consulting">
-<meta property="og:description" content="Eight fixed-scope packages: on-prem infrastructure, cloud landing zones, Kubernetes, CI/CD, Linux automation, HPC and GPU clusters, private AI and application development. See what is included.">
+<meta property="og:description" content="Proxmox and VMware infrastructure design and build at a fixed price, plus cloud landing zones, Kubernetes, CI/CD, Linux automation, HPC and GPU clusters, private AI and application development.">
 <meta property="og:url" content="https://sheerwaterconsulting.co.uk/services.html">
 <meta property="og:image" content="https://sheerwaterconsulting.co.uk/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -49,7 +49,7 @@
 <section class="page-hero">
   <div class="wrap">
     <h1>Services and <span style="white-space:nowrap">fixed-price</span> packages</h1>
-    <p class="lede">Each package has a stated deliverable and timeline, and a fixed price agreed in writing before work starts. Choose the closest one and we adjust the scope to fit you.</p>
+    <p class="lede">Our main service is on-premises infrastructure design and build on Proxmox or VMware. The other packages sit alongside it. Each has a stated deliverable and timeline, and a fixed price agreed in writing before work starts.</p>
   </div>
 </section>
 
@@ -79,7 +79,142 @@
   <h2>For IT providers</h2>
   <p>IT providers need dependable extra capacity for client work. These packages are scoped as repeatable engagements. We work as an extension of your team and hand over documentation your own engineers can pick up and reuse.</p>
 </div>
-    <article class="pkg-detail" id="cloud-landing-zone" data-audiences="startup regulated msp">
+    <article class="pkg-detail" id="on-prem-infrastructure" data-audiences="research startup regulated msp">
+  <div class="pkg-detail-head">
+    <h3>On-prem infrastructure design and build</h3>
+    <p class="pkg-facts"><span class="pkg-price">Fixed price</span><span class="pkg-time">3-8 weeks</span></p>
+  </div>
+  <div class="pkg-view" data-view="all">
+    <p class="lede">Servers, storage and networking designed and built in your own rooms or racks, on VMware or Proxmox, and handed over documented.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A written design covering capacity, networking, storage and backup</li>
+          <li>Hypervisor hosts installed and configured, on VMware vSphere or Proxmox VE</li>
+          <li>Virtual networks, VLANs and storage set up and tested</li>
+          <li>Backup, restore and failover tested end to end</li>
+          <li>Monitoring and alerting for hosts and virtual machines</li>
+          <li>Runbook and handover session for your own team</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Organisations that want to run their own virtualised infrastructure on premises, or move off an ageing or costly platform, with a design they can trust.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Your current kit and workloads if any, the number of virtual machines you expect, and your uptime and backup expectations.</dd>
+        <dt><h4>Often chosen by</h4></dt>
+        <dd>research groups, startups, regulated businesses, IT providers</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="research" hidden>
+    <p class="lede">Your own virtualised compute and storage, built to last.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A research group has servers and storage but each one is configured by hand. We design a clustered, backed-up virtual environment on Proxmox or VMware, with shared storage and clear access for students and staff.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A written design sized to your workloads and growth</li>
+          <li>Hypervisor cluster on Proxmox VE or VMware vSphere</li>
+          <li>Shared storage and networks separated by project</li>
+          <li>Backup and restore tested for data you cannot lose</li>
+          <li>Monitoring and alerting for hosts and virtual machines</li>
+          <li>A runbook a new postdoc or student can follow</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Research groups and labs that run their own servers and need them consolidated, reliable and documented.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>A list of current servers and storage, the workloads you run and who needs access.</dd>
+        <dt><h4>What shapes the scope</h4></dt>
+        <dd>Smaller: a single site with a few hosts. Larger: clustered storage, GPU hosts or many projects with separate networks.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="startup" hidden>
+    <p class="lede">Own your infrastructure instead of renting it forever.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A startup with steady workloads finds cloud bills growing faster than revenue. We design and build a small on-premises or colocated virtual platform, with backup and a path to burst into the cloud.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A cost comparison and design for an on-prem or colocated platform</li>
+          <li>Hypervisor hosts on Proxmox VE or VMware vSphere</li>
+          <li>Networking, firewalling and remote access</li>
+          <li>Backup and recovery tested against realistic failures</li>
+          <li>Monitoring and a simple capacity plan</li>
+          <li>Documentation so a small team can run it</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Teams with predictable workloads who want lower running costs and control over their data.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Your workloads and their size, where the hardware will live and your budget range for equipment.</dd>
+        <dt><h4>What shapes the scope</h4></dt>
+        <dd>Smaller: two or three hosts in one room. Larger: high availability, multiple sites or strict recovery targets.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="regulated" hidden>
+    <p class="lede">Infrastructure that keeps data on premises, and can be explained to an auditor.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">A firm must keep client data in its own premises. We design a segmented, backed-up virtual environment with access control and logging, documented in terms an auditor can follow.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A written design with network segmentation and access control</li>
+          <li>Hypervisor cluster on VMware vSphere or Proxmox VE</li>
+          <li>Encrypted storage and tested backups held off site</li>
+          <li>Central logging and alerting</li>
+          <li>A recovery plan with tested restore times</li>
+          <li>Documentation for audits and for your own staff</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Law, health and finance firms that need data held on premises with clear controls and records.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Your data and compliance requirements, current systems and recovery expectations.</dd>
+        <dt><h4>What shapes the scope</h4></dt>
+        <dd>Smaller: one office with a few hosts. Larger: two sites, high availability or detailed audit evidence.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="pkg-view" data-view="msp" hidden>
+    <p class="lede">A hosting platform your team can build services on, or a way off VMware costs.</p>
+    <h4>A typical project</h4>
+    <p class="scenario">An IT provider wants a platform for hosting client workloads, or needs to move clients off VMware after licensing changes. We design the target platform, build it and plan the migration.</p>
+    <div class="pkg-detail-grid">
+      <div>
+        <h4>What you get</h4>
+        <ul>
+          <li>A platform design for multi-client hosting or migration</li>
+          <li>Build on Proxmox VE or VMware vSphere</li>
+          <li>Tenant networks, storage and role-based access</li>
+          <li>Migration plan and pilot move of selected virtual machines</li>
+          <li>Backup, monitoring and capacity reporting</li>
+          <li>Runbooks for your engineers</li>
+        </ul>
+      </div>
+      <dl>
+        <dt><h4>Good fit for</h4></dt>
+        <dd>Managed service providers building or replacing a virtualisation platform for client workloads.</dd>
+        <dt><h4>What we need from you</h4></dt>
+        <dd>Your current estate, number of clients and virtual machines, and any licensing deadline.</dd>
+        <dt><h4>What shapes the scope</h4></dt>
+        <dd>Smaller: a pilot platform and a few machines. Larger: many tenants, high availability or a full estate migration.</dd>
+      </dl>
+    </div>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=on-prem-infrastructure">Request this package</a></p>
+</article>
+<article class="pkg-detail" id="cloud-landing-zone" data-audiences="startup regulated msp">
   <div class="pkg-detail-head">
     <h3>Cloud landing zone</h3>
     <p class="pkg-facts"><span class="pkg-price">Fixed price</span><span class="pkg-time">2-3 weeks</span></p>
@@ -784,141 +919,6 @@
     </div>
   </div>
   <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Request this package</a></p>
-</article>
-<article class="pkg-detail" id="on-prem-infrastructure" data-audiences="research startup regulated msp">
-  <div class="pkg-detail-head">
-    <h3>On-prem infrastructure design and build</h3>
-    <p class="pkg-facts"><span class="pkg-price">Fixed price</span><span class="pkg-time">3-8 weeks</span></p>
-  </div>
-  <div class="pkg-view" data-view="all">
-    <p class="lede">Servers, storage and networking designed and built in your own rooms or racks, on VMware or Proxmox, and handed over documented.</p>
-    <div class="pkg-detail-grid">
-      <div>
-        <h4>What you get</h4>
-        <ul>
-          <li>A written design covering capacity, networking, storage and backup</li>
-          <li>Hypervisor hosts installed and configured, on VMware vSphere or Proxmox VE</li>
-          <li>Virtual networks, VLANs and storage set up and tested</li>
-          <li>Backup, restore and failover tested end to end</li>
-          <li>Monitoring and alerting for hosts and virtual machines</li>
-          <li>Runbook and handover session for your own team</li>
-        </ul>
-      </div>
-      <dl>
-        <dt><h4>Good fit for</h4></dt>
-        <dd>Organisations that want to run their own virtualised infrastructure on premises, or move off an ageing or costly platform, with a design they can trust.</dd>
-        <dt><h4>What we need from you</h4></dt>
-        <dd>Your current kit and workloads if any, the number of virtual machines you expect, and your uptime and backup expectations.</dd>
-        <dt><h4>Often chosen by</h4></dt>
-        <dd>research groups, startups, regulated businesses, IT providers</dd>
-      </dl>
-    </div>
-  </div>
-  <div class="pkg-view" data-view="research" hidden>
-    <p class="lede">Your own virtualised compute and storage, built to last.</p>
-    <h4>A typical project</h4>
-    <p class="scenario">A research group has servers and storage but each one is configured by hand. We design a clustered, backed-up virtual environment on Proxmox or VMware, with shared storage and clear access for students and staff.</p>
-    <div class="pkg-detail-grid">
-      <div>
-        <h4>What you get</h4>
-        <ul>
-          <li>A written design sized to your workloads and growth</li>
-          <li>Hypervisor cluster on Proxmox VE or VMware vSphere</li>
-          <li>Shared storage and networks separated by project</li>
-          <li>Backup and restore tested for data you cannot lose</li>
-          <li>Monitoring and alerting for hosts and virtual machines</li>
-          <li>A runbook a new postdoc or student can follow</li>
-        </ul>
-      </div>
-      <dl>
-        <dt><h4>Good fit for</h4></dt>
-        <dd>Research groups and labs that run their own servers and need them consolidated, reliable and documented.</dd>
-        <dt><h4>What we need from you</h4></dt>
-        <dd>A list of current servers and storage, the workloads you run and who needs access.</dd>
-        <dt><h4>What shapes the scope</h4></dt>
-        <dd>Smaller: a single site with a few hosts. Larger: clustered storage, GPU hosts or many projects with separate networks.</dd>
-      </dl>
-    </div>
-  </div>
-  <div class="pkg-view" data-view="startup" hidden>
-    <p class="lede">Own your infrastructure instead of renting it forever.</p>
-    <h4>A typical project</h4>
-    <p class="scenario">A startup with steady workloads finds cloud bills growing faster than revenue. We design and build a small on-premises or colocated virtual platform, with backup and a path to burst into the cloud.</p>
-    <div class="pkg-detail-grid">
-      <div>
-        <h4>What you get</h4>
-        <ul>
-          <li>A cost comparison and design for an on-prem or colocated platform</li>
-          <li>Hypervisor hosts on Proxmox VE or VMware vSphere</li>
-          <li>Networking, firewalling and remote access</li>
-          <li>Backup and recovery tested against realistic failures</li>
-          <li>Monitoring and a simple capacity plan</li>
-          <li>Documentation so a small team can run it</li>
-        </ul>
-      </div>
-      <dl>
-        <dt><h4>Good fit for</h4></dt>
-        <dd>Teams with predictable workloads who want lower running costs and control over their data.</dd>
-        <dt><h4>What we need from you</h4></dt>
-        <dd>Your workloads and their size, where the hardware will live and your budget range for equipment.</dd>
-        <dt><h4>What shapes the scope</h4></dt>
-        <dd>Smaller: two or three hosts in one room. Larger: high availability, multiple sites or strict recovery targets.</dd>
-      </dl>
-    </div>
-  </div>
-  <div class="pkg-view" data-view="regulated" hidden>
-    <p class="lede">Infrastructure that keeps data on premises, and can be explained to an auditor.</p>
-    <h4>A typical project</h4>
-    <p class="scenario">A firm must keep client data in its own premises. We design a segmented, backed-up virtual environment with access control and logging, documented in terms an auditor can follow.</p>
-    <div class="pkg-detail-grid">
-      <div>
-        <h4>What you get</h4>
-        <ul>
-          <li>A written design with network segmentation and access control</li>
-          <li>Hypervisor cluster on VMware vSphere or Proxmox VE</li>
-          <li>Encrypted storage and tested backups held off site</li>
-          <li>Central logging and alerting</li>
-          <li>A recovery plan with tested restore times</li>
-          <li>Documentation for audits and for your own staff</li>
-        </ul>
-      </div>
-      <dl>
-        <dt><h4>Good fit for</h4></dt>
-        <dd>Law, health and finance firms that need data held on premises with clear controls and records.</dd>
-        <dt><h4>What we need from you</h4></dt>
-        <dd>Your data and compliance requirements, current systems and recovery expectations.</dd>
-        <dt><h4>What shapes the scope</h4></dt>
-        <dd>Smaller: one office with a few hosts. Larger: two sites, high availability or detailed audit evidence.</dd>
-      </dl>
-    </div>
-  </div>
-  <div class="pkg-view" data-view="msp" hidden>
-    <p class="lede">A hosting platform your team can build services on, or a way off VMware costs.</p>
-    <h4>A typical project</h4>
-    <p class="scenario">An IT provider wants a platform for hosting client workloads, or needs to move clients off VMware after licensing changes. We design the target platform, build it and plan the migration.</p>
-    <div class="pkg-detail-grid">
-      <div>
-        <h4>What you get</h4>
-        <ul>
-          <li>A platform design for multi-client hosting or migration</li>
-          <li>Build on Proxmox VE or VMware vSphere</li>
-          <li>Tenant networks, storage and role-based access</li>
-          <li>Migration plan and pilot move of selected virtual machines</li>
-          <li>Backup, monitoring and capacity reporting</li>
-          <li>Runbooks for your engineers</li>
-        </ul>
-      </div>
-      <dl>
-        <dt><h4>Good fit for</h4></dt>
-        <dd>Managed service providers building or replacing a virtualisation platform for client workloads.</dd>
-        <dt><h4>What we need from you</h4></dt>
-        <dd>Your current estate, number of clients and virtual machines, and any licensing deadline.</dd>
-        <dt><h4>What shapes the scope</h4></dt>
-        <dd>Smaller: a pilot platform and a few machines. Larger: many tenants, high availability or a full estate migration.</dd>
-      </dl>
-    </div>
-  </div>
-  <p><a class="btn btn-primary btn-small" href="contact.html?package=on-prem-infrastructure">Request this package</a></p>
 </article>
   </div>
 </section>
