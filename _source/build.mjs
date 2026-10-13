@@ -105,13 +105,13 @@ ${tailored}
     '<ul class="pkg-list">\n' +
     roles.map((r) => `  <li class="job" data-group="${r.group}"><a class="pkg-row" href="job-${r.slug}.html">
     <div><h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p></div>
-    <div class="pkg-facts"><span class="pkg-price">${esc(r.type)}</span><span class="pkg-time">Remote from Dhaka, fixed salary${r.openings > 1 ? `, ${r.openings} positions` : ''}</span></div>
+    <div class="pkg-facts"><span class="pkg-price">${r.closed ? 'Closed' : esc(r.type)}</span><span class="pkg-time">${r.closed ? 'Not accepting applications' : `Remote from Dhaka, fixed salary${r.openings > 1 ? `, ${r.openings} positions` : ''}`}</span></div>
   </a></li>`).join('\n') +
     '\n</ul>',
 
   role_options: () =>
     '<option value="">Choose a role</option>\n' +
-    roles.map((r) => `<option value="${r.slug}">${esc(r.title)}</option>`).join('\n') +
+    roles.filter((r) => !r.closed).map((r) => `<option value="${r.slug}">${esc(r.title)}</option>`).join('\n') +
     '\n<option value="general">General interest, no specific role</option>',
 };
 
@@ -167,9 +167,10 @@ for (const r of roles) {
       <li><span>Type</span>${esc(r.type)}</li>
       <li><span>Location</span>Remote, based in Dhaka, Bangladesh</li>
       <li><span>Salary</span>Fixed</li>
-      <li><span>Positions</span>${r.openings}</li>
+      <li><span>${r.closed ? 'Status' : 'Positions'}</span>${r.closed ? 'Closed' : r.openings}</li>
     </ul>
-    <div class="btn-row"><a class="btn btn-primary" href="apply.html?role=${r.slug}">Apply for this role</a></div>
+${r.closed ? `    <div class="notice"><p><strong>This role is closed and we are not accepting new applications.</strong> Thank you to everyone who applied. You can <a href="apply.html?role=general">register general interest</a> for future roles.</p></div>
+    <div class="btn-row"><a class="btn btn-primary" href="careers.html#roles">See open roles</a></div>` : `    <div class="btn-row"><a class="btn btn-primary" href="apply.html?role=${r.slug}">Apply for this role</a></div>`}
   </div>
 </section>
 
@@ -204,7 +205,7 @@ ${ul(r.nice)}
   </div>
 </section>
 
-<section class="section tint">
+${r.closed ? '' : `<section class="section tint">
   <div class="wrap">
     <div class="section-head">
       <h2>How to apply</h2>
@@ -217,9 +218,9 @@ ${ul(r.nice)}
     </ol>
     <div class="btn-row"><a class="btn btn-primary" href="apply.html?role=${r.slug}">Apply for this role</a><a class="btn btn-quiet" href="careers.html#roles">See other roles</a></div>
   </div>
-</section>
+</section>`}
 `;
-  writePage(`job-${r.slug}.html`, { title: `${r.title}, remote from Dhaka`, description: `${r.summary} Remote ${r.type.toLowerCase()} for candidates based in Dhaka, Bangladesh, with ${site.name}. Fixed salary.`, key: 'careers' }, content);
+  writePage(`job-${r.slug}.html`, { title: `${r.title}, remote from Dhaka`, description: `${r.closed ? 'Closed, not accepting applications. ' : ''}${r.summary} Remote ${r.type.toLowerCase()} for candidates based in Dhaka, Bangladesh, with ${site.name}. Fixed salary.`, key: 'careers' }, content);
 }
 
 // Package data for the finder and the estimator, from the same source as the page text.

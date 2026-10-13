@@ -65,7 +65,8 @@
       "Progress towards a certification such as Azure Fundamentals, CKA or Terraform Associate"
     ],
     "trial": "A paid task: deploy a small app to Kubernetes from a Git repository, with an automatic pipeline.",
-    "openings": 2
+    "openings": 2,
+    "closed": true
   },
   {
     "slug": "ai-ml-engineer-intern",
