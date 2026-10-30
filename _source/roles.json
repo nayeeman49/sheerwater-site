@@ -6,9 +6,9 @@
   "type": "Voluntary training programme",
   "programme": true,
   "applyHref": "apply-intern.html",
-  "summary": "A structured, part-time, fully remote 6-month training programme for UK students. Learn Linux, Windows Server, virtualisation and Ansible by building real lab projects.",
+  "summary": "A structured, part-time, fully remote 6-month training programme for UK students, with 20 places and one-on-one mentoring. Learn Linux, Windows Server, virtualisation and Ansible by building real lab projects.",
   "metaTitle": "Infrastructure Engineer Intern: 6-month training programme, remote UK",
-  "metaDescription": "A voluntary, part-time, fully remote 6-month training programme for UK students: Linux, Windows Server, PowerShell, Proxmox, VMware and Ansible, built through real lab projects with weekly guidance.",
+  "metaDescription": "20 places on a voluntary, part-time, fully remote 6-month training programme for UK students, with one-on-one mentoring: Linux, Windows Server, PowerShell, Proxmox, VMware and Ansible.",
   "facts": [
    [
     "Type",
@@ -25,6 +25,10 @@
    [
     "Commitment",
     "Around 8 hours a week"
+   ],
+   [
+    "Places",
+    "20 available"
    ]
   ],
   "sections": [
@@ -34,7 +38,7 @@
    },
    {
     "title": "About the programme",
-    "text": "This is a structured part-time fully remote 6-month training program, not a job in the usual sense. You will learn the skills UK employers look for in infrastructure engineer roles by building real lab projects, with regular guidance and feedback from a working engineer. It is part-time and remote, and it is voluntary and unpaid. It does not involve client work. You finish with a GitHub portfolio and a clear record of what you built."
+    "text": "This is a structured part-time fully remote 6-month training program, not a job in the usual sense. You will learn the skills UK employers look for in infrastructure engineer roles by building real lab projects, with one-on-one mentoring and regular feedback from a working engineer. There are 20 places. It is part-time and remote, and it is voluntary and unpaid. It does not involve client work. You finish with a GitHub portfolio and a clear record of what you built."
    },
    {
     "title": "What you'll learn",
@@ -76,8 +80,8 @@
    {
     "title": "What you'll get",
     "items": [
-     "Weekly guided sessions and individual feedback",
-     "Five finished projects on GitHub",
+     "One-on-one mentoring, plus weekly guided sessions and individual feedback",
+     "Multiple projects on GitHub",
      "An intern title and project descriptions for your CV and LinkedIn",
      "A reference from the founder on successful completion, where earned"
     ]
@@ -95,14 +99,14 @@
   "applySteps": [
    [
     "Apply",
-    "Share your LinkedIn profile and a link to your CV. It takes about two minutes."
+    "Share your LinkedIn profile. It takes about a minute."
    ],
    [
     "We reply",
     "We read every application and reply by email."
    ]
   ],
-  "openings": 8
+  "openings": 20
  },
  {
   "slug": "project-manager",
