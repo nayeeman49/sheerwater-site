@@ -1,35 +1,54 @@
-<!--meta {"title":"On-prem, cloud and local AI infrastructure | Sheerwater Consulting","description":"Proxmox and VMware on-prem builds, cloud landing zones, Kubernetes, and local AI and GPU machines at a fixed price for UK research groups, startups and small organisations. Founder-led, Woking, Surrey.","key":"home","home":true} -->
-<section class="hero">
-  <div class="hero-pattern" aria-hidden="true"></div>
-  <div class="wrap hero-grid">
-    <div>
-      <h1>On-prem, cloud and local AI infrastructure, built to a fixed price</h1>
-      <p class="lede">We design and build Proxmox and VMware platforms, cloud foundations and Kubernetes, and local AI machines with GPU servers that keep your data on your own premises. For UK research groups, labs, startups and small organisations, with backups tested and a runbook your team can follow.</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="contact.html">Get a fixed quote</a>
-        <a class="btn btn-quiet" href="services.html">See the packages</a>
+<!--meta {"title":"Sheerwater Consulting | On-prem, cloud and local AI infrastructure","description":"Proxmox and VMware on-prem builds, cloud platforms, Kubernetes and local AI machines at a fixed price, for UK research groups, startups and small organisations. Founder-led, Woking, Surrey.","key":"home","home":true} -->
+<script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('intro-on'); }</script>
+
+<section class="intro" id="intro" data-phase="0" aria-label="Introduction">
+  <div class="intro-pin">
+    <div class="intro-stage" aria-hidden="true">
+      <div class="rig">
+        <div class="layer l-base"><span class="psu"></span><span class="fan"></span><span class="fan"></span><span class="fan"></span><span class="fan"></span></div>
+        <div class="layer l-storage"><i></i><i></i><i></i><i></i></div>
+        <div class="layer l-board"><span class="cpu"></span><span class="cpu"></span><span class="ram"></span><span class="ram"></span><span class="ram"></span><span class="ram"></span></div>
+        <div class="layer l-gpu"><span class="gfan"></span><span class="gfan"></span></div>
+        <div class="layer l-lid"></div>
       </div>
     </div>
 
-    <div class="panel">
-      <h2>What we build</h2>
-      <ul>
-        <li><strong>On-prem:</strong> Proxmox and VMware servers, storage and networking</li>
-        <li><strong>Cloud:</strong> Azure and AWS landing zones, Kubernetes, CI/CD</li>
-        <li><strong>Local AI:</strong> GPU servers and AI workstations running models on your premises</li>
-        <li><strong>Hybrid:</strong> steady workloads on your hardware, the cloud where it pays</li>
-        <li><strong>Also:</strong> Linux automation, HPC and GPU clusters, private AI pilots, apps</li>
-      </ul>
-      <p><a class="btn btn-primary btn-small" href="contact.html">Get a fixed quote</a></p>
+    <div class="intro-copy">
+      <div class="cap on">
+        <p class="eyebrow">Sheerwater Consulting · Woking, UK</p>
+        <h1>Infrastructure for small teams</h1>
+        <p class="lede">On-prem servers, cloud platforms and local AI machines. Designed, built and handed over at a fixed price.</p>
+      </div>
+      <div class="cap">
+        <h2>On-prem</h2>
+        <p>Proxmox or VMware on your own hardware: servers, storage and networking, written up so your team can run it.</p>
+      </div>
+      <div class="cap">
+        <h2>Local AI</h2>
+        <p>A GPU machine in your own office that runs language models, so your documents stay in the building.</p>
+      </div>
+      <div class="cap">
+        <h2>Cloud</h2>
+        <p>Azure or AWS set up properly in Terraform, with Kubernetes and deployment pipelines when you need them.</p>
+      </div>
+      <div class="cap">
+        <h2>One price, agreed up front</h2>
+        <p>Every package has a written scope and a fixed price before we start.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="contact.html">Get a fixed quote</a>
+          <a class="btn btn-quiet" href="services.html">See the packages</a>
+        </div>
+      </div>
     </div>
+    <div class="scroll-cue" aria-hidden="true">Scroll</div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Nine packages, each with a stated scope and a fixed price</h2>
-      <p>You know the cost before we start. The fixed price is confirmed in writing after a scoping call.</p>
+      <h2>Packages</h2>
+      <p>Each one has a written scope and a fixed price. We confirm the price in writing after a short call.</p>
     </div>
     {{packages_list}}
     <p style="margin-top:1.5rem"><a href="services.html">Compare the packages</a></p>
@@ -39,7 +58,7 @@
 <section class="section">
   <div class="wrap" style="max-width:40rem">
       <form class="panel" id="finder" aria-labelledby="finder-title">
-        <h2 id="finder-title">Not sure which package fits?</h2>
+        <h2 id="finder-title">Not sure where to start?</h2>
         <div class="field">
           <label for="finder-who">Who is this for? <span class="hint">Optional</span></label>
           <select id="finder-who" name="who">
@@ -62,11 +81,11 @@
             <option value="ai">To use AI on private data</option>
             <option value="app">To build a web or mobile app</option>
             <option value="gpu">To run AI on my own GPU machine</option>
-          <option value="onprem">To build servers on premises (VMware, Proxmox)</option>
+            <option value="onprem">To build servers on premises (VMware, Proxmox)</option>
           </select>
         </div>
         <div id="finder-result" class="result" aria-live="polite">
-          <p class="muted">Choose what you need most and the best-fit package appears here.</p>
+          <p class="muted">Pick what you need most and the best-fit package shows up here.</p>
         </div>
       </form>
   </div>
@@ -78,10 +97,10 @@
       <h2>How a project runs</h2>
     </div>
     <ol class="steps">
-      <li><h3>Scoping call</h3><p>Thirty minutes, free. We listen, ask questions and tell you if we are not the right fit.</p></li>
-      <li><h3>Written scope and price</h3><p>One page covering what is built, what is not, the timeline and a fixed price.</p></li>
-      <li><h3>Build in short stages</h3><p>Weekly demos and everything in your own repositories, so you can see progress and keep the work.</p></li>
-      <li><h3>Handover</h3><p>A runbook and a walkthrough for your team. Ongoing support is optional.</p></li>
+      <li><h3>Scoping call</h3><p>Thirty minutes, free. If we are not the right people for the job, we will say so.</p></li>
+      <li><h3>Written scope</h3><p>One page: what we build, what we do not, how long it takes and the price.</p></li>
+      <li><h3>Build</h3><p>Weekly demos. Everything goes into your own repositories, so you keep the work.</p></li>
+      <li><h3>Handover</h3><p>A runbook and a walkthrough for your team. Support afterwards is optional.</p></li>
     </ol>
   </div>
 </section>
@@ -89,12 +108,12 @@
 <section class="section">
   <div class="wrap split wide-left">
     <div>
-      <p>Sheerwater is led by Nayeem An-noor, an infrastructure engineer with more than five years across Linux, HPC, cloud and public-sector systems. Architecture, security decisions and every client conversation stay with him.</p>
-      <p>Extra build capacity comes from a small in-house team, and every change is reviewed in the UK before it reaches you.</p>
-      <p><a href="about.html">More about the studio</a></p>
+      <p>Sheerwater is run by Nayeem An-noor, an infrastructure engineer with more than five years across Linux, HPC, cloud and public-sector systems. He handles the architecture, the security decisions and every client conversation.</p>
+      <p>A small in-house team helps with the build, and he reviews every change before it reaches you.</p>
+      <p><a href="about.html">More about us</a></p>
     </div>
     <div class="notice">
-      <p><strong>Early client pricing.</strong> While the studio builds its first references, early clients get a reduced fixed price in return for a short written reference.</p>
+      <p><strong>Early client pricing.</strong> We are still building our first references, so early clients get a lower fixed price in return for a short written reference.</p>
       <p><a href="contact.html">Ask about early pricing</a></p>
     </div>
   </div>
@@ -103,19 +122,21 @@
 <section class="section tint">
   <div class="wrap split">
     <div>
-      <h2>Want to build with us?</h2>
-      <p>We hire engineers and creatives by the project. Roles open when work is signed, so register your interest now and we contact you when a project matches your skills.</p>
+      <h2>Want to work with us?</h2>
+      <p>We take people on by the project. Roles open once work is signed, so register your interest and we will get in touch when something fits.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="careers.html">See roles</a>
         <a class="btn btn-quiet" href="apply.html">Register your interest</a>
       </div>
     </div>
     <div>
-      <h2>Have a project in mind?</h2>
-      <p>Tell us what you are trying to do. You get a straight answer on scope, price and timing within a couple of working days.</p>
+      <h2>Got a project?</h2>
+      <p>Tell us what you are trying to do. You will get a straight answer on scope, price and timing within a couple of working days.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="contact.html">Start a project</a>
       </div>
     </div>
   </div>
 </section>
+
+<script src="assets/intro.js"></script>
