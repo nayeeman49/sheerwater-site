@@ -203,7 +203,7 @@
         fetch(cfg.formEndpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
           .then(function (res) {
             if (!res.ok) { throw new Error('bad status'); }
-            say(kind === 'apply'
+            say(form.getAttribute('data-success') ? form.getAttribute('data-success') : kind === 'apply'
               ? 'Thanks, your details are in. We contact people when a project matches their skills.'
               : 'Thanks, your enquiry is sent. We aim to reply within two working days.', 'ok');
             form.reset();

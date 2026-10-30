@@ -103,7 +103,7 @@ ${tailored}
 
   roles_list: () =>
     '<ul class="pkg-list">\n' +
-    roles.map((r) => `  <li class="job" data-group="${r.group}"><a class="pkg-row" href="job-${r.slug}.html">
+    roles.filter((r) => !r.programme).map((r) => `  <li class="job" data-group="${r.group}"><a class="pkg-row" href="job-${r.slug}.html">
     <div><h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p></div>
     <div class="pkg-facts"><span class="pkg-price">${r.closed ? 'Closed' : esc(r.type)}</span><span class="pkg-time">${r.closed ? 'Not accepting applications' : `Remote from Dhaka, fixed salary${r.openings > 1 ? `, ${r.openings} positions` : ''}`}</span></div>
   </a></li>`).join('\n') +
@@ -111,7 +111,7 @@ ${tailored}
 
   role_options: () =>
     '<option value="">Choose a role</option>\n' +
-    roles.filter((r) => !r.closed).map((r) => `<option value="${r.slug}">${esc(r.title)}</option>`).join('\n') +
+    roles.filter((r) => !r.closed && !r.programme).map((r) => `<option value="${r.slug}">${esc(r.title)}</option>`).join('\n') +
     '\n<option value="general">General interest, no specific role</option>',
 };
 
@@ -156,6 +156,14 @@ for (const file of pageFiles) {
 }
 
 // One page per job advert: job-<slug>.html
+const sectionsHtml = (r) => {
+  const li = (a) => a.map((x) => `          <li>${esc(x)}</li>`).join('\n');
+  return `    <div class="role-body">\n` + r.sections.map((sec) => {
+    if (sec.text) return `      <div class="role-wide">\n        <h2>${esc(sec.title)}</h2>\n        <p>${esc(sec.text)}</p>\n      </div>`;
+    if (sec.groups) return `      <div class="role-wide"><h2>${esc(sec.title)}</h2></div>\n` + sec.groups.map((g) => `      <div>\n        <h3>${esc(g.label)}</h3>\n        <ul>\n${li(g.items)}\n        </ul>\n      </div>`).join('\n');
+    return `      <div>\n        <h2 style="font-size:1.3rem">${esc(sec.title)}</h2>\n        <ul>\n${li(sec.items)}\n        </ul>\n      </div>`;
+  }).join('\n') + `\n    </div>\n`;
+};
 const ul = (a) => a.map((x) => `          <li>${esc(x)}</li>`).join('\n');
 for (const r of roles) {
   const content = `<section class="page-hero">
@@ -164,19 +172,19 @@ for (const r of roles) {
     <h1>${esc(r.title)}</h1>
     <p class="lede">${esc(r.summary)}</p>
     <ul class="role-facts" aria-label="Role details">
-      <li><span>Type</span>${esc(r.type)}</li>
+${r.facts ? r.facts.map(([k, v]) => `      <li><span>${esc(k)}</span>${esc(v)}</li>`).join('\n') : `      <li><span>Type</span>${esc(r.type)}</li>
       <li><span>Location</span>Remote, based in Dhaka, Bangladesh</li>
       <li><span>Salary</span>Fixed</li>
-      <li><span>${r.closed ? 'Status' : 'Positions'}</span>${r.closed ? 'Closed' : r.openings}</li>
+      <li><span>${r.closed ? 'Status' : 'Positions'}</span>${r.closed ? 'Closed' : r.openings}</li>`}
     </ul>
 ${r.closed ? `    <div class="notice"><p><strong>This role is closed and we are not accepting new applications.</strong> Thank you to everyone who applied. You can <a href="apply.html?role=general">register general interest</a> for future roles.</p></div>
-    <div class="btn-row"><a class="btn btn-primary" href="careers.html#roles">See open roles</a></div>` : `    <div class="btn-row"><a class="btn btn-primary" href="apply.html?role=${r.slug}">Apply for this role</a></div>`}
+    <div class="btn-row"><a class="btn btn-primary" href="careers.html#roles">See open roles</a></div>` : `    <div class="btn-row"><a class="btn btn-primary" href="${r.applyHref || `apply.html?role=${r.slug}`}">Apply for this role</a></div>`}
   </div>
 </section>
 
 <section class="section" style="padding-top:1rem">
   <div class="wrap">
-    <div class="role-body">
+${r.sections ? sectionsHtml(r) : `    <div class="role-body">
       <div class="role-wide">
         <h2>About the role</h2>
         <p>${esc(r.about)}</p>
@@ -202,6 +210,7 @@ ${ul(r.nice)}
         <p>${esc(r.trial)} Every trial task is paid.</p>
       </div>
     </div>
+`}
   </div>
 </section>
 
@@ -210,17 +219,19 @@ ${r.closed ? '' : `<section class="section tint">
     <div class="section-head">
       <h2>How to apply</h2>
     </div>
-    <ol class="steps">
+    ${r.applySteps ? `<ol class="steps" style="max-width:44rem;grid-template-columns:1fr 1fr">
+${r.applySteps.map(([h, t]) => `      <li><h3>${esc(h)}</h3><p>${esc(t)}</p></li>`).join('\n')}
+    </ol>` : `<ol class="steps">
       <li><h3>Send the form</h3><p>About five minutes. Include links to your work, such as GitHub, a portfolio or an online CV.</p></li>
       <li><h3>Intro call</h3><p>Thirty minutes about your experience and availability.</p></li>
       <li><h3>Paid trial task</h3><p>A small, real task with a written brief. You are paid for it.</p></li>
       <li><h3>Offer</h3><p>A written agreement covering the work, salary, confidentiality and ownership of what you build.</p></li>
-    </ol>
-    <div class="btn-row"><a class="btn btn-primary" href="apply.html?role=${r.slug}">Apply for this role</a><a class="btn btn-quiet" href="careers.html#roles">See other roles</a></div>
+    </ol>`}
+    <div class="btn-row"><a class="btn btn-primary" href="${r.applyHref || `apply.html?role=${r.slug}`}">Apply for this role</a><a class="btn btn-quiet" href="careers.html#roles">See other roles</a></div>
   </div>
 </section>`}
 `;
-  writePage(`job-${r.slug}.html`, { title: `${r.title}, remote from Dhaka`, description: `${r.closed ? 'Closed, not accepting applications. ' : ''}${r.summary} Remote ${r.type.toLowerCase()} for candidates based in Dhaka, Bangladesh, with ${site.name}. Fixed salary.`, key: 'careers' }, content);
+  writePage(`job-${r.slug}.html`, r.metaTitle ? { title: r.metaTitle, description: r.metaDescription, key: 'careers' } : { title: `${r.title}, remote from Dhaka`, description: `${r.closed ? 'Closed, not accepting applications. ' : ''}${r.summary} Remote ${r.type.toLowerCase()} for candidates based in Dhaka, Bangladesh, with ${site.name}. Fixed salary.`, key: 'careers' }, content);
 }
 
 // Package data for the finder and the estimator, from the same source as the page text.
