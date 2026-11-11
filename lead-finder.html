@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lead finder | Sheerwater Consulting</title>
+<meta name="description" content="Internal tool for finding prospects for Sheerwater Consulting packages.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sheerwaterconsulting.co.uk/lead-finder.html">
+<meta name="theme-color" content="#001119">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sheerwater Consulting">
+<meta property="og:title" content="Lead finder | Sheerwater Consulting">
+<meta property="og:description" content="Internal tool for finding prospects for Sheerwater Consulting packages.">
+<meta property="og:url" content="https://sheerwaterconsulting.co.uk/lead-finder.html">
+<meta property="og:image" content="https://sheerwaterconsulting.co.uk/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.className += ' js';</script>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html" aria-label="Sheerwater Consulting, home">
+      <img class="brand-mark" src="assets/logo-mark.png" width="39" height="44" alt="">
+      <span class="brand-text"><span class="brand-name">Sheerwater</span><span class="brand-sub">Consulting</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a href="services.html">Services</a>
+      <a href="private-ai.html">Private AI</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a class="btn btn-primary btn-small" href="contact.html">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <p class="muted">Internal tool. Not in the menu and hidden from search engines.</p>
+    <h1>Find customers for a package</h1>
+    <p class="lede">Choose the package, the kind of customer and the area. The page builds the searches for LinkedIn, Google, job boards and public sector tenders, plus a first message to adapt. Nothing is sent or collected: each link opens in a new tab and you read the results yourself.</p>
+  </div>
+</section>
+
+<section class="section" id="lead-finder">
+  <div class="wrap">
+    <noscript><p class="notice">This page needs JavaScript to build the searches.</p></noscript>
+    <div class="panel">
+      <h2>What are you selling, and to whom?</h2>
+      <div class="form-grid two">
+        <div class="field">
+          <label for="lf-service">Package</label>
+          <select id="lf-service"></select>
+        </div>
+        <div class="field">
+          <label for="lf-audience">Type of customer</label>
+          <select id="lf-audience"></select>
+        </div>
+        <div class="field">
+          <label for="lf-region">Area</label>
+          <select id="lf-region"></select>
+        </div>
+        <div class="field">
+          <label for="lf-place">Town or county <span class="hint">Optional. Narrows the job and Google searches.</span></label>
+          <input type="text" id="lf-place" maxlength="60" placeholder="For example Guildford, Reading or Surrey" autocomplete="off">
+        </div>
+      </div>
+      <fieldset class="field">
+        <legend>Sectors <span class="hint">Optional. Pick any that apply.</span></legend>
+        <div id="lf-sectors" class="chips" role="group" aria-label="Sectors"></div>
+      </fieldset>
+      <fieldset class="field">
+        <legend>Look for</legend>
+        <div id="lf-signals" class="choice-row"></div>
+      </fieldset>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Searches</h2>
+      <p id="lf-summary" class="muted" aria-live="polite"></p>
+    </div>
+    <div id="lf-groups"></div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap split">
+    <div>
+      <h2>Titles to look for</h2>
+      <ul id="lf-titles"></ul>
+      <p id="lf-sic" class="muted"></p>
+    </div>
+    <div>
+      <h2>Check before you reach out</h2>
+      <ul id="lf-qualify"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split wide-left">
+    <div>
+      <h2>Messages to adapt</h2>
+      <p class="muted">Fill in the brackets with something real you found: the advert, the post or the renewal. A message with no specific reason to send it is a worse message.</p>
+      <div id="lf-messages"></div>
+    </div>
+    <div class="notice">
+      <p><strong>Ground rules</strong></p>
+      <ul>
+        <li>Send messages yourself, one at a time. Do not automate outreach or scrape profiles.</li>
+        <li>Use public business information only, and write down where you found each lead.</li>
+        <li>Keep it business to business, say who you are, and stop if someone asks you to.</li>
+        <li>Do not message people about anything that draws on a current or former employer.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script src="assets/lead-finder.js" defer></script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img class="footer-logo" src="assets/logo.png" width="130" height="147" alt="Sheerwater Consulting" loading="lazy">
+      <p class="footer-text">A founder-led infrastructure studio in Woking, Surrey. On-prem, cloud and local AI for UK research teams, startups and small businesses.</p>
+    </div>
+    <div>
+      <p class="footer-head">Studio</p>
+      <ul class="footer-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="private-ai.html">Private AI</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-head">Work with us</p>
+      <ul class="footer-links">
+        <li><a href="contact.html">Start a project</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="apply.html">Register your interest</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-head">Find us</p>
+      <ul class="footer-links">
+        <li><a data-config="phone" data-show href="tel:+447498840388">+44 7498 840388</a></li>
+        <li><a href="https://www.linkedin.com/company/sheerwater-studios/" rel="noopener">LinkedIn</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p>&copy; 2026 Sheerwater Consulting. Woking, Surrey, United Kingdom.</p>
+  </div>
+  <!-- When the business is incorporated, add the company name, number and registered office here. -->
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/packages.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

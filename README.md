@@ -14,6 +14,7 @@ A static, multi-page website with no framework and no server. It works on GitHub
 | Apply | `apply.html` | Application form, with the role pre-selected from the Careers page |
 | Start a project | `contact.html` | Enquiry form, with the package pre-filled |
 | Privacy | `privacy.html` | Plain-language privacy notice |
+| Lead finder | `lead-finder.html` | Internal tool, unlisted and `noindex`: pick a package, customer type and area, get LinkedIn, Google, job-board and tender searches plus message drafts (`assets/lead-finder.js`) |
 | Not found | `404.html` | Shown for unknown addresses |
 
 ## Publish free on GitHub Pages

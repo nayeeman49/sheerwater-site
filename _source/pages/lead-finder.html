@@ -1,0 +1,88 @@
+<!--meta {"title":"Lead finder","description":"Internal tool for finding prospects for Sheerwater Consulting packages.","key":"lead-finder","noindex":true} -->
+<section class="page-hero">
+  <div class="wrap">
+    <p class="muted">Internal tool. Not in the menu and hidden from search engines.</p>
+    <h1>Find customers for a package</h1>
+    <p class="lede">Choose the package, the kind of customer and the area. The page builds the searches for LinkedIn, Google, job boards and public sector tenders, plus a first message to adapt. Nothing is sent or collected: each link opens in a new tab and you read the results yourself.</p>
+  </div>
+</section>
+
+<section class="section" id="lead-finder">
+  <div class="wrap">
+    <noscript><p class="notice">This page needs JavaScript to build the searches.</p></noscript>
+    <div class="panel">
+      <h2>What are you selling, and to whom?</h2>
+      <div class="form-grid two">
+        <div class="field">
+          <label for="lf-service">Package</label>
+          <select id="lf-service"></select>
+        </div>
+        <div class="field">
+          <label for="lf-audience">Type of customer</label>
+          <select id="lf-audience"></select>
+        </div>
+        <div class="field">
+          <label for="lf-region">Area</label>
+          <select id="lf-region"></select>
+        </div>
+        <div class="field">
+          <label for="lf-place">Town or county <span class="hint">Optional. Narrows the job and Google searches.</span></label>
+          <input type="text" id="lf-place" maxlength="60" placeholder="For example Guildford, Reading or Surrey" autocomplete="off">
+        </div>
+      </div>
+      <fieldset class="field">
+        <legend>Sectors <span class="hint">Optional. Pick any that apply.</span></legend>
+        <div id="lf-sectors" class="chips" role="group" aria-label="Sectors"></div>
+      </fieldset>
+      <fieldset class="field">
+        <legend>Look for</legend>
+        <div id="lf-signals" class="choice-row"></div>
+      </fieldset>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Searches</h2>
+      <p id="lf-summary" class="muted" aria-live="polite"></p>
+    </div>
+    <div id="lf-groups"></div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap split">
+    <div>
+      <h2>Titles to look for</h2>
+      <ul id="lf-titles"></ul>
+      <p id="lf-sic" class="muted"></p>
+    </div>
+    <div>
+      <h2>Check before you reach out</h2>
+      <ul id="lf-qualify"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split wide-left">
+    <div>
+      <h2>Messages to adapt</h2>
+      <p class="muted">Fill in the brackets with something real you found: the advert, the post or the renewal. A message with no specific reason to send it is a worse message.</p>
+      <div id="lf-messages"></div>
+    </div>
+    <div class="notice">
+      <p><strong>Ground rules</strong></p>
+      <ul>
+        <li>Send messages yourself, one at a time. Do not automate outreach or scrape profiles.</li>
+        <li>Use public business information only, and write down where you found each lead.</li>
+        <li>Keep it business to business, say who you are, and stop if someone asks you to.</li>
+        <li>Do not message people about anything that draws on a current or former employer.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script src="assets/lead-finder.js" defer></script>

@@ -134,6 +134,7 @@ function writePage(file, meta, content) {
     title: esc(title),
     description: esc(meta.description),
     canonical,
+    robots: meta.noindex ? '\n<meta name="robots" content="noindex, nofollow">' : '',
     ogimage: `${base}/assets/og.png`,
     nav,
     year,
