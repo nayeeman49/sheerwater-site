@@ -245,12 +245,30 @@
     el.style.setProperty('--my', (e.clientY - r.top) + 'px');
   }, { passive: true });
 
+  /* Package clips: load and play only while on screen. Reduced motion keeps the still image. */
+  var clips = Array.prototype.slice.call(document.querySelectorAll('video[data-src]'));
+  if (clips.length && 'IntersectionObserver' in window && !reduce) {
+    var vio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) {
+          if (!v.getAttribute('src')) { v.muted = true; v.setAttribute('src', v.getAttribute('data-src')); }
+          var p = v.play();
+          if (p && p.catch) { p.catch(function () {}); }
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.35 });
+    clips.forEach(function (v) { vio.observe(v); });
+  }
+
   if (reduce) { return; }
 
   /* Reveal sections as they scroll into view */
   if ('IntersectionObserver' in window) {
     var targets = Array.prototype.slice.call(document.querySelectorAll(
-      'main .section-head, main .steps li, main .pkg-list li, main .split > *, main .notice, main .job, main .pkg-detail, main .audience-intro, main form.panel'
+      'main .section-head, main .steps li, main .pkg-list li, main .pkg-cards li, main .split > *, main .notice, main .job, main .pkg-detail, main .audience-intro, main form.panel'
     )).filter(function (el) { return !el.closest('.hero, .page-hero, [hidden]'); });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {

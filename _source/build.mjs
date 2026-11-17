@@ -19,13 +19,16 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const gbp = (n) => '£' + n.toLocaleString('en-GB');
 const audienceLabel = { research: 'research groups', startup: 'startups', regulated: 'regulated businesses', msp: 'IT providers' };
 
+// A short silent clip per package. It loads and plays only while on screen (see assets/main.js).
+const video = (slug) => `<div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/${slug}.jpg" data-src="assets/video/${slug}.mp4" aria-hidden="true" tabindex="-1"></video></div>`;
+
 // Reusable blocks injected into pages through {{tokens}}.
 const blocks = {
   packages_list: () =>
-    '<ul class="pkg-list">\n' +
-    packages.map((p) => `  <li><a class="pkg-row" href="services.html#${p.slug}">
-    <div><h3>${esc(p.name)}</h3><p>${esc(p.summary)}</p></div>
-    <div class="pkg-facts"><span class="pkg-price">Fixed price</span><span class="pkg-time">${esc(p.timeline)}</span></div>
+    '<ul class="pkg-cards">\n' +
+    packages.map((p) => `  <li><a class="pkg-card" href="services.html#${p.slug}">
+    ${video(p.slug)}
+    <div class="pkg-card-body"><h3>${esc(p.name)}</h3><p class="pkg-time">${esc(p.timeline)}</p></div>
   </a></li>`).join('\n') +
     '\n</ul>',
 
@@ -82,6 +85,7 @@ ${v.priceNote ? `        <dt><h4>What shapes the scope</h4></dt>\n        <dd>${
     <h3>${esc(p.name)}</h3>
     <p class="pkg-facts"><span class="pkg-price">Fixed price</span><span class="pkg-time">${esc(p.timeline)}</span></p>
   </div>
+  ${video(p.slug)}
 ${general}
 ${tailored}
   <p><a class="btn btn-primary btn-small" href="contact.html?package=${p.slug}">Request this package</a></p>
