@@ -105,13 +105,13 @@ ${tailored}
     '<ul class="pkg-list">\n' +
     roles.filter((r) => !r.programme).map((r) => `  <li class="job" data-group="${r.group}"><a class="pkg-row" href="job-${r.slug}.html">
     <div><h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p></div>
-    <div class="pkg-facts"><span class="pkg-price">${r.closed ? 'Closed' : esc(r.type)}</span><span class="pkg-time">${r.closed ? 'Not accepting applications' : `Remote from Dhaka, fixed salary${r.openings > 1 ? `, ${r.openings} positions` : ''}`}</span></div>
+    <div class="pkg-facts"><span class="pkg-price">${r.closed ? 'Closed' : esc(r.listFacts ? r.listFacts[0] : r.type)}</span><span class="pkg-time">${r.closed ? 'Not accepting applications' : (r.listFacts ? esc(r.listFacts[1]) : `Remote from Dhaka, fixed salary${r.openings > 1 ? `, ${r.openings} positions` : ''}`)}</span></div>
   </a></li>`).join('\n') +
     '\n</ul>',
 
   role_options: () =>
     '<option value="">Choose a role</option>\n' +
-    roles.filter((r) => !r.closed && !r.programme).map((r) => `<option value="${r.slug}">${esc(r.title)}</option>`).join('\n') +
+    roles.filter((r) => !r.closed && !r.programme && !r.voluntary).map((r) => `<option value="${r.slug}">${esc(r.title)}</option>`).join('\n') +
     '\n<option value="general">General interest, no specific role</option>',
 };
 

@@ -246,5 +246,98 @@
   ],
   "trial": "A paid task: edit a 30 to 60 second video from supplied footage, with subtitles and a caption.",
   "openings": 1
+ },
+ {
+  "slug": "ai-business-analyst",
+  "title": "AI Business Analyst (Associate)",
+  "group": "business",
+  "type": "Voluntary advisory role",
+  "voluntary": true,
+  "applyHref": "apply-ai-business-analyst.html",
+  "listFacts": [
+   "Voluntary, part time",
+   "Remote, UK"
+  ],
+  "summary": "A voluntary, part-time advisory role for a business analyst who wants hands-on experience with private AI projects, working as and when you are available.",
+  "metaTitle": "AI Business Analyst (Associate): voluntary part-time role, remote UK",
+  "metaDescription": "A voluntary, part-time, remote role helping Sheerwater Consulting scope and test private AI projects. Apply with your LinkedIn profile. No CV needed.",
+  "facts": [
+   [
+    "Type",
+    "Voluntary, unpaid advisory role"
+   ],
+   [
+    "Location",
+    "Remote, UK"
+   ],
+   [
+    "Commitment",
+    "Part time, on and off. No set hours."
+   ],
+   [
+    "Experience",
+    "Business analysis, AI interest"
+   ]
+  ],
+  "sections": [
+   {
+    "title": "About Sheerwater Consulting",
+    "text": "Sheerwater is a founder-led UK infrastructure and AI consultancy based in Woking, Surrey. We sell fixed-scope services including on-premises infrastructure, Azure and AWS landing zones, Kubernetes, and private AI that runs on a client's own systems. We are early stage and building our first client work."
+   },
+   {
+    "title": "About the role",
+    "text": "The AI Business Analyst helps us decide which problems are worth solving with private AI, and shapes how we scope, test and report on each pilot. It is a voluntary advisory role for someone with business analysis experience who wants to work on AI projects alongside a small team. You choose what to take on and when."
+   },
+   {
+    "title": "What you could work on",
+    "items": [
+     "Discovery: build a standard discovery questionnaire and requirements template for our services, starting with the private AI pilot",
+     "Use-case selection: help a client find one task where AI will save time, and define what a good result looks like",
+     "Pilot testing: plan and run testing sessions with a client's team and write a short verdict report",
+     "Data and risk review: map where a client's data sits and what must stay in-house",
+     "Proposals: turn discovery notes into a one-page proposal and statement of work",
+     "Training programme: help keep our student programme organised",
+     "Hands-on AI: build a prompt library and test our local AI demo, using Claude and other tools"
+    ]
+   },
+   {
+    "title": "Who this suits",
+    "items": [
+     "Experience in business analysis: stakeholder interviews, requirements, process mapping and documentation",
+     "Interest in AI, and ideally some project experience with chatbots or similar tools",
+     "Clear writing, and confidence talking to non-technical people",
+     "Reliable communication: you tell us when you are busy, and we do not chase",
+     "No deep technical background needed"
+    ]
+   },
+   {
+    "title": "What you get",
+    "items": [
+     "Real AI project experience for your CV and LinkedIn, with a title and a short written reference where earned",
+     "Practice with Claude and other AI tools on real business tasks",
+     "A say in how our private AI offer is shaped"
+    ]
+   },
+   {
+    "title": "How it works",
+    "items": [
+     "Part time, on and off. There are no set hours, no minimum commitment and no deadlines we can enforce.",
+     "Either side can stop at any time, without notice or reason.",
+     "This is unpaid and is not employment. It creates no contract of employment, and we make no promise of future paid work.",
+     "Client information stays confidential, and we ask you to confirm this in writing."
+    ]
+   }
+  ],
+  "applySteps": [
+   [
+    "Apply",
+    "Share your LinkedIn profile. GitHub is optional. No CV needed."
+   ],
+   [
+    "We reply",
+    "We read every application ourselves and reply by email."
+   ]
+  ],
+  "openings": 1
  }
 ]
