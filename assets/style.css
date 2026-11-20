@@ -1,10 +1,7 @@
 /* Sheerwater Consulting. The palette and the rounded, right-angled line style come from the logo. */
 
 /* Fonts are self-hosted: no third-party requests, so no visitor data is sent to a font service. */
-@font-face { font-family: "Newsreader"; src: url("fonts/newsreader-latin-opsz-normal.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
-@font-face { font-family: "IBM Plex Sans"; src: url("fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "IBM Plex Sans"; src: url("fonts/ibm-plex-sans-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "IBM Plex Sans"; src: url("fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("fonts/dm-sans-latin-opsz-normal.woff2") format("woff2"); font-weight: 100 1000; font-style: normal; font-display: swap; }
 
 :root {
   color-scheme: dark;
@@ -601,3 +598,92 @@ input[type="text"], input[type="email"], input[type="url"], input[type="number"]
 .week-tabs button:hover { border-color: var(--cyan); }
 .week-tabs button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--on-accent); }
 @media (max-width: 520px) { .week-tabs button { width: 2.3rem; height: 2.3rem; } }
+
+
+/* ===== Light theme: soft mint page, white rounded cards, one clean grotesk ===== */
+:root {
+  color-scheme: light;
+  --bg: #d6e9d9;
+  --surface: #f6f8f5;
+  --surface-2: #eaf2ea;
+  --line: #bcd3c0;
+  --line-strong: #8fb09a;
+  --ink: #0c1913;
+  --soft: #46594f;
+  --on-accent: #ffffff;
+  --on-ink: #ffffff;
+  --cyan: #0b7a4b;
+  --green: #12a05c;
+  --radius: 20px;
+  --radius-small: 12px;
+  --display: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+/* header, footer and the opening animation stay dark, so the logo and the 3D server read well */
+.site-header, .site-footer, .intro {
+  --bg: #061a21; --surface: #0a232c; --surface-2: #103039; --line: #1b3944; --line-strong: #345866;
+  --ink: #eef2ee; --soft: #9fb4b8; --cyan: #62d8c9; --green: #2fbf7c; --on-ink: #04141a; --on-accent: #04141a;
+  color: var(--ink);
+}
+.site-header { background: #061a21; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.site-footer { background: #041419; }
+.intro { background: #061a21; border-radius: 0 0 2rem 2rem; }
+
+body { font-size: 1.0625rem; line-height: 1.6; }
+h1, h2 { font-weight: 300; letter-spacing: -0.035em; line-height: 1.02; }
+h1 { font-size: clamp(2.7rem, 5.4vw + 0.4rem, 5rem); letter-spacing: -0.04em; }
+h2 { font-size: clamp(2rem, 2.6vw + 1rem, 3.1rem); }
+h3, h4 { font-weight: 500; letter-spacing: -0.01em; }
+.page-hero h1 { font-size: clamp(2.6rem, 5vw + 0.5rem, 4.6rem); max-width: 16ch; }
+.pkg-detail h3, .panel h2, .panel h3, .audience-intro h2 { font-weight: 400; }
+.cap h1, .cap h2 { font-weight: 300; }
+.lede { color: var(--soft); }
+
+/* buttons: pills, black on the page, light in the dark header */
+.btn { border-radius: 999px; font-weight: 500; }
+.btn-primary { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
+.btn-primary:hover { background: var(--cyan); color: var(--on-ink); border-color: var(--cyan); }
+.btn-quiet { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn-quiet:hover { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
+.btn-primary:focus-visible { outline-color: var(--cyan); }
+.chip { border-radius: 999px; border-color: var(--line-strong); }
+.chip:hover { border-color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
+.week-tabs button { border-radius: 999px; border-color: var(--line-strong); }
+.week-tabs button:hover { border-color: var(--ink); }
+.week-tabs button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+
+/* white rounded cards */
+.panel, .notice, .pkg-card, .steps li { background: var(--surface); border: 0; border-radius: 20px; }
+.notice { border-left: 0; }
+.panel { padding: clamp(1.4rem, 3vw, 2rem); }
+.pkg-card { overflow: hidden; transition: box-shadow .2s ease; }
+.pkg-card:hover { transform: none; box-shadow: 0 0 0 2px var(--cyan); }
+.pkg-card-body { padding: 1rem 1.25rem 1.2rem; }
+.pkg-media, .course-media { background: #061a21; border: 0; border-radius: 20px; }
+.pkg-card .pkg-media { border-radius: 0; border-bottom: 0; }
+.steps li { padding: 1.4rem 1.5rem 1.6rem; }
+.steps li::before { color: var(--cyan); }
+.steps p { color: var(--soft); }
+.tint { background: #c8dfcc; }
+.section + .section { border-top: 0; }
+.specs { background: var(--surface); border-radius: 20px; padding: 0.4rem 1.5rem 0.3rem; gap: 0 2rem; }
+.specs div { border-top-color: var(--line); }
+.specs div:nth-child(-n+2) { border-top: 0; }
+.role-facts li { border-radius: 999px; background: var(--surface); border-color: transparent; }
+.pkg-row:hover, .role summary:hover { background: rgba(255,255,255,.55); }
+.pkg-row, .role summary { border-radius: 12px; }
+input[type="text"], input[type="email"], input[type="url"], input[type="number"], select, textarea { background: #fff; border-color: var(--line-strong); border-radius: 12px; color: var(--ink); }
+.page-hero { border-bottom: 0; }
+.page-hero::after { opacity: .22; }
+.about-logo { background: #061a21; padding: 1.25rem; border-radius: 20px; width: 230px; }
+.leader-photo { border-color: var(--line-strong); }
+.week-list li { border-left-color: var(--line-strong); }
+.pkg-detail { border-top-color: var(--line-strong); }
+.faq details, .faq details:first-child { border-color: var(--line-strong); }
+.role, .role:first-child { border-color: var(--line-strong); }
+.pkg-list, .pkg-list li { border-color: var(--line-strong); }
+.estimate { color: var(--cyan); }
+::selection { background: var(--ink); color: var(--on-ink); }
+.js .nav-toggle { border-radius: 999px; }
+@media print { body { background: #fff; } }
