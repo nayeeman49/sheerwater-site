@@ -1,29 +1,35 @@
 /* Sheerwater Consulting. The palette and the rounded, right-angled line style come from the logo. */
 
+/* Fonts are self-hosted: no third-party requests, so no visitor data is sent to a font service. */
+@font-face { font-family: "Newsreader"; src: url("fonts/newsreader-latin-opsz-normal.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("fonts/ibm-plex-sans-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+
 :root {
   color-scheme: dark;
 
   /* Sampled from the logo file */
-  --bg: #00090e;
-  --cyan: #08FBFA;
-  --green: #00BF63;
+  --bg: #061a21;
+  --cyan: #62d8c9;
+  --green: #2fbf7c;
 
   /* Supporting tones */
-  --surface: #07161e;
-  --surface-2: #0A2A39;
-  --line: #10242e;
-  --line-strong: #2d5468;
-  --ink: #F2FAFB;
-  --soft: #9CB8C4;
-  --on-accent: #001119;
+  --surface: #0a232c;
+  --surface-2: #103039;
+  --line: #1b3944;
+  --line-strong: #345866;
+  --ink: #eef2ee;
+  --soft: #9fb4b8;
+  --on-accent: #04141a;
   --danger: #FF8A80;
 
-  --radius: 14px;
-  --radius-small: 8px;
+  --radius: 6px;
+  --radius-small: 4px;
   --max: 1120px;
   --gutter: clamp(1rem, 4vw, 2rem);
-  --display: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -303,7 +309,7 @@ fieldset { border: 0; padding: 0; margin: 0 0 1rem; }
 
 /* Footer */
 
-.site-footer { background: #000B11; border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 3rem; color: var(--soft); }
+.site-footer { background: #041419; border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 3rem; color: var(--soft); }
 .site-footer a { color: var(--ink); text-decoration-color: var(--line-strong); }
 .site-footer a:hover { color: var(--cyan); }
 .footer-grid { display: grid; gap: 2rem; }
@@ -484,3 +490,87 @@ fieldset { border: 0; padding: 0; margin: 0 0 1rem; }
 @media (max-width: 959px) {
   .pkg-detail > .pkg-media { margin: 0 0 1.25rem; max-width: 34rem; }
 }
+
+
+/* ===== Design pass: serif display, plain grotesk body, one calm accent ===== */
+
+body { font-size: 1.0625rem; line-height: 1.6; font-feature-settings: "kern", "liga", "tnum" 0; text-rendering: optimizeLegibility; }
+::selection { background: var(--cyan); color: var(--on-accent); }
+
+h1, h2 { font-family: var(--display); font-weight: 400; font-optical-sizing: auto; letter-spacing: -0.02em; line-height: 1.04; }
+h1 { font-size: clamp(2.7rem, 5.2vw + 0.4rem, 4.9rem); letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.9rem, 2.4vw + 1rem, 2.9rem); }
+h3, h4 { font-family: var(--body); font-weight: 600; letter-spacing: -0.005em; line-height: 1.25; }
+h3 { font-size: 1.15rem; }
+.page-hero h1 { font-size: clamp(2.5rem, 4.4vw + 0.6rem, 4.2rem); max-width: 17ch; }
+.lede { font-size: 1.22rem; line-height: 1.55; color: var(--soft); max-width: 52ch; }
+.section-head { max-width: 40rem; }
+.section-head h2 { margin-bottom: 0.5em; }
+
+/* small headings stay in the grotesk */
+.brand-name, .brand-sub, .footer-head, .role-title, .role-body h4, .pkg-detail h4, .faq summary, .result-name, .estimate, .steps li::before { font-family: var(--body); }
+.brand-name { font-weight: 600; letter-spacing: -0.01em; }
+.pkg-detail h3 { font-size: 1.6rem; font-family: var(--display); font-weight: 400; letter-spacing: -0.02em; }
+.panel h2, .panel h3, .audience-intro h2 { font-family: var(--display); font-weight: 400; }
+.estimate { font-weight: 500; }
+
+/* header and links */
+.site-header { background: rgba(6,26,33,.88); }
+.site-nav a:not(.btn) { font-size: .96rem; }
+.site-nav a[aria-current="page"] { border-bottom-color: var(--cyan); }
+a { text-decoration-color: var(--line-strong); }
+
+/* buttons: square-cornered, paper-white primary, accent only on interaction */
+.btn { border-radius: 4px; font-weight: 500; padding: 0.8rem 1.35rem; }
+.btn-small { padding: 0.5rem 1rem; font-size: .92rem; }
+.btn-primary { background: var(--ink); color: var(--on-accent); border-color: var(--ink); }
+.btn-primary:hover { background: var(--cyan); color: var(--on-accent); border-color: var(--cyan); }
+.btn-quiet { border-color: var(--line-strong); }
+.btn-quiet:hover { border-color: var(--cyan); color: var(--ink); }
+.btn:hover { transform: none; }
+
+/* filters */
+.chip { border-radius: 4px; font-size: .95rem; padding: 0.45rem 1rem; }
+.chip:hover { border-color: var(--cyan); color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--on-accent); border-color: var(--ink); }
+
+/* surfaces */
+.panel { border-radius: 8px; background: var(--surface); }
+.notice { border-radius: var(--radius); border-left: 2px solid var(--cyan); background: var(--surface); }
+.tint { background: var(--surface); }
+.section + .section { border-top-color: var(--line); }
+.role-facts li { border-radius: 4px; font-size: .9rem; }
+input[type="text"], input[type="email"], input[type="url"], input[type="number"], select, textarea { border-radius: 4px; }
+
+/* video cards: image-led, no lift */
+.pkg-card { border-radius: var(--radius); transition: border-color .2s ease; background: var(--surface); }
+.pkg-card:hover { transform: none; border-color: var(--cyan); }
+.pkg-card:hover h3, .pkg-row:hover h3, .faq summary:hover, .crumb a:hover, .site-footer a:hover, .role-toggle { color: var(--ink); }
+.pkg-card:hover h3 { text-decoration: underline; text-decoration-color: var(--cyan); text-underline-offset: .25em; text-decoration-thickness: 1px; }
+.pkg-card h3 { font-size: 1.02rem; }
+.pkg-media { border-radius: var(--radius); }
+.pkg-card .pkg-time, .pkg-time { font-size: .92rem; }
+
+/* sequence numbers */
+.steps li::before { color: var(--cyan); font-weight: 500; font-variant-numeric: tabular-nums; }
+.steps h3 { font-size: 1.08rem; }
+
+/* intro captions: sentence case, no tracked capitals */
+.cap .eyebrow { text-transform: none; letter-spacing: 0; font-size: .95rem; color: var(--soft); }
+.intro-on .scroll-cue { text-transform: none; letter-spacing: 0; font-size: .8rem; }
+.cap h1 { font-size: clamp(2.4rem, 3.6vw + .8rem, 3.8rem); }
+.cap h2 { font-family: var(--display); font-weight: 400; letter-spacing: -0.02em; font-size: clamp(2rem, 3.2vw + .6rem, 3.2rem); }
+
+/* page headers: the logo's right-angled line pattern, kept faint */
+.page-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); padding-bottom: clamp(2rem, 4vw, 3.25rem); }
+.page-hero::after {
+  content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 46%; pointer-events: none;
+  background: url("maze.svg") right center / cover no-repeat; opacity: .16;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 60%); mask-image: linear-gradient(to right, transparent, #000 60%);
+}
+.page-hero .wrap { position: relative; z-index: 1; }
+@media (max-width: 859px) { .page-hero::after { display: none; } }
+.page-hero + .section { border-top: 0; }
+
+@media (max-width: 640px) { body { font-size: 1rem; } h1 { font-size: 2.5rem; } }
+.js .nav-toggle { border-radius: 4px; }

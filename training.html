@@ -20,9 +20,8 @@
 <script>document.documentElement.className += ' js';</script>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -49,7 +48,6 @@
 <main id="main">
 <section class="page-hero">
   <div class="wrap">
-    <p class="eyebrow">Training</p>
     <h1>Learn by building, one project a week</h1>
     <p class="lede">Our training team runs two free, part-time, remote programmes for UK students. Each lasts 12 weeks, with one live evening a week and a hands-on project you push to GitHub.</p>
     <div class="btn-row">
@@ -59,7 +57,7 @@
   </div>
 </section>
 
-<section class="section" id="infrastructure" style="padding-top:1rem">
+<section class="section" id="infrastructure">
   <div class="wrap split wide-left">
     <div>
       <h2>Infrastructure Engineer Training Programme</h2>
