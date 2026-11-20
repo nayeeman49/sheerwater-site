@@ -14,21 +14,21 @@
   function smooth(x) { x = clamp(x); return x * x * (3 - 2 * x); }
 
   // Opening sequence: a mint veil with the logo lifts away, then the server flies together from fully exploded.
-  var T0 = null, DELAY = 200, DUR = 1000, opening = true;
+  var T0 = null, DELAY = 0, DUR = 450, opening = true;
   var veil = document.createElement('div');
   veil.className = 'veil';
-  veil.innerHTML = '<img src="assets/logo-mark.png?v=mint6" width="88" height="88" alt="">';
+  veil.innerHTML = '<img src="assets/logo-mark.png?v=mint7" width="88" height="88" alt="">';
   document.body.appendChild(veil);
   sec.classList.add('opening');
   function ease(x) { return 1 - Math.pow(1 - x, 2.6); }
   function open(now) {
     if (T0 === null) { T0 = now; }
     var t = now - T0;
-    if (t > 260 && !veil.classList.contains('go')) { veil.classList.add('go'); }
-    if (t > 200) { sec.classList.add('show'); }
+    if (t > 60 && !veil.classList.contains('go')) { veil.classList.add('go'); }
+    if (t > 0) { sec.classList.add('show'); }
     var k = clamp((t - DELAY) / DUR);
     openE = 1 - ease(k);
-    if (k >= 1 || window.scrollY > 40) { opening = false; sec.classList.remove('opening'); sec.classList.add('opened'); update(); setTimeout(function () { veil.remove(); }, 500); return; }
+    if (k >= 1 || window.scrollY > 2) { opening = false; sec.classList.remove('opening'); sec.classList.add('opened'); update(); setTimeout(function () { veil.remove(); }, 300); return; }
     update();
     window.requestAnimationFrame(open);
   }
@@ -57,6 +57,7 @@
 
   function request() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
   window.addEventListener('scroll', request, { passive: true });
+  ['wheel', 'touchstart', 'keydown'].forEach(function (n) { window.addEventListener(n, function () { openE = 0; }, { passive: true, once: true }); });
   window.addEventListener('resize', request);
   update();
   window.requestAnimationFrame(open);

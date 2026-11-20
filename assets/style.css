@@ -717,8 +717,8 @@ input[type="text"], input[type="email"], input[type="url"], input[type="number"]
 .week-list li { padding: .9rem 1.1rem .95rem 1.25rem; }
 
 /* opening sequence on the home page */
-.veil { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; background: #d6e9d9; transition: opacity .35s ease, transform .45s cubic-bezier(.7,0,.2,1); }
-.veil img { border-radius: 24px; animation: veil-in .3s cubic-bezier(.2,.8,.2,1) both; }
+.veil { position: fixed; inset: 0; z-index: 60; pointer-events: none; display: grid; place-items: center; background: #d6e9d9; transition: opacity .25s ease, transform .3s ease; }
+.veil img { border-radius: 24px; animation: veil-in .15s cubic-bezier(.2,.8,.2,1) both; }
 .veil.go { opacity: 0; transform: translateY(-4%); pointer-events: none; }
 @keyframes veil-in { from { opacity: 0; transform: scale(.8); } to { opacity: 1; transform: none; } }
 .intro.opening:not(.show) .rig { opacity: 0; }
