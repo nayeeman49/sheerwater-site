@@ -715,3 +715,16 @@ input[type="text"], input[type="email"], input[type="url"], input[type="number"]
 .chip[aria-pressed="false"], .week-tabs button[aria-pressed="false"] { box-shadow: 0 1px 2px rgba(12,40,26,.08), 0 4px 10px -4px rgba(12,40,26,.14); }
 .week-list li { background: var(--surface); border-radius: 0 14px 14px 0; box-shadow: 0 1px 2px rgba(12,40,26,.06), 0 8px 18px -8px rgba(12,40,26,.16); padding-right: 1rem; }
 .week-list li { padding: .9rem 1.1rem .95rem 1.25rem; }
+
+/* opening sequence on the home page */
+.veil { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; background: #d6e9d9; transition: opacity .6s ease .1s, transform .8s cubic-bezier(.7,0,.2,1); }
+.veil img { border-radius: 24px; animation: veil-in .7s cubic-bezier(.2,.8,.2,1) both; }
+.veil.go { opacity: 0; transform: translateY(-4%); pointer-events: none; }
+@keyframes veil-in { from { opacity: 0; transform: scale(.8); } to { opacity: 1; transform: none; } }
+.intro.opening:not(.show) .rig { opacity: 0; }
+.intro .rig { transition: opacity .7s ease; }
+.intro.opened .rig, .intro:not(.opening) .rig { transition: opacity .6s ease; }
+.intro-on .intro.opening .cap { opacity: 0; transform: translateY(18px); }
+.intro-on .intro.opened .cap.on { transition-delay: .1s; }
+.site-header { transition: transform .6s ease, background .3s ease; }
+@media (prefers-reduced-motion: reduce) { .veil { display: none; } }
