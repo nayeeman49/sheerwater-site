@@ -21,7 +21,7 @@ const gbp = (n) => '£' + n.toLocaleString('en-GB');
 const audienceLabel = { research: 'research groups', startup: 'startups', regulated: 'regulated businesses', msp: 'IT providers' };
 
 // A short silent clip per package. It loads and plays only while on screen (see assets/main.js).
-const video = (slug) => `<div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/${slug}.jpg" data-src="assets/video/${slug}.mp4" aria-hidden="true" tabindex="-1"></video></div>`;
+const video = (slug) => `<div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/${slug}.jpg?v=mint1" data-src="assets/video/${slug}.mp4?v=mint1" aria-hidden="true" tabindex="-1"></video></div>`;
 
 // Reusable blocks injected into pages through {{tokens}}.
 const blocks = {
