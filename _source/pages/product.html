@@ -1,9 +1,9 @@
-<!--meta {"title":"Product: apps, websites and games, built to order","description":"The Sheerwater product team builds mobile apps, business websites and games. The team is in progress and open to projects. Tell us what you want to build.","key":"product"} -->
+<!--meta {"title":"Product: apps, websites and games, built to order","description":"The Sheerwater product team builds mobile apps, business websites, games, web apps, online shops, booking systems and AI features. The team is in progress and open to projects.","key":"product"} -->
 <section class="page-hero">
   <div class="wrap">
     <p class="eyebrow">Product</p>
-    <h1>Mobile apps, websites and games</h1>
-    <p class="lede">Our product team builds software from idea to launch. The team is in progress, we are taking on projects now, and we are open to building almost anything in these three areas.</p>
+    <h1>Apps, websites, games and tools, built to order</h1>
+    <p class="lede">Our product team builds software from idea to launch. The team is in progress, we are taking on projects now, and we are open to building almost anything: mobile apps, websites for businesses, games, web apps, shops, booking systems and AI features.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="contact.html?package=application-development">Tell us your idea</a>
       <a class="btn btn-quiet" href="#what">What we build</a>
@@ -15,13 +15,24 @@
   <div class="wrap">
     <div class="section-head">
       <h2>What we are open to building</h2>
-      <p>If your idea fits one of these, we want to hear it. If it sits somewhere in between, describe it and we will say plainly whether we can do it well.</p>
+      <p>Pick a type to filter the list, or watch each clip to see how that kind of project comes together. If your idea sits somewhere in between, describe it and we will say plainly whether we can do it well.</p>
     </div>
-    <ul class="pkg-list">
-      <li class="pkg-row"><div><h3>Mobile apps</h3><p>iOS and Android apps for a business, a community or a new idea: from a first working version to a launch-ready app.</p></div></li>
-      <li class="pkg-row"><div><h3>Websites for businesses</h3><p>Clear, fast websites for small businesses and organisations, with forms, bookings or a simple content system where you need them.</p></div></li>
-      <li class="pkg-row"><div><h3>Games</h3><p>Browser and mobile games, from small prototypes to full releases.</p></div></li>
-    </ul>
+    <div id="product-filter" class="chips" role="group" aria-label="Filter by what you want to build">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">Everything</button>
+      <button type="button" class="chip" data-filter="apps" aria-pressed="false">Apps</button>
+      <button type="button" class="chip" data-filter="web" aria-pressed="false">Websites</button>
+      <button type="button" class="chip" data-filter="games" aria-pressed="false">Games</button>
+      <button type="button" class="chip" data-filter="business" aria-pressed="false">Business tools</button>
+      <button type="button" class="chip" data-filter="ai" aria-pressed="false">AI</button>
+    </div>
+    <p id="product-count" class="muted" aria-live="polite"></p>
+    {{product_cards}}
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    {{product_detail}}
   </div>
 </section>
 
@@ -29,7 +40,7 @@
   <div class="wrap split">
     <div>
       <h2>Where the team is today</h2>
-      <p>The product team is being built. It is led by our engineering side and is growing with the projects it takes on, so we keep the number of builds small enough to do them properly.</p>
+      <p>The product team is in progress. It is being built alongside the projects it takes on, so we keep the number of builds small enough to do them properly.</p>
       <p>We are also working on our own products, starting with private AI that runs on a customer's own infrastructure. We only build a product of our own once real buyers have told us they need it.</p>
     </div>
     <div>

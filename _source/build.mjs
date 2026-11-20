@@ -11,6 +11,7 @@ const read = (p) => readFileSync(join(here, p), 'utf8');
 
 const site = JSON.parse(read('site.json'));
 const packages = JSON.parse(read('packages.json'));
+const products = JSON.parse(read('products.json'));
 const roles = JSON.parse(read('roles.json'));
 const audiences = JSON.parse(read('audiences.json'));
 const layout = read('layout.html');
@@ -31,6 +32,41 @@ const blocks = {
     <div class="pkg-card-body"><h3>${esc(p.name)}</h3><p class="pkg-time">${esc(p.timeline)}</p></div>
   </a></li>`).join('\n') +
     '\n</ul>',
+
+  product_cards: () =>
+    '<ul class="pkg-cards" id="product-cards">\n' +
+    products.map((p) => `  <li data-tags="${p.tags.join(' ')}"><a class="pkg-card" href="#${p.slug}">
+    ${video(p.slug)}
+    <div class="pkg-card-body"><h3>${esc(p.name)}</h3><p class="pkg-time">${esc(p.tagline)}</p></div>
+  </a></li>`).join('\n') +
+    '\n</ul>',
+
+  product_detail: () =>
+    products.map((p) => `<article class="pkg-detail" id="${p.slug}" data-tags="${p.tags.join(' ')}">
+  <div class="pkg-detail-head">
+    <h3>${esc(p.name)}</h3>
+    <p class="pkg-facts"><span class="pkg-time">Scoped and priced per project</span></p>
+  </div>
+  ${video(p.slug)}
+  <p class="lede">${esc(p.summary)}</p>
+  <h4>A typical first release</h4>
+  <p class="scenario">${esc(p.first)}</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What we can build</h4>
+      <ul>
+${p.builds.map((d) => `        <li>${esc(d)}</li>`).join('\n')}
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>${esc(p.fit)}</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>${esc(p.needs)}</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Tell us about your ${esc(p.name.toLowerCase())} idea</a></p>
+</article>`).join('\n'),
 
   lead_package: () => {
     const p = packages.find((x) => x.slug === 'on-prem-infrastructure');

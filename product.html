@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Product: apps, websites and games, built to order | Sheerwater Consulting</title>
-<meta name="description" content="The Sheerwater product team builds mobile apps, business websites and games. The team is in progress and open to projects. Tell us what you want to build.">
+<meta name="description" content="The Sheerwater product team builds mobile apps, business websites, games, web apps, online shops, booking systems and AI features. The team is in progress and open to projects.">
 <link rel="canonical" href="https://sheerwaterconsulting.co.uk/product.html">
 <meta name="theme-color" content="#001119">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sheerwater Consulting">
 <meta property="og:title" content="Product: apps, websites and games, built to order | Sheerwater Consulting">
-<meta property="og:description" content="The Sheerwater product team builds mobile apps, business websites and games. The team is in progress and open to projects. Tell us what you want to build.">
+<meta property="og:description" content="The Sheerwater product team builds mobile apps, business websites, games, web apps, online shops, booking systems and AI features. The team is in progress and open to projects.">
 <meta property="og:url" content="https://sheerwaterconsulting.co.uk/product.html">
 <meta property="og:image" content="https://sheerwaterconsulting.co.uk/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -50,8 +50,8 @@
 <section class="page-hero">
   <div class="wrap">
     <p class="eyebrow">Product</p>
-    <h1>Mobile apps, websites and games</h1>
-    <p class="lede">Our product team builds software from idea to launch. The team is in progress, we are taking on projects now, and we are open to building almost anything in these three areas.</p>
+    <h1>Apps, websites, games and tools, built to order</h1>
+    <p class="lede">Our product team builds software from idea to launch. The team is in progress, we are taking on projects now, and we are open to building almost anything: mobile apps, websites for businesses, games, web apps, shops, booking systems and AI features.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="contact.html?package=application-development">Tell us your idea</a>
       <a class="btn btn-quiet" href="#what">What we build</a>
@@ -63,13 +63,288 @@
   <div class="wrap">
     <div class="section-head">
       <h2>What we are open to building</h2>
-      <p>If your idea fits one of these, we want to hear it. If it sits somewhere in between, describe it and we will say plainly whether we can do it well.</p>
+      <p>Pick a type to filter the list, or watch each clip to see how that kind of project comes together. If your idea sits somewhere in between, describe it and we will say plainly whether we can do it well.</p>
     </div>
-    <ul class="pkg-list">
-      <li class="pkg-row"><div><h3>Mobile apps</h3><p>iOS and Android apps for a business, a community or a new idea: from a first working version to a launch-ready app.</p></div></li>
-      <li class="pkg-row"><div><h3>Websites for businesses</h3><p>Clear, fast websites for small businesses and organisations, with forms, bookings or a simple content system where you need them.</p></div></li>
-      <li class="pkg-row"><div><h3>Games</h3><p>Browser and mobile games, from small prototypes to full releases.</p></div></li>
-    </ul>
+    <div id="product-filter" class="chips" role="group" aria-label="Filter by what you want to build">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">Everything</button>
+      <button type="button" class="chip" data-filter="apps" aria-pressed="false">Apps</button>
+      <button type="button" class="chip" data-filter="web" aria-pressed="false">Websites</button>
+      <button type="button" class="chip" data-filter="games" aria-pressed="false">Games</button>
+      <button type="button" class="chip" data-filter="business" aria-pressed="false">Business tools</button>
+      <button type="button" class="chip" data-filter="ai" aria-pressed="false">AI</button>
+    </div>
+    <p id="product-count" class="muted" aria-live="polite"></p>
+    <ul class="pkg-cards" id="product-cards">
+  <li data-tags="apps"><a class="pkg-card" href="#mobile-apps">
+    <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/mobile-apps.jpg" data-src="assets/video/mobile-apps.mp4" aria-hidden="true" tabindex="-1"></video></div>
+    <div class="pkg-card-body"><h3>Mobile apps</h3><p class="pkg-time">iOS and Android apps</p></div>
+  </a></li>
+  <li data-tags="web"><a class="pkg-card" href="#business-websites">
+    <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/business-websites.jpg" data-src="assets/video/business-websites.mp4" aria-hidden="true" tabindex="-1"></video></div>
+    <div class="pkg-card-body"><h3>Websites for businesses</h3><p class="pkg-time">Clear, fast, mobile-first</p></div>
+  </a></li>
+  <li data-tags="games"><a class="pkg-card" href="#games">
+    <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/games.jpg" data-src="assets/video/games.mp4" aria-hidden="true" tabindex="-1"></video></div>
+    <div class="pkg-card-body"><h3>Games</h3><p class="pkg-time">Browser and mobile games</p></div>
+  </a></li>
+  <li data-tags="apps web business"><a class="pkg-card" href="#web-apps">
+    <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/web-apps.jpg" data-src="assets/video/web-apps.mp4" aria-hidden="true" tabindex="-1"></video></div>
+    <div class="pkg-card-body"><h3>Web apps and SaaS</h3><p class="pkg-time">Accounts, billing, admin</p></div>
+  </a></li>
+  <li data-tags="web business"><a class="pkg-card" href="#online-shops">
+    <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/online-shops.jpg" data-src="assets/video/online-shops.mp4" aria-hidden="true" tabindex="-1"></video></div>
+    <div class="pkg-card-body"><h3>Online shops</h3><p class="pkg-time">Products, basket, secure checkout</p></div>
+  </a></li>
+  <li data-tags="business"><a class="pkg-card" href="#booking-systems">
+    <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/booking-systems.jpg" data-src="assets/video/booking-systems.mp4" aria-hidden="true" tabindex="-1"></video></div>
+    <div class="pkg-card-body"><h3>Booking and scheduling systems</h3><p class="pkg-time">Appointments without the back-and-forth</p></div>
+  </a></li>
+  <li data-tags="ai"><a class="pkg-card" href="#ai-assistants">
+    <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/ai-assistants.jpg" data-src="assets/video/ai-assistants.mp4" aria-hidden="true" tabindex="-1"></video></div>
+    <div class="pkg-card-body"><h3>AI features and assistants</h3><p class="pkg-time">Assistants that cite and ask first</p></div>
+  </a></li>
+  <li data-tags="business apps"><a class="pkg-card" href="#internal-tools">
+    <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/internal-tools.jpg" data-src="assets/video/internal-tools.mp4" aria-hidden="true" tabindex="-1"></video></div>
+    <div class="pkg-card-body"><h3>Dashboards and internal tools</h3><p class="pkg-time">Replace the spreadsheet</p></div>
+  </a></li>
+</ul>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <article class="pkg-detail" id="mobile-apps" data-tags="apps">
+  <div class="pkg-detail-head">
+    <h3>Mobile apps</h3>
+    <p class="pkg-facts"><span class="pkg-time">Scoped and priced per project</span></p>
+  </div>
+  <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/mobile-apps.jpg" data-src="assets/video/mobile-apps.mp4" aria-hidden="true" tabindex="-1"></video></div>
+  <p class="lede">Apps for phones and tablets, for a business, a community or a new idea, from a first working version to a launch-ready release.</p>
+  <h4>A typical first release</h4>
+  <p class="scenario">We agree the one thing the app must do well, design the key screens, build it in short stages with a test version on your own phone each week, then prepare the store listings.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What we can build</h4>
+      <ul>
+        <li>Customer apps with accounts, profiles and push notifications</li>
+        <li>Booking, ordering and loyalty apps for a local or online business</li>
+        <li>Community and events apps</li>
+        <li>Apps that work offline and sync when connected</li>
+        <li>Payments and sign-in with the usual providers</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Founders and organisations with a clear idea who want a first version in users' hands quickly.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>A sketch or a short description of what the app does, who uses it and anything it must connect to.</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Tell us about your mobile apps idea</a></p>
+</article>
+<article class="pkg-detail" id="business-websites" data-tags="web">
+  <div class="pkg-detail-head">
+    <h3>Websites for businesses</h3>
+    <p class="pkg-facts"><span class="pkg-time">Scoped and priced per project</span></p>
+  </div>
+  <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/business-websites.jpg" data-src="assets/video/business-websites.mp4" aria-hidden="true" tabindex="-1"></video></div>
+  <p class="lede">Websites that explain what you do, load quickly on any screen and make it easy for customers to get in touch.</p>
+  <h4>A typical first release</h4>
+  <p class="scenario">We agree the pages and the single action you want visitors to take, design a layout that works on a phone first, then build and launch it with you able to edit the text yourself.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What we can build</h4>
+      <ul>
+        <li>Brochure and service websites</li>
+        <li>Landing pages for a campaign or a launch</li>
+        <li>Contact forms, enquiries and simple content editing</li>
+        <li>Search-friendly structure and sensible page speed</li>
+        <li>Your own domain, hosting and email set up</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Small businesses, practices and organisations that need a professional site without a long project.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>Your logo and any text or photos you have, and examples of sites you like.</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Tell us about your websites for businesses idea</a></p>
+</article>
+<article class="pkg-detail" id="games" data-tags="games">
+  <div class="pkg-detail-head">
+    <h3>Games</h3>
+    <p class="pkg-facts"><span class="pkg-time">Scoped and priced per project</span></p>
+  </div>
+  <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/games.jpg" data-src="assets/video/games.mp4" aria-hidden="true" tabindex="-1"></video></div>
+  <p class="lede">Playable games, from a small prototype to prove an idea through to a full release.</p>
+  <h4>A typical first release</h4>
+  <p class="scenario">We build a small playable version of the core mechanic first, so you can feel whether it is fun before anything else is built around it.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What we can build</h4>
+      <ul>
+        <li>Casual browser and mobile games</li>
+        <li>Prototypes to test a game idea with real players</li>
+        <li>Score tables, accounts and in-game progress</li>
+        <li>Branded games for a campaign or an event</li>
+        <li>Art and sound integrated with what you already have</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Creators and businesses with a game concept, or a brand that wants something playable.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>A description of how the game plays, references you like and who it is for.</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Tell us about your games idea</a></p>
+</article>
+<article class="pkg-detail" id="web-apps" data-tags="apps web business">
+  <div class="pkg-detail-head">
+    <h3>Web apps and SaaS</h3>
+    <p class="pkg-facts"><span class="pkg-time">Scoped and priced per project</span></p>
+  </div>
+  <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/web-apps.jpg" data-src="assets/video/web-apps.mp4" aria-hidden="true" tabindex="-1"></video></div>
+  <p class="lede">Software that runs in the browser: sign-in, a dashboard, subscriptions and the admin area to run it.</p>
+  <h4>A typical first release</h4>
+  <p class="scenario">We agree a small first release, such as sign-in plus the one workflow users pay for, launch it to a few customers and extend it from what they actually use.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What we can build</h4>
+      <ul>
+        <li>Customer portals and member areas</li>
+        <li>Subscription products with plans and billing</li>
+        <li>Admin screens to manage users and content</li>
+        <li>Dashboards that show people what matters</li>
+        <li>Back end, database and APIs</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Startups and teams turning a validated idea into a product.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>The main workflow in plain words, who the users are and how you plan to charge.</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Tell us about your web apps and saas idea</a></p>
+</article>
+<article class="pkg-detail" id="online-shops" data-tags="web business">
+  <div class="pkg-detail-head">
+    <h3>Online shops</h3>
+    <p class="pkg-facts"><span class="pkg-time">Scoped and priced per project</span></p>
+  </div>
+  <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/online-shops.jpg" data-src="assets/video/online-shops.mp4" aria-hidden="true" tabindex="-1"></video></div>
+  <p class="lede">Shops that show your products well, take payments through a trusted provider and keep orders organised.</p>
+  <h4>A typical first release</h4>
+  <p class="scenario">We launch with a small catalogue and a working checkout, so you can take real orders early, then add products and features as sales come in.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What we can build</h4>
+      <ul>
+        <li>Product catalogues, search and filters</li>
+        <li>Basket and checkout with a payment provider</li>
+        <li>Order emails and a simple order list</li>
+        <li>Stock, discount codes and delivery options</li>
+        <li>Selling digital products or services as well as goods</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Makers, retailers and small brands starting to sell online or moving off a platform that no longer fits.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>Your product list with photos and prices, delivery rules and which payment provider you want.</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Tell us about your online shops idea</a></p>
+</article>
+<article class="pkg-detail" id="booking-systems" data-tags="business">
+  <div class="pkg-detail-head">
+    <h3>Booking and scheduling systems</h3>
+    <p class="pkg-facts"><span class="pkg-time">Scoped and priced per project</span></p>
+  </div>
+  <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/booking-systems.jpg" data-src="assets/video/booking-systems.mp4" aria-hidden="true" tabindex="-1"></video></div>
+  <p class="lede">Let customers book a time themselves, then confirm and remind them automatically.</p>
+  <h4>A typical first release</h4>
+  <p class="scenario">We start with one service and one calendar, so bookings, confirmations and reminders work end to end before more services and staff are added.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What we can build</h4>
+      <ul>
+        <li>Appointment and class booking with live availability</li>
+        <li>Calendar sync for staff</li>
+        <li>Email or text confirmations and reminders</li>
+        <li>Deposits and online payment at booking</li>
+        <li>A simple admin view for your team</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Clinics, studios, tutors, salons, event organisers and anyone whose diary is full of messages.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>Your services, opening hours, how long each appointment takes and your cancellation rules.</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Tell us about your booking and scheduling systems idea</a></p>
+</article>
+<article class="pkg-detail" id="ai-assistants" data-tags="ai">
+  <div class="pkg-detail-head">
+    <h3>AI features and assistants</h3>
+    <p class="pkg-facts"><span class="pkg-time">Scoped and priced per project</span></p>
+  </div>
+  <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/ai-assistants.jpg" data-src="assets/video/ai-assistants.mp4" aria-hidden="true" tabindex="-1"></video></div>
+  <p class="lede">Add AI to an app or a website: answer questions from your own documents, with sources, and ask a person before anything important is done.</p>
+  <h4>A typical first release</h4>
+  <p class="scenario">We pick one task, test it on real examples from your work, and show you how often the answers are right before it is built into the product.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What we can build</h4>
+      <ul>
+        <li>Chat assistants that answer from your documents and show the source</li>
+        <li>Summaries and drafts inside an existing app</li>
+        <li>Approval steps before an AI sends or changes anything</li>
+        <li>Assistants that run on your own servers when data must stay private</li>
+        <li>Testing so you can see how often answers are right</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Teams that want AI inside a product or a workflow without handing control to it.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>The task, a few real examples, and where the data is allowed to go.</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Tell us about your ai features and assistants idea</a></p>
+</article>
+<article class="pkg-detail" id="internal-tools" data-tags="business apps">
+  <div class="pkg-detail-head">
+    <h3>Dashboards and internal tools</h3>
+    <p class="pkg-facts"><span class="pkg-time">Scoped and priced per project</span></p>
+  </div>
+  <div class="pkg-media"><video muted loop playsinline preload="none" poster="assets/video/internal-tools.jpg" data-src="assets/video/internal-tools.mp4" aria-hidden="true" tabindex="-1"></video></div>
+  <p class="lede">Turn spreadsheets, copy-and-paste and email chains into a simple tool your team uses every day.</p>
+  <h4>A typical first release</h4>
+  <p class="scenario">We replace one painful process first, usually the spreadsheet everyone depends on, then extend the tool once your team trusts it.</p>
+  <div class="pkg-detail-grid">
+    <div>
+      <h4>What we can build</h4>
+      <ul>
+        <li>Dashboards that pull numbers from your systems</li>
+        <li>Forms and approval workflows</li>
+        <li>Order, stock and job trackers</li>
+        <li>Reports that update themselves</li>
+        <li>Role-based access, so people see only what they should</li>
+      </ul>
+    </div>
+    <dl>
+      <dt><h4>Good fit for</h4></dt>
+      <dd>Small teams losing hours to manual work and fragile spreadsheets.</dd>
+      <dt><h4>What we need from you</h4></dt>
+      <dd>The current process, a sample of the spreadsheet or data, and who needs to see what.</dd>
+    </dl>
+  </div>
+  <p><a class="btn btn-primary btn-small" href="contact.html?package=application-development">Tell us about your dashboards and internal tools idea</a></p>
+</article>
   </div>
 </section>
 
@@ -77,7 +352,7 @@
   <div class="wrap split">
     <div>
       <h2>Where the team is today</h2>
-      <p>The product team is being built. It is led by our engineering side and is growing with the projects it takes on, so we keep the number of builds small enough to do them properly.</p>
+      <p>The product team is in progress. It is being built alongside the projects it takes on, so we keep the number of builds small enough to do them properly.</p>
       <p>We are also working on our own products, starting with private AI that runs on a customer's own infrastructure. We only build a product of our own once real buyers have told us they need it.</p>
     </div>
     <div>

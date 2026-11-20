@@ -113,6 +113,26 @@
     applyFilter(known ? wantedAudience : 'all');
   }
 
+
+  /* Product page: type filter */
+  var productBar = $('#product-filter');
+  if (productBar) {
+    var pCards = $$('#product-cards li');
+    var pDetails = $$('.pkg-detail');
+    var pChips = $$('.chip', productBar);
+    var pCount = $('#product-count');
+    var applyProduct = function (value) {
+      var shown = 0;
+      var match = function (el) { return value === 'all' || (el.getAttribute('data-tags') || '').split(' ').indexOf(value) !== -1; };
+      pCards.forEach(function (el) { var s = match(el); el.hidden = !s; if (s) { shown += 1; } });
+      pDetails.forEach(function (el) { el.hidden = !match(el); });
+      pChips.forEach(function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-filter') === value ? 'true' : 'false'); });
+      if (pCount) { pCount.textContent = 'Showing ' + shown + ' of ' + pCards.length; }
+    };
+    pChips.forEach(function (c) { c.addEventListener('click', function () { applyProduct(c.getAttribute('data-filter')); }); });
+    applyProduct('all');
+  }
+
   /* Careers page: group filter */
   var roleBar = $('#role-filter');
   if (roleBar) {

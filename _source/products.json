@@ -1,0 +1,138 @@
+[
+  {
+    "slug": "mobile-apps",
+    "name": "Mobile apps",
+    "tagline": "iOS and Android apps",
+    "tags": ["apps"],
+    "summary": "Apps for phones and tablets, for a business, a community or a new idea, from a first working version to a launch-ready release.",
+    "builds": [
+      "Customer apps with accounts, profiles and push notifications",
+      "Booking, ordering and loyalty apps for a local or online business",
+      "Community and events apps",
+      "Apps that work offline and sync when connected",
+      "Payments and sign-in with the usual providers"
+    ],
+    "first": "We agree the one thing the app must do well, design the key screens, build it in short stages with a test version on your own phone each week, then prepare the store listings.",
+    "fit": "Founders and organisations with a clear idea who want a first version in users' hands quickly.",
+    "needs": "A sketch or a short description of what the app does, who uses it and anything it must connect to."
+  },
+  {
+    "slug": "business-websites",
+    "name": "Websites for businesses",
+    "tagline": "Clear, fast, mobile-first",
+    "tags": ["web"],
+    "summary": "Websites that explain what you do, load quickly on any screen and make it easy for customers to get in touch.",
+    "builds": [
+      "Brochure and service websites",
+      "Landing pages for a campaign or a launch",
+      "Contact forms, enquiries and simple content editing",
+      "Search-friendly structure and sensible page speed",
+      "Your own domain, hosting and email set up"
+    ],
+    "first": "We agree the pages and the single action you want visitors to take, design a layout that works on a phone first, then build and launch it with you able to edit the text yourself.",
+    "fit": "Small businesses, practices and organisations that need a professional site without a long project.",
+    "needs": "Your logo and any text or photos you have, and examples of sites you like."
+  },
+  {
+    "slug": "games",
+    "name": "Games",
+    "tagline": "Browser and mobile games",
+    "tags": ["games"],
+    "summary": "Playable games, from a small prototype to prove an idea through to a full release.",
+    "builds": [
+      "Casual browser and mobile games",
+      "Prototypes to test a game idea with real players",
+      "Score tables, accounts and in-game progress",
+      "Branded games for a campaign or an event",
+      "Art and sound integrated with what you already have"
+    ],
+    "first": "We build a small playable version of the core mechanic first, so you can feel whether it is fun before anything else is built around it.",
+    "fit": "Creators and businesses with a game concept, or a brand that wants something playable.",
+    "needs": "A description of how the game plays, references you like and who it is for."
+  },
+  {
+    "slug": "web-apps",
+    "name": "Web apps and SaaS",
+    "tagline": "Accounts, billing, admin",
+    "tags": ["apps", "web", "business"],
+    "summary": "Software that runs in the browser: sign-in, a dashboard, subscriptions and the admin area to run it.",
+    "builds": [
+      "Customer portals and member areas",
+      "Subscription products with plans and billing",
+      "Admin screens to manage users and content",
+      "Dashboards that show people what matters",
+      "Back end, database and APIs"
+    ],
+    "first": "We agree a small first release, such as sign-in plus the one workflow users pay for, launch it to a few customers and extend it from what they actually use.",
+    "fit": "Startups and teams turning a validated idea into a product.",
+    "needs": "The main workflow in plain words, who the users are and how you plan to charge."
+  },
+  {
+    "slug": "online-shops",
+    "name": "Online shops",
+    "tagline": "Products, basket, secure checkout",
+    "tags": ["web", "business"],
+    "summary": "Shops that show your products well, take payments through a trusted provider and keep orders organised.",
+    "builds": [
+      "Product catalogues, search and filters",
+      "Basket and checkout with a payment provider",
+      "Order emails and a simple order list",
+      "Stock, discount codes and delivery options",
+      "Selling digital products or services as well as goods"
+    ],
+    "first": "We launch with a small catalogue and a working checkout, so you can take real orders early, then add products and features as sales come in.",
+    "fit": "Makers, retailers and small brands starting to sell online or moving off a platform that no longer fits.",
+    "needs": "Your product list with photos and prices, delivery rules and which payment provider you want."
+  },
+  {
+    "slug": "booking-systems",
+    "name": "Booking and scheduling systems",
+    "tagline": "Appointments without the back-and-forth",
+    "tags": ["business"],
+    "summary": "Let customers book a time themselves, then confirm and remind them automatically.",
+    "builds": [
+      "Appointment and class booking with live availability",
+      "Calendar sync for staff",
+      "Email or text confirmations and reminders",
+      "Deposits and online payment at booking",
+      "A simple admin view for your team"
+    ],
+    "first": "We start with one service and one calendar, so bookings, confirmations and reminders work end to end before more services and staff are added.",
+    "fit": "Clinics, studios, tutors, salons, event organisers and anyone whose diary is full of messages.",
+    "needs": "Your services, opening hours, how long each appointment takes and your cancellation rules."
+  },
+  {
+    "slug": "ai-assistants",
+    "name": "AI features and assistants",
+    "tagline": "Assistants that cite and ask first",
+    "tags": ["ai"],
+    "summary": "Add AI to an app or a website: answer questions from your own documents, with sources, and ask a person before anything important is done.",
+    "builds": [
+      "Chat assistants that answer from your documents and show the source",
+      "Summaries and drafts inside an existing app",
+      "Approval steps before an AI sends or changes anything",
+      "Assistants that run on your own servers when data must stay private",
+      "Testing so you can see how often answers are right"
+    ],
+    "first": "We pick one task, test it on real examples from your work, and show you how often the answers are right before it is built into the product.",
+    "fit": "Teams that want AI inside a product or a workflow without handing control to it.",
+    "needs": "The task, a few real examples, and where the data is allowed to go."
+  },
+  {
+    "slug": "internal-tools",
+    "name": "Dashboards and internal tools",
+    "tagline": "Replace the spreadsheet",
+    "tags": ["business", "apps"],
+    "summary": "Turn spreadsheets, copy-and-paste and email chains into a simple tool your team uses every day.",
+    "builds": [
+      "Dashboards that pull numbers from your systems",
+      "Forms and approval workflows",
+      "Order, stock and job trackers",
+      "Reports that update themselves",
+      "Role-based access, so people see only what they should"
+    ],
+    "first": "We replace one painful process first, usually the spreadsheet everyone depends on, then extend the tool once your team trusts it.",
+    "fit": "Small teams losing hours to manual work and fragile spreadsheets.",
+    "needs": "The current process, a sample of the spreadsheet or data, and who needs to see what."
+  }
+]
