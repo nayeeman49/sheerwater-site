@@ -265,6 +265,51 @@
     el.style.setProperty('--my', (e.clientY - r.top) + 'px');
   }, { passive: true });
 
+
+  /* Training page: week explorer. Selecting a week shows its topic and project and jumps the video to it. */
+  Array.prototype.slice.call(document.querySelectorAll('.weeks')).forEach(function (box) {
+    var items = Array.prototype.slice.call(box.querySelectorAll('.week-list li'));
+    var section = box.closest('.course');
+    var clip = section ? section.querySelector('video') : null;
+    if (!items.length) { return; }
+    var tabs = document.createElement('div');
+    tabs.className = 'week-tabs';
+    var buttons = items.map(function (li, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = String(i + 1);
+      b.setAttribute('aria-label', 'Week ' + (i + 1));
+      b.setAttribute('aria-pressed', 'false');
+      tabs.appendChild(b);
+      return b;
+    });
+    box.insertBefore(tabs, box.querySelector('.week-list'));
+    var show = function (n) {
+      items.forEach(function (li, i) { li.hidden = i !== n; });
+      buttons.forEach(function (b, i) { b.setAttribute('aria-pressed', i === n ? 'true' : 'false'); });
+    };
+    show(0);
+    buttons.forEach(function (b, i) {
+      b.addEventListener('click', function () {
+        show(i);
+        if (!clip) { return; }
+        if (!clip.getAttribute('src')) { clip.muted = true; clip.setAttribute('src', clip.getAttribute('data-src')); }
+        var seek = function () {
+          try { clip.currentTime = Math.min(i + 0.5, Math.max(0, (clip.duration || 12) - 0.2)); } catch (err) {}
+          if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) { var p = clip.play(); if (p && p.catch) { p.catch(function () {}); } }
+        };
+        if (clip.readyState >= 1) { seek(); } else { clip.addEventListener('loadedmetadata', seek, { once: true }); }
+      });
+    });
+    if (clip) {
+      clip.addEventListener('timeupdate', function () {
+        if (clip.paused || clip.seeking) { return; }
+        var n = Math.min(items.length - 1, Math.floor(clip.currentTime));
+        if (buttons[n].getAttribute('aria-pressed') !== 'true') { show(n); }
+      });
+    }
+  });
+
   /* Package clips: load and play only while on screen. Reduced motion keeps the still image. */
   var clips = Array.prototype.slice.call(document.querySelectorAll('video[data-src]'));
   if (clips.length && 'IntersectionObserver' in window && !reduce) {

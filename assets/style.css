@@ -574,3 +574,30 @@ input[type="text"], input[type="email"], input[type="url"], input[type="number"]
 
 @media (max-width: 640px) { body { font-size: 1rem; } h1 { font-size: 2.5rem; } }
 .js .nav-toggle { border-radius: 4px; }
+
+/* ===== Training page: large video, compact facts, week explorer ===== */
+.course { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.course-media { margin-bottom: clamp(1.5rem, 3vw, 2.25rem); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--bg); }
+.course-media video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--bg); }
+.course-grid { display: grid; gap: 1.75rem 3.5rem; align-items: start; }
+@media (min-width: 860px) { .course-grid { grid-template-columns: 1.15fr 0.85fr; } }
+.course h2 { margin-bottom: 0.4em; }
+.course .lede { margin-bottom: 0; }
+.specs { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+.specs div { border-top: 1px solid var(--line-strong); padding: 0.6rem 0 0.75rem; }
+.specs dt { color: var(--soft); font-size: 0.88rem; }
+.specs dd { margin: 0.1rem 0 0; font-weight: 500; line-height: 1.35; }
+.weeks { margin-top: clamp(1.75rem, 3vw, 2.5rem); }
+.weeks-label { color: var(--soft); font-size: 0.95rem; margin-bottom: 0.75rem; }
+.week-list { list-style: none; margin: 0; padding: 0; }
+.week-list li { margin: 0 0 0.9rem; padding-left: 1rem; border-left: 2px solid var(--line-strong); }
+.week-list h3 { margin: 0; font-size: 1.05rem; }
+.week-list p { margin: 0.15rem 0 0; color: var(--soft); }
+.js .weeks .week-list li { border-left-color: var(--cyan); padding: 0.1rem 0 0.1rem 1.1rem; margin: 1rem 0 0; min-height: 4.3rem; }
+.js .weeks .week-list h3 { font-family: var(--display); font-weight: 400; font-size: clamp(1.4rem, 1.5vw + 1rem, 1.9rem); letter-spacing: -0.015em; line-height: 1.15; }
+.js .weeks .week-list p { font-size: 1.05rem; }
+.week-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.week-tabs button { font: inherit; font-weight: 500; font-variant-numeric: tabular-nums; width: 2.6rem; height: 2.6rem; border-radius: 4px; border: 1px solid var(--line-strong); background: transparent; color: var(--ink); cursor: pointer; transition: background-color .2s ease, border-color .2s ease, color .2s ease; }
+.week-tabs button:hover { border-color: var(--cyan); }
+.week-tabs button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--on-accent); }
+@media (max-width: 520px) { .week-tabs button { width: 2.3rem; height: 2.3rem; } }

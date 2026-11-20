@@ -1,8 +1,8 @@
-<!--meta {"title":"Training: free part-time engineering programmes","description":"Two free, part-time, remote 12-week training programmes from Sheerwater Consulting: Infrastructure Engineer and AI Engineering Foundations. A project every week, up to 20 students each.","key":"training"} -->
+<!--meta {"title":"Training: two free 12-week programmes","description":"Two free, part-time, remote 12-week training programmes from Sheerwater Consulting: Infrastructure Engineer and AI Engineering Foundations. A project every week, up to 20 students each.","key":"training"} -->
 <section class="page-hero">
   <div class="wrap">
-    <h1>Learn by building, one project a week</h1>
-    <p class="lede">Our training team runs two free, part-time, remote programmes for UK students. Each lasts 12 weeks, with one live evening a week and a hands-on project you push to GitHub.</p>
+    <h1>Two free programmes. A project every week.</h1>
+    <p class="lede">Part-time, remote, 12 weeks each, for UK students. One live evening a week, then you build and push the project to GitHub.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="#infrastructure">Infrastructure Engineer</a>
       <a class="btn btn-quiet" href="#ai-engineering">AI Engineering Foundations</a>
@@ -10,110 +10,109 @@
   </div>
 </section>
 
-<section class="section" id="infrastructure">
-  <div class="wrap split wide-left">
-    <div>
-      <h2>Infrastructure Engineer Training Programme</h2>
-      <p>Twelve weeks that take you from the Linux command line to running containers and machine-learning workloads on Kubernetes. Each week has one live evening of about 2.5 hours, then a project you build in your own time.</p>
-      <h3>What you learn</h3>
-      <ul>
-        <li>Git, GitHub and the Linux command line, then Linux administration: users, SSH, systemd, networking and storage</li>
-        <li>Proxmox virtualisation, with a VMware comparison</li>
-        <li>Ansible for patching, hardening and repeatable builds</li>
-        <li>Docker, Kubernetes and an introduction to MLOps</li>
-        <li>A capstone project to finish</li>
-      </ul>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="job-infrastructure-engineer-intern.html">Programme details</a>
-        <a class="btn btn-quiet" href="apply-intern.html">Apply</a>
+<section class="section course" id="infrastructure">
+  <div class="wrap">
+    <div class="course-media"><video muted loop playsinline preload="none" poster="assets/video/infra-training.jpg" data-src="assets/video/infra-training.mp4" aria-label="Animation of the Infrastructure Engineer programme, from Linux and Git to Kubernetes and a local AI model" tabindex="-1"></video></div>
+    <div class="course-grid">
+      <div>
+        <h2>Infrastructure Engineer</h2>
+        <p class="lede">From the Linux command line to Proxmox, Ansible, Docker, Kubernetes and a local AI model.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="apply-intern.html">Apply</a>
+          <a class="btn btn-quiet" href="job-infrastructure-engineer-intern.html">Full details</a>
+        </div>
       </div>
+    <dl class="specs">
+      <div><dt>Length</dt><dd>12 weeks, part time</dd></div>
+      <div><dt>Time</dt><dd>About 8 hours a week</dd></div>
+      <div><dt>Places</dt><dd>20</dd></div>
+      <div><dt>Support</dt><dd>1-to-1 mentoring</dd></div>
+      <div><dt>Where</dt><dd>Remote, UK students</dd></div>
+      <div><dt>Cost</dt><dd>Free</dd></div>
+    </dl>
     </div>
-    <div class="panel">
-      <h3>At a glance</h3>
-      <ul class="role-facts">
-        <li><span>Length</span>12 weeks, part time</li>
-        <li><span>Time</span>about 8 hours a week</li>
-        <li><span>Places</span>20</li>
-        <li><span>Support</span>1-to-1 mentoring support</li>
-        <li><span>Where</span>remote, UK students</li>
-        <li><span>Cost</span>free</li>
-      </ul>
+    <div class="weeks" data-clip="infrastructure">
+      <p class="weeks-label" id="infrastructure-weeks">Select a week to see the topic and project, and jump the video to it.</p>
+      <ol class="week-list" aria-labelledby="infrastructure-weeks">
+      <li data-week="1"><h3>Week 1: Git, GitHub and the command line</h3><p>Project: Your first repo and README</p></li>
+      <li data-week="2"><h3>Week 2: Linux administration</h3><p>Project: Build and harden a Linux server</p></li>
+      <li data-week="3"><h3>Week 3: Storage, networking and Bash</h3><p>Project: Backup and health-check script</p></li>
+      <li data-week="4"><h3>Week 4: Proxmox virtual machines</h3><p>Project: Build a Proxmox lab</p></li>
+      <li data-week="5"><h3>Week 5: Backups and the VMware comparison</h3><p>Project: Restore a VM and write a migration plan</p></li>
+      <li data-week="6"><h3>Week 6: Ansible basics</h3><p>Project: Your first playbook</p></li>
+      <li data-week="7"><h3>Week 7: Ansible roles, patching and hardening</h3><p>Project: Patch several servers at once</p></li>
+      <li data-week="8"><h3>Week 8: Docker</h3><p>Project: Containerise an app</p></li>
+      <li data-week="9"><h3>Week 9: Kubernetes basics</h3><p>Project: Deploy to a cluster</p></li>
+      <li data-week="10"><h3>Week 10: Kubernetes: ingress, config and monitoring</h3><p>Project: Expose and monitor your app</p></li>
+      <li data-week="11"><h3>Week 11: MLOps</h3><p>Project: A local AI model behind an API</p></li>
+      <li data-week="12"><h3>Week 12: Capstone showcase</h3><p>Project: Present your end-to-end project</p></li>
+      </ol>
     </div>
   </div>
 </section>
 
-<section class="section tint" id="ai-engineering">
-  <div class="wrap split wide-left">
-    <div>
-      <h2>AI Engineering Foundations</h2>
-      <p>Twelve weeks on building AI applications that run on your own hardware. You start by running a first local model and finish with a deployed project, with a defined project every week.</p>
-      <h3>What you learn</h3>
-      <ul>
-        <li>Python for data, machine-learning basics and PyTorch</li>
-        <li>How language models work, prompting and running models locally</li>
-        <li>Retrieval-augmented generation (RAG): searching your own documents, with citations and testing</li>
-        <li>Fine-tuning a small model with LoRA</li>
-        <li>AI agents that use tools and ask for approval first</li>
-        <li>Deploying with Docker and an API, plus responsible AI, then a capstone showcase</li>
-      </ul>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="contact.html">Register your interest</a>
-        <a class="btn btn-quiet" href="assets/Sheerwater_AI_Engineering_Foundations_Syllabus.pdf">Download the syllabus (PDF)</a>
+<section class="section course tint" id="ai-engineering">
+  <div class="wrap">
+    <div class="course-media"><video muted loop playsinline preload="none" poster="assets/video/ai-training.jpg" data-src="assets/video/ai-training.mp4" aria-label="Animation of the AI Engineering Foundations programme, from a first local model to retrieval, fine-tuning, agents and deployment" tabindex="-1"></video></div>
+    <div class="course-grid">
+      <div>
+        <h2>AI Engineering Foundations</h2>
+        <p class="lede">Build AI applications that run on your own hardware: local models, retrieval, fine-tuning, agents and deployment.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="contact.html">Register your interest</a>
+          <a class="btn btn-quiet" href="assets/Sheerwater_AI_Engineering_Foundations_Syllabus.pdf">Syllabus (PDF)</a>
+        </div>
       </div>
+    <dl class="specs">
+      <div><dt>Length</dt><dd>12 weeks, part time</dd></div>
+      <div><dt>Time</dt><dd>2.5-hour evening plus about 5 hours</dd></div>
+      <div><dt>Places</dt><dd>Up to 20</dd></div>
+      <div><dt>You need</dt><dd>Basic Python, 16 GB laptop</dd></div>
+      <div><dt>Start date</dt><dd>To be announced</dd></div>
+      <div><dt>Cost</dt><dd>Free</dd></div>
+    </dl>
     </div>
-    <div class="panel">
-      <h3>At a glance</h3>
-      <ul class="role-facts">
-        <li><span>Length</span>12 weeks, part time</li>
-        <li><span>Time</span>one 2.5-hour evening plus about 5 hours of project work</li>
-        <li><span>Places</span>up to 20</li>
-        <li><span>You need</span>basic Python and a laptop with 16 GB of RAM</li>
-        <li><span>Where</span>remote</li>
-        <li><span>Start date</span>to be announced</li>
-        <li><span>Cost</span>free</li>
-      </ul>
+    <div class="weeks" data-clip="ai-engineering">
+      <p class="weeks-label" id="ai-engineering-weeks">Select a week to see the topic and project, and jump the video to it.</p>
+      <ol class="week-list" aria-labelledby="ai-engineering-weeks">
+      <li data-week="1"><h3>Week 1: Setup and your first local model</h3><p>Project: Hello, local model</p></li>
+      <li data-week="2"><h3>Week 2: Python for data</h3><p>Project: Clean-up report</p></li>
+      <li data-week="3"><h3>Week 3: Machine learning basics</h3><p>Project: Predict it, then break it</p></li>
+      <li data-week="4"><h3>Week 4: Neural networks with PyTorch</h3><p>Project: Digit reader from scratch</p></li>
+      <li data-week="5"><h3>Week 5: How language models work</h3><p>Project: Prompt test bench</p></li>
+      <li data-week="6"><h3>Week 6: Running models locally</h3><p>Project: Which model fits my laptop?</p></li>
+      <li data-week="7"><h3>Week 7: Retrieval-augmented generation, part 1</h3><p>Project: Ask my documents</p></li>
+      <li data-week="8"><h3>Week 8: RAG, part 2: citations and testing</h3><p>Project: Prove it works</p></li>
+      <li data-week="9"><h3>Week 9: Fine-tuning with LoRA</h3><p>Project: Teach it a style</p></li>
+      <li data-week="10"><h3>Week 10: Agents and tool calling</h3><p>Project: Helpful assistant with limits</p></li>
+      <li data-week="11"><h3>Week 11: Deploying and responsible AI</h3><p>Project: Ship it</p></li>
+      <li data-week="12"><h3>Week 12: Capstone showcase</h3><p>Project: Your best build, finished</p></li>
+      </ol>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>How both programmes work</h2>
-    </div>
-    <ol class="steps">
-      <li><h3>Live evening</h3><p>One session a week of about 2.5 hours: show and tell, a taught topic with a live demo, then the start of that week's project.</p></li>
-      <li><h3>Weekly project</h3><p>You finish it in your own time and push it to a public GitHub repository with a README.</p></li>
-      <li><h3>Feedback</h3><p>Written feedback on your projects, and support from the training team between sessions.</p></li>
-      <li><h3>Portfolio</h3><p>You finish with a set of working projects and a capstone you can show to employers.</p></li>
-    </ol>
-  </div>
-</section>
-
-<section class="section tint">
   <div class="wrap split">
     <div class="faq">
-      <h2>Questions people ask</h2>
+      <h2>Good to know</h2>
       <details>
         <summary>Is it really free?</summary>
-        <p>Yes. Both programmes are free and voluntary. They are training, not paid work, and they do not involve client work. Nothing is promised afterwards, and a place does not guarantee a job.</p>
+        <p>Yes. Both programmes are free and voluntary. They are training, not paid work, with no client work, and a place does not guarantee a job.</p>
       </details>
       <details>
         <summary>Do I get a qualification?</summary>
-        <p>No accredited qualification. If you complete the programme you get a statement of completion from Sheerwater Consulting and a portfolio of projects on GitHub.</p>
+        <p>No accredited qualification. You get a statement of completion from Sheerwater Consulting and a portfolio on GitHub.</p>
       </details>
       <details>
-        <summary>Who can join?</summary>
-        <p>UK-based students and early-career learners. The Infrastructure programme needs no prior experience. AI Engineering Foundations needs basic Python.</p>
-      </details>
-      <details>
-        <summary>Can I do both?</summary>
-        <p>You can apply for both, but each takes about 7 to 8 hours a week, so most people do one at a time.</p>
+        <summary>Who can join, and can I do both?</summary>
+        <p>UK-based students and early-career learners. The Infrastructure programme needs no experience; AI Engineering Foundations needs basic Python. Each takes about 7 to 8 hours a week, so most people do one at a time.</p>
       </details>
     </div>
-    <div class="notice">
-      <p><strong>Want to help teach?</strong> We are looking for lab helpers once the first cohorts finish. See our <a href="careers.html">careers page</a> or get in touch.</p>
-      <p><a href="contact.html">Contact the training team</a></p>
+    <div>
+      <h2>Questions?</h2>
+      <p>Ask the training team before you apply.</p>
+      <div class="btn-row"><a class="btn btn-quiet" href="contact.html">Contact us</a></div>
     </div>
   </div>
 </section>
