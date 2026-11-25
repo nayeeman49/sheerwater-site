@@ -1,17 +1,17 @@
 [
  {
   "slug": "infrastructure-engineer-intern",
-  "title": "Infrastructure Engineer Training Programme (3 Months)",
+  "title": "Infrastructure Engineer Internship (3-Month Training Programme)",
   "group": "engineering",
-  "type": "Voluntary training programme",
+  "type": "Voluntary training internship",
   "applyHref": "apply-intern.html",
-  "summary": "A structured, part-time, fully remote 3-month training programme for UK students, with 20 places and 1-to-1 mentoring support. Build a project every week in Linux, Proxmox, Ansible, Docker, Kubernetes and MLOps.",
-  "metaTitle": "Infrastructure Engineer Training Programme: 3 months, remote UK",
-  "metaDescription": "20 places on a voluntary, part-time, fully remote 3-month training programme for UK students, with 1-to-1 mentoring support: Linux, Proxmox, Ansible, Docker, Kubernetes and MLOps.",
+  "summary": "A structured, part-time, fully remote 3-month training internship for UK students, starting 16 December 2026, with 30 places and monthly 1-to-1 check-ins. Build a project every week in Linux, Proxmox, Ansible, Docker, Kubernetes and MLOps.",
+  "metaTitle": "Infrastructure Engineer Internship: 3-month training, remote UK",
+  "metaDescription": "30 places on a voluntary, part-time, fully remote 3-month training internship for UK students, starting 16 December 2026, with monthly 1-to-1 check-ins: Linux, Proxmox, Ansible, Docker, Kubernetes and MLOps.",
   "facts": [
    [
     "Type",
-    "Voluntary, unpaid training programme"
+    "Voluntary, unpaid training internship"
    ],
    [
     "Location",
@@ -26,8 +26,12 @@
     "Around 8 hours a week"
    ],
    [
+    "Starts",
+    "Wednesday 16 December 2026"
+   ],
+   [
     "Places",
-    "20 available"
+    "30 available"
    ]
   ],
   "sections": [
@@ -37,7 +41,11 @@
    },
    {
     "title": "About the programme",
-    "text": "This is a structured, part-time, fully remote 3-month training programme, not a job in the usual sense. Each week has one live evening session of about 2.5 hours, then a project you build in your own time and push to GitHub. There are 20 places, with 1-to-1 mentoring support. It is voluntary and unpaid, and it does not involve client work. You finish with a GitHub portfolio and a clear record of what you built."
+    "text": "This is a structured, part-time, fully remote 3-month training internship, not a job in the usual sense. Each week has one live evening session of about 2.5 hours, then a project you build in your own time and push to GitHub. There are 30 places, with monthly 1-to-1 check-ins and written feedback on every project. It is voluntary and unpaid, it does not involve client work, and it does not lead to an accredited qualification. You finish with a GitHub portfolio, a statement of completion and a clear record of what you built."
+   },
+   {
+    "title": "Dates",
+    "text": "The first session is on Wednesday 16 December 2026. There are no sessions on 23 and 30 December, then weekly sessions resume on Wednesday 6 January 2027. The final showcase is on Wednesday 17 March 2027."
    },
    {
     "title": "What you'll learn",
@@ -76,10 +84,10 @@
    {
     "title": "What you'll get",
     "items": [
-     "1-to-1 mentoring support, plus weekly guided sessions and feedback",
+     "A live session every week, monthly 1-to-1 check-ins and written feedback on every project",
      "A GitHub portfolio of about 10 small projects and one capstone",
      "Project descriptions for your CV and LinkedIn",
-     "A reference from the founder on successful completion, where earned"
+     "A statement of completion from Sheerwater Studios, and a reference from the founder on successful completion, where earned"
     ]
    },
    {
@@ -88,7 +96,8 @@
      "Studying or recently graduated in computing, IT or engineering, or teaching yourself",
      "Curious about servers, Linux and automation. No prior experience required.",
      "Able to commit around 8 hours a week for 3 months, with breaks for exams",
-     "A laptop with 16 GB RAM, or willingness to use a shared lab host"
+     "A laptop with 16 GB RAM, or willingness to use a shared lab host",
+     "If you are under 18, we ask for a parent or guardian's consent"
     ]
    }
   ],
@@ -102,10 +111,11 @@
     "We read every application and reply by email."
    ]
   ],
-  "openings": 20,
+  "openings": 30,
   "voluntary": true,
   "listFacts": [
-   "Voluntary training, 3 months",
+   "Voluntary training internship, 3 months",
+   "Starts 16 December 2026",
    "Remote, UK students"
   ]
  },
