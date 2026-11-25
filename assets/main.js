@@ -1,4 +1,4 @@
-/* Sheerwater Consulting: small, dependency-free enhancements. The site works without this file. */
+/* Sheerwater Studios: small, dependency-free enhancements. The site works without this file. */
 (function () {
   'use strict';
 
@@ -217,7 +217,7 @@
         data.append('_subject', subject);
         var roleSel = form.querySelector('[name="role"]');
         if (roleSel && roleSel.selectedIndex > 0) { data.append('role_title', roleSel.options[roleSel.selectedIndex].text); }
-        data.append('from_name', 'Sheerwater Consulting website');
+        data.append('from_name', 'Sheerwater Studios website');
         if (cfg.formAccessKey) { data.append('access_key', cfg.formAccessKey); data.append('subject', subject); }
         say('Sending...', '');
         fetch(cfg.formEndpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })

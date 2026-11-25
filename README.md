@@ -1,4 +1,4 @@
-# Sheerwater Consulting website
+# Sheerwater Studios website
 
 A static, multi-page website with no framework and no server. It works on GitHub Pages, Cloudflare Pages, Netlify and any other static host.
 

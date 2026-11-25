@@ -17,7 +17,7 @@
   var T0 = null, DELAY = 0, DUR = 450, opening = true;
   var veil = document.createElement('div');
   veil.className = 'veil';
-  veil.innerHTML = '<img src="assets/logo-mark.png?v=mint8" width="88" height="88" alt="">';
+  veil.innerHTML = '<img src="assets/logo-mark.png?v=studios1" width="88" height="88" alt="">';
   document.body.appendChild(veil);
   sec.classList.add('opening');
   function ease(x) { return 1 - Math.pow(1 - x, 2.6); }

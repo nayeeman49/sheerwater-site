@@ -1,4 +1,4 @@
-/* Sheerwater Consulting: lead finder.
+/* Sheerwater Studios: lead finder.
    Turns the options chosen on the page into ready-made search links (LinkedIn, Google, job boards,
    public sector tenders). Nothing is sent anywhere and nothing is scraped: each link opens the
    search site in a new tab and you read the results yourself. */
@@ -78,7 +78,7 @@
         'A renewal, hardware refresh or licence change is coming up',
         'Not locked into a long contract with a larger provider'
       ],
-      note: 'Hi [Name], I run Sheerwater Consulting in Woking. We do fixed-price VMware to Proxmox migrations. Saw [signal] at [Company]. Happy to share what we see in the field, no pitch.',
+      note: 'Hi [Name], I run Sheerwater Studios in Woking. We do fixed-price VMware to Proxmox migrations. Saw [signal] at [Company]. Happy to share what we see in the field, no pitch.',
       offer: 'a free 20-minute review of your current estate'
     },
     'local-ai-gpu-machines': {
@@ -106,7 +106,7 @@
         'No infrastructure as code yet',
         'Someone who owns the cloud bill'
       ],
-      note: 'Hi [Name], I am Nayeem from Sheerwater Consulting (Woking). We set up Azure and AWS foundations with Terraform. Saw [signal] at [Company]. Open to a short chat?',
+      note: 'Hi [Name], I am Nayeem from Sheerwater Studios (Woking). We set up Azure and AWS foundations with Terraform. Saw [signal] at [Company]. Open to a short chat?',
       offer: 'a short call to look at how your cloud accounts are set up today'
     },
     'kubernetes-baseline': {
@@ -134,7 +134,7 @@
         'Code is already in Git',
         'A lead engineer or CTO who feels the pain'
       ],
-      note: 'Hi [Name], I am Nayeem at Sheerwater Consulting. We build CI/CD pipelines that make releases boring. Saw [signal] at [Company]. Worth a quick chat?',
+      note: 'Hi [Name], I am Nayeem at Sheerwater Studios. We build CI/CD pipelines that make releases boring. Saw [signal] at [Company]. Worth a quick chat?',
       offer: 'a short call to walk through how you release today'
     },
     'linux-automation': {
@@ -148,7 +148,7 @@
         'Patching is inconsistent or late',
         'A small team with no automation owner'
       ],
-      note: 'Hi [Name], I am Nayeem at Sheerwater Consulting. We automate Linux patching and builds with Ansible. Saw [signal] at [Company]. Open to comparing notes?',
+      note: 'Hi [Name], I am Nayeem at Sheerwater Studios. We automate Linux patching and builds with Ansible. Saw [signal] at [Company]. Open to comparing notes?',
       offer: 'a short call to look at how your servers are patched and built'
     },
     'hpc-gpu-cluster': {
@@ -176,7 +176,7 @@
         'A data protection lead who will review the setup',
         'Realistic that a pilot gives a verdict, not a finished product'
       ],
-      note: 'Hi [Name], I am Nayeem at Sheerwater Consulting. We run five-week private AI pilots on a client’s own servers. Saw [signal] at [Company]. Open to a short chat?',
+      note: 'Hi [Name], I am Nayeem at Sheerwater Studios. We run five-week private AI pilots on a client’s own servers. Saw [signal] at [Company]. Open to a short chat?',
       offer: 'a free scoping call; if a cloud AI service would suit you better, I will say so'
     },
     'application-development': {
@@ -190,7 +190,7 @@
         'A budget holder who can decide',
         'Willing to agree a small first version'
       ],
-      note: 'Hi [Name], I am Nayeem at Sheerwater Consulting (Woking). We build custom web and mobile apps for small teams. Saw [signal] at [Company]. Open to a chat?',
+      note: 'Hi [Name], I am Nayeem at Sheerwater Studios (Woking). We build custom web and mobile apps for small teams. Saw [signal] at [Company]. Open to a chat?',
       offer: 'a short call to scope a first version'
     }
   };
@@ -336,7 +336,7 @@
       'I got in touch because of [signal]. We offer a fixed-price “' + name + '” package' + timeline +
       '. If it is useful I can send a one-page outline, or we can do ' + svc.offer + '.\n\n' +
       'If it is not relevant, no problem at all, and just say if you would rather I did not message again.\n\n' +
-      'Nayeem An-noor\nFounder and Lead Engineer, Sheerwater Consulting\nsheerwaterconsulting.co.uk';
+      'Nayeem An-noor\nFounder and Lead Engineer, Sheerwater Studios\nsheerwaterconsulting.co.uk';
   }
 
   /* Exposed so the logic can be tested without a browser. */
